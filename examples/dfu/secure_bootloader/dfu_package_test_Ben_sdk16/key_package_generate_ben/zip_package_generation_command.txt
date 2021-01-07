@@ -1,0 +1,5 @@
+nrfutil pkg generate --hw-version 52 --application-version 1 --application led0_init_on_ble.hex --sd-req 0xcb --key-file private.pem led0_init_on_ble.zip
+nrfutil pkg generate --hw-version 52 --application-version 1 --application led3_init_on_ble.hex --sd-req 0xcb --key-file private.pem led3_init_on_ble.zip
+nrfutil pkg generate --hw-version 52 --application-version 1 --application ble_app_uart_slave.hex --sd-req 0xcb --key-file private.pem ble_app_uart_slave.zip
+
+nrfutil pkg generate --hw-version 52 --application-version 1 --application ble_app_buttonless_dfu_pca10040_s132.hex --sd-req 0xcb --key-file private.pem ble_app_buttonless_dfu_pca10040_s132.zip

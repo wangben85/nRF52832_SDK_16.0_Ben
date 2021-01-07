@@ -1,0 +1,1 @@
+This demo is for NUS throughput test, slave side code

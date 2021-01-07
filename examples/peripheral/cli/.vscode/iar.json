@@ -1,0 +1,7 @@
+{
+    "version": 1,
+    "path": "C://Program Files (x86)//IAR Systems//Embedded Workbench 8.1//",
+    "project": "C://Nordic_BLE_SDK//nRF5_SDK_16.0.0_98a08e2//examples//peripheral//cli//pca10040//blank//iar//cli_pca10040.ewp",
+    "config": "nrf52832_xxaa",
+    "parallel" : true
+}

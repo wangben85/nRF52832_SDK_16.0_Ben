@@ -1,0 +1,9 @@
+---- NRFX_DELAY_US Matches (8 in 4 files) ----
+Nrfx_common.h (c:\nordic_ble_sdk\nrf5_sdk_16.0.0_98a08e2\modules\nrfx\drivers):           NRFX_DELAY_US(delay_us);                          \
+Nrfx_glue.h (c:\nordic_ble_sdk\nrf5_sdk_16.0.0_98a08e2\modules\nrfx\templates):#define NRFX_DELAY_US(us_time)
+Nrfx_twi_twim.c (c:\nordic_ble_sdk\nrf5_sdk_16.0.0_98a08e2\modules\nrfx\drivers\src):    NRFX_DELAY_US(4);
+Nrfx_twi_twim.c (c:\nordic_ble_sdk\nrf5_sdk_16.0.0_98a08e2\modules\nrfx\drivers\src):            NRFX_DELAY_US(4);
+Nrfx_twi_twim.c (c:\nordic_ble_sdk\nrf5_sdk_16.0.0_98a08e2\modules\nrfx\drivers\src):            NRFX_DELAY_US(4);
+Nrfx_twi_twim.c (c:\nordic_ble_sdk\nrf5_sdk_16.0.0_98a08e2\modules\nrfx\drivers\src):    NRFX_DELAY_US(4);
+Nrfx_twi_twim.c (c:\nordic_ble_sdk\nrf5_sdk_16.0.0_98a08e2\modules\nrfx\drivers\src):    NRFX_DELAY_US(4);
+Nrf_delay.h (c:\nordic_ble_sdk\nrf5_sdk_16.0.0_98a08e2\components\libraries\delay):#define nrf_delay_us(us_time) NRFX_DELAY_US(us_time)

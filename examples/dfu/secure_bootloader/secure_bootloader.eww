@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspace>
+    <project>
+        <path>$WS_DIR$\pca10040_uart\iar\secure_bootloader_uart_mbr_pca10040.ewp</path>
+    </project>
+    <project>
+        <path>$WS_DIR$\pca10040_s132_ble\iar\secure_bootloader_ble_s132_pca10040.ewp</path>
+    </project>
+    <project>
+        <path>$WS_DIR$\pca10040_uart_debug\iar\secure_bootloader_uart_mbr_pca10040_debug.ewp</path>
+    </project>
+    <project>
+        <path>$WS_DIR$\pca10040_s132_ble_debug\iar\secure_bootloader_ble_s132_pca10040_debug.ewp</path>
+    </project>
+    <batchBuild />
+</workspace>

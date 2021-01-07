@@ -1,0 +1,2 @@
+---- Signature required Matches (1 in 1 files) ----
+Nrf_dfu_validation.c (c:\nordic_ble_sdk\nrf5_sdk_16.0.0_98a08e2\components\libraries\bootloader\dfu):    NRF_LOG_INFO("Signature required. Checking signature.")

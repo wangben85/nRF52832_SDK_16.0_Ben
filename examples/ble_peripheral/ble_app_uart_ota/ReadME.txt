@@ -1,0 +1,1 @@
+This demo is ble_app_uart to combined with ble_app_buttonless_dfu example

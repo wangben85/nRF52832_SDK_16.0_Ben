@@ -1,0 +1,31 @@
+
+2020-10-16 10:41:09,291 Using board at serial port: com19
+2020-10-16 10:41:09,327 Sending Application image.
+2020-10-16 10:41:12,837 Serial: Set Packet Receipt Notification 0
+2020-10-16 10:41:12,855 Sending init packet...
+2020-10-16 10:41:12,862 Serial: Selecting Object: type:1
+2020-10-16 10:41:12,867 Serial: Object selected:  max_size:512 offset:0 crc:0
+2020-10-16 10:41:12,878 Serial: Streaming Data: len:141 offset:0 crc:0x00000000
+2020-10-16 10:59:00,865 Using board at serial port: com19
+2020-10-16 10:59:00,902 Sending Application image.
+2020-10-16 10:59:04,422 Serial: Set Packet Receipt Notification 0
+2020-10-16 10:59:04,438 Sending init packet...
+2020-10-16 10:59:04,448 Serial: Selecting Object: type:1
+2020-10-16 10:59:04,455 Serial: Object selected:  max_size:512 offset:0 crc:0
+2020-10-16 10:59:04,466 Serial: Streaming Data: len:141 offset:0 crc:0x00000000
+2020-10-16 10:59:04,687 Sending firmware file...
+2020-10-16 10:59:04,698 Serial: Selecting Object: type:2
+2020-10-16 10:59:04,720 Serial: Object selected:  max_size:4096 offset:0 crc:0
+2020-10-16 10:59:04,726 Serial: Streaming Data: len:4096 offset:0 crc:0x00000000
+2020-10-16 10:59:05,209 Serial: Streaming Data: len:4096 offset:4096 crc:0xE234BBA4
+2020-10-16 10:59:05,694 Serial: Streaming Data: len:4096 offset:8192 crc:0x64675076
+2020-10-16 10:59:06,185 Serial: Streaming Data: len:4096 offset:12288 crc:0x92B46803
+2020-10-16 10:59:06,672 Serial: Streaming Data: len:4096 offset:16384 crc:0x98316191
+2020-10-16 10:59:07,161 Serial: Streaming Data: len:4096 offset:20480 crc:0x7BF812F6
+2020-10-16 10:59:07,647 Serial: Streaming Data: len:4096 offset:24576 crc:0x226B489C
+2020-10-16 10:59:08,140 Serial: Streaming Data: len:4096 offset:28672 crc:0xC33E9441
+2020-10-16 10:59:08,629 Serial: Streaming Data: len:1420 offset:32768 crc:0xDE139218
+2020-10-16 10:59:09,079 Image sent in 4.641392707824707s
+
+logger.debug("Serial: Set Packet Receipt Notification {}".format(self.prn))
+

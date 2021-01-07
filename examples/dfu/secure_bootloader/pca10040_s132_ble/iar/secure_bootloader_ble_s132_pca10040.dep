@@ -1,0 +1,2474 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <fileVersion>4</fileVersion>
+    <fileChecksum>2962461035</fileChecksum>
+    <configuration>
+        <name>nrf52832_xxaa_s132</name>
+        <outputs>
+            <file>$PROJ_DIR$\_build\oberon_backend_ecc.pbi</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\softdevice\s132\headers\ble_err.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\modules\nrfx\soc\nrfx_irqs_nrf52832.h</file>
+            <file>$PROJ_DIR$\_build\nrf_dfu_ver_validation.pbi</file>
+            <file>$PROJ_DIR$\_build\nrf_dfu_validation.o</file>
+            <file>$PROJ_DIR$\_build\crc32.__cstat.et</file>
+            <file>$PROJ_DIR$\_build\nrfx_atomic.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\nrf_bootloader_info.h</file>
+            <file>$PROJ_DIR$\_build\nrf_bootloader_app_start.__cstat.et</file>
+            <file>$PROJ_DIR$\_build\nrf_nvmc.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\inc\c\iccarm_builtin.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\softdevice\s132\headers\nrf_nvic.h</file>
+            <file>$PROJ_DIR$\_build\nrf_bootloader_dfu_timers.__cstat.et</file>
+            <file>$PROJ_DIR$\_build\oberon_backend_hash.pbi</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\fstorage\nrf_fstorage_nvmc.h</file>
+            <file>$PROJ_DIR$\_build\oberon_backend_hash.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\nrf_crypto_allocator.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\nrf_crypto_rng_shared.h</file>
+            <file>$PROJ_DIR$\_build\nrf_dfu.__cstat.et</file>
+            <file>$PROJ_DIR$\_build\sha256.pbi</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\util\sdk_macros.h</file>
+            <file>$PROJ_DIR$\_build\micro_ecc_backend_ecdsa.__cstat.et</file>
+            <file>$PROJ_DIR$\_build\nrf_dfu_handling_error.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\softdevice\s132\headers\ble.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\experimental_section_vars\nrf_section_iter.h</file>
+            <file>$PROJ_DIR$\_build\mem_manager.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\backend\cc310_bl\cc310_bl_backend_ecdh.h</file>
+            <file>$PROJ_DIR$\_build\nrf_bootloader_wdt.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\modules\nrfx\mdk\nrf_peripherals.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\delay\nrf_delay.h</file>
+            <file>$PROJ_DIR$\_build\nrf_dfu_svci_handler.pbi</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\util\app_error.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\modules\nrfx\soc\nrfx_atomic.h</file>
+            <file>$PROJ_DIR$\_build\nrf_dfu_validation.pbi</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\modules\nrfx\mdk\nrf51_to_nrf52.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\backend\cc310_bl\cc310_bl_backend_ecc.h</file>
+            <file>$PROJ_DIR$\_build\nrf_atomic.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+            <file>$PROJ_DIR$\_build\nrfx_atomic.o</file>
+            <file>$PROJ_DIR$\_build\ble_srv_common.pbi</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\backend\oberon\oberon_backend_chacha_poly_aead.h</file>
+            <file>$PROJ_DIR$\_build\oberon_backend_eddsa.pbi</file>
+            <file>$PROJ_DIR$\_build\nrf_bootloader_info.o</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\util\sdk_errors.h</file>
+            <file>$PROJ_DIR$\_build\nrf_bootloader.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\svc\nrf_svci_async_handler.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\nrf_crypto_eddsa_backend.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\modules\nrfx\hal\nrf_clock.h</file>
+            <file>$PROJ_DIR$\_build\mem_manager.pbi</file>
+            <file>$PROJ_DIR$\_build\nrf_bootloader_app_start_final.pbi</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\backend\cc310_bl\cc310_bl_backend_hash.h</file>
+            <file>$PROJ_DIR$\_build\nrf_svc_handler.o</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\backend\cc310\cc310_backend_rng.h</file>
+            <file>$TOOLKIT_DIR$\lib\rt7M_tl.a</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\softdevice\s132\headers\ble_gatts.h</file>
+            <file>$PROJ_DIR$\_build\nrf_fprintf.o</file>
+            <file>$PROJ_DIR$\_build\pb_common.pbi</file>
+            <file>$PROJ_DIR$\_build\nrf_dfu_transport.__cstat.et</file>
+            <file>$PROJ_DIR$\_build\main.__cstat.et</file>
+            <file>$PROJ_DIR$\_build\nrf_dfu_flash.o</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\nrf_crypto_ecc_backend.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\atomic_fifo\nrf_atfifo_internal.h</file>
+            <file>$PROJ_DIR$\_build\oberon_backend_ecdh.o</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\nrf_bootloader_app_start.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\modules\nrfx\mdk\iar_startup_nrf52.s</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\boards\boards.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\external\nano-pb\pb_decode.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\external\nano-pb\pb_common.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\ble\common\ble_srv_common.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\nrf_bootloader_app_start_final.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\nrf_bootloader_dfu_timers.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\nrf_bootloader_wdt.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\modules\nrfx\mdk\system_nrf52.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\nrf_bootloader.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\nrf_bootloader_fw_activation.c</file>
+            <file>$PROJ_DIR$\..\..\main.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\nrf_crypto_ecc.c</file>
+            <file>$PROJ_DIR$\..\..\..\dfu_public_key.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\nrf_bootloader_info.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\nrf_crypto_ecdsa.c</file>
+            <file>$PROJ_DIR$\..\config\sdk_config.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\nrf_crypto_hash.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\backend\nrf_sw\nrf_sw_backend_hash.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\scheduler\app_scheduler.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\modules\nrfx\hal\nrf_nvmc.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\dfu\nrf_dfu_settings_svci.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\dfu\nrf_dfu_validation.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\util\app_util_platform.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\dfu\nrf_dfu_utils.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\backend\oberon\oberon_backend_hmac.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\dfu\dfu-cc.pb.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\dfu\nrf_dfu_flash.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\dfu\nrf_dfu_req_handler.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\backend\oberon\oberon_backend_ecc.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\backend\oberon\oberon_backend_eddsa.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\backend\oberon\oberon_backend_hash.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\ble_dfu\nrf_dfu_ble.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\dfu\nrf_dfu_settings.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\dfu\nrf_dfu_ver_validation.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\backend\micro_ecc\micro_ecc_backend_ecc.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\backend\micro_ecc\micro_ecc_backend_ecdsa.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\nrf_crypto_init.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\dfu\nrf_dfu.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\nrf_crypto_shared.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\dfu\nrf_dfu_handling_error.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\backend\oberon\oberon_backend_ecdh.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\backend\oberon\oberon_backend_chacha_poly_aead.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\dfu\nrf_dfu_transport.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\backend\oberon\oberon_backend_ecdsa.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\dfu\nrf_dfu_mbr.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\backend\micro_ecc\micro_ecc_backend_ecdh.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\modules\nrfx\soc\nrfx_atomic.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\util\app_error_weak.c</file>
+            <file>$PROJ_DIR$\_build\nrf_strerror.o</file>
+            <file>$PROJ_DIR$\_build\crc32.pbi</file>
+            <file>$PROJ_DIR$\_build\nrf_strerror.pbi</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\external\fprintf\nrf_fprintf.h</file>
+            <file>$PROJ_DIR$\_build\nrf_dfu_settings.pbi</file>
+            <file>$PROJ_DIR$\_build\nrf_dfu_svci.pbi</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\nrf_bootloader_fw_activation.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\nrf_crypto_mem.h</file>
+            <file>$PROJ_DIR$\_build\nrf_dfu_mbr.pbi</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\toolchain\cmsis\include\core_cm4.h</file>
+            <file>$PROJ_DIR$\_build\micro_ecc_backend_ecdsa.o</file>
+            <file>$PROJ_DIR$\_build\nrf_bootloader_fw_activation.pbi</file>
+            <file>$PROJ_DIR$\_build\nrf_dfu_req_handler.pbi</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\log\nrf_log_instance.h</file>
+            <file>$PROJ_DIR$\_build\main.pbi</file>
+            <file>$PROJ_DIR$\_build\nrf_dfu.pbi</file>
+            <file>$PROJ_DIR$\_build\micro_ecc_backend_ecdh.pbi</file>
+            <file>$PROJ_DIR$\_build\dfu_public_key.pbi</file>
+            <file>$PROJ_DIR$\_build\nrf_log_str_formatter.pbi</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Full.h</file>
+            <file>$PROJ_DIR$\_build\secure_bootloader_ble_s132_pca10040.hex</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\dfu\nrf_dfu_transport.h</file>
+            <file>$PROJ_DIR$\_build\nrf_log_frontend.pbi</file>
+            <file>$PROJ_DIR$\_build\nrf_dfu_handling_error.pbi</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\dfu\nrf_dfu_mbr.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\backend\cc310\cc310_backend_ecdh.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\backend\micro_ecc\micro_ecc_backend_shared.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\log\src\nrf_log_ctrl_internal.h</file>
+            <file>$PROJ_DIR$\_build\nrf_dfu_req_handler.o</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\util\sdk_common.h</file>
+            <file>$PROJ_DIR$\_build\nrf_fstorage.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\atomic_fifo\nrf_atfifo.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\fstorage\nrf_fstorage.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\balloc\nrf_balloc.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\memobj\nrf_memobj.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\log\src\nrf_log_frontend.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\softdevice\common\nrf_sdh.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\util\nrf_assert.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\ringbuf\nrf_ringbuf.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\dfu\nrf_dfu_svci_handler.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\external\fprintf\nrf_fprintf.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\fstorage\nrf_fstorage_sd.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\queue\nrf_queue.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\svc\nrf_svc_handler.c</file>
+            <file>$PROJ_DIR$\_build\nrf_dfu_utils.o</file>
+            <file>$PROJ_DIR$\_build\nrf_dfu_ble.o</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\dfu\nrf_dfu_svci.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\fstorage\nrf_fstorage_nvmc.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\softdevice\common\nrf_sdh_soc.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\log\src\nrf_log_str_formatter.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\external\nrf_oberon\lib\cortex-m4\hard-float\short-wchar\liboberon_3.0.1.a</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\external\micro-ecc\nrf52hf_iar\armgcc\micro_ecc_lib_nrf52.a</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\modules\nrfx\mdk\compiler_abstraction.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\backend\optiga\optiga_backend_ecdh.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\atomic\nrf_atomic.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\softdevice\common\nrf_sdh_ble.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\mem_manager\mem_manager.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\experimental_section_vars\nrf_section_iter.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\sha256\sha256.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\external\fprintf\nrf_fprintf_format.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\strerror\nrf_strerror.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crc32\crc32.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\dfu\nrf_dfu_types.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\scheduler\app_scheduler.h</file>
+            <file>$PROJ_DIR$\_build\nrf_dfu_mbr.__cstat.et</file>
+            <file>$PROJ_DIR$\_build\nrf_crypto_ecc.o</file>
+            <file>$PROJ_DIR$\_build\pb_decode.__cstat.et</file>
+            <file>$PROJ_DIR$\_build\oberon_backend_eddsa.__cstat.et</file>
+            <file>$PROJ_DIR$\_build\nrf_crypto_shared.o</file>
+            <file>$PROJ_DIR$\_build\micro_ecc_backend_ecc.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\backend\oberon\oberon_backend_ecdh.h</file>
+            <file>$PROJ_DIR$\_build\nrf_dfu_settings.__cstat.et</file>
+            <file>$PROJ_DIR$\_build\nrf_queue.o</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\backend\oberon\oberon_backend_ecdsa.h</file>
+            <file>$PROJ_DIR$\_build\nrf_memobj.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\external\fprintf\nrf_fprintf_format.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\nrf_crypto_error.h</file>
+            <file>$PROJ_DIR$\_build\app_util_platform.__cstat.et</file>
+            <file>$PROJ_DIR$\_build\nrf_dfu_validation.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\nrf_crypto_ecdsa.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\nrf_crypto_aead.h</file>
+            <file>$PROJ_DIR$\_build\nrf_queue.__cstat.et</file>
+            <file>$PROJ_DIR$\_build\nrf_assert.__cstat.et</file>
+            <file>$PROJ_DIR$\_build\nrf_crypto_init.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\modules\nrfx\soc\nrfx_coredep.h</file>
+            <file>$PROJ_DIR$\_build\nrf_fprintf_format.o</file>
+            <file>$PROJ_DIR$\_build\nrf_crypto_ecdsa.__cstat.et</file>
+            <file>$PROJ_DIR$\_build\nrf_queue.pbi</file>
+            <file>$PROJ_DIR$\_build\nrf_dfu_req_handler.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\nrf_crypto_aes_shared.h</file>
+            <file>$PROJ_DIR$\_build\nrf_bootloader_app_start.pbi</file>
+            <file>$PROJ_DIR$\_build\nrf_sw_backend_hash.pbi</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\modules\nrfx\mdk\nrf52_bitfields.h</file>
+            <file>$PROJ_DIR$\_build\nrf_memobj.pbi</file>
+            <file>$PROJ_DIR$\_build\pb_common.__cstat.et</file>
+            <file>$PROJ_DIR$\_build\nrf_sdh.o</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\nrf_bootloader_wdt.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\backend\cc310\cc310_backend_hmac.h</file>
+            <file>$PROJ_DIR$\_build\nrf_fprintf.pbi</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\nrf_crypto_hmac.h</file>
+            <file>$PROJ_DIR$\_build\oberon_backend_chacha_poly_aead.o</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\dfu\nrf_dfu_utils.h</file>
+            <file>$PROJ_DIR$\_build\nrf_crypto_init.pbi</file>
+            <file>$PROJ_DIR$\_build\micro_ecc_backend_ecdh.__cstat.et</file>
+            <file>$PROJ_DIR$\_build\nrf_nvmc.o</file>
+            <file>$PROJ_DIR$\_build\oberon_backend_hmac.__cstat.et</file>
+            <file>$PROJ_DIR$\_build\nrf_dfu_ver_validation.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\backend\cc310\cc310_backend_hash.h</file>
+            <file>$PROJ_DIR$\_build\nrf_bootloader_fw_activation.o</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\backend\mbedtls\mbedtls_backend_aes.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\backend\oberon\oberon_backend_hash.h</file>
+            <file>$PROJ_DIR$\_build\nrf_sw_backend_hash.__cstat.et</file>
+            <file>$PROJ_DIR$\_build\nrf_crypto_ecc.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdlib.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\ble_dfu\nrf_dfu_ble_svci_bond_sharing.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\dfu\dfu-cc.pb.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\log\nrf_log.h</file>
+            <file>$PROJ_DIR$\_build\nrf_dfu_flash.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\memobj\nrf_memobj.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\nrf_crypto_hmac_shared.h</file>
+            <file>$PROJ_DIR$\_build\nrf_dfu.o</file>
+            <file>$PROJ_DIR$\_build\ble_srv_common.o</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\nrf_bootloader_dfu_timers.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\util\app_util.h</file>
+            <file>$PROJ_DIR$\_build\nrf_svc_handler.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\ringbuf\nrf_ringbuf.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\toolchain\cmsis\include\core_cmSimd.h</file>
+            <file>$PROJ_DIR$\_build\nrf_fstorage_nvmc.pbi</file>
+            <file>$PROJ_DIR$\_build\app_scheduler.o</file>
+            <file>$PROJ_DIR$\_build\boards.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\svc\nrf_svci.h</file>
+            <file>$PROJ_DIR$\_build\nrf_log_str_formatter.o</file>
+            <file>$PROJ_DIR$\_build\nrf_bootloader_dfu_timers.pbi</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\softdevice\s132\headers\ble_gap.h</file>
+            <file>$PROJ_DIR$\_build\iar_startup_nrf52.o</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\backend\nrf_sw\nrf_sw_backend_hash.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\softdevice\s132\headers\nrf_error_sdm.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\nrf_crypto_ecdsa_shared.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\softdevice\s132\headers\nrf_svc.h</file>
+            <file>$PROJ_DIR$\_build\oberon_backend_ecc.__cstat.et</file>
+            <file>$PROJ_DIR$\_build\secure_bootloader_ble_s132_pca10040.map</file>
+            <file>$PROJ_DIR$\_build\nrf_bootloader_app_start_final.__cstat.et</file>
+            <file>$PROJ_DIR$\_build\nrf_bootloader_wdt.pbi</file>
+            <file>$PROJ_DIR$\_build\app_error_weak.pbi</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\modules\nrfx\soc\nrfx_irqs.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\mem_manager\mem_manager.h</file>
+            <file>$PROJ_DIR$\_build\nrf_balloc.o</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\nrf_crypto_hash_shared.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+            <file>$PROJ_DIR$\_build\oberon_backend_ecdh.__cstat.et</file>
+            <file>$PROJ_DIR$\_build\nrf_crypto_hash.o</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\modules\nrfx\mdk\nrf52832_peripherals.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\toolchain\cmsis\include\core_cmFunc.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\sha256\sha256.h</file>
+            <file>$PROJ_DIR$\_build\oberon_backend_chacha_poly_aead.pbi</file>
+            <file>$PROJ_DIR$\_build\nrf_fstorage_nvmc.o</file>
+            <file>$PROJ_DIR$\_build\oberon_backend_hmac.o</file>
+            <file>$PROJ_DIR$\_build\secure_bootloader_ble_s132_pca10040.out</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\log\nrf_log_ctrl.h</file>
+            <file>$PROJ_DIR$\_build\nrf_crypto_hash.__cstat.et</file>
+            <file>$PROJ_DIR$\_build\ble_srv_common.__cstat.et</file>
+            <file>$PROJ_DIR$\_build\nrf_bootloader_info.__cstat.et</file>
+            <file>$PROJ_DIR$\_build\oberon_backend_chacha_poly_aead.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\backend\optiga\optiga_backend_ecc.h</file>
+            <file>$PROJ_DIR$\_build\pb_decode.pbi</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\nrf_crypto_hash.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\backend\cc310\cc310_backend_chacha_poly_aead.h</file>
+            <file>$PROJ_DIR$\_build\dfu-cc.pb.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\integration\nrfx\legacy\apply_old_config.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\boards\boards.h</file>
+            <file>$PROJ_DIR$\_build\app_scheduler.pbi</file>
+            <file>$PROJ_DIR$\_build\oberon_backend_ecdsa.__cstat.et</file>
+            <file>$PROJ_DIR$\_build\nrf_sdh_soc.pbi</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\util\sdk_alloca.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\nrf_crypto_shared.h</file>
+            <file>$PROJ_DIR$\_build\nrf_crypto_shared.pbi</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\backend\cifra\cifra_backend_aes_aead.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\backend\oberon\oberon_backend_eddsa.h</file>
+            <file>$PROJ_DIR$\_build\nrf_dfu_ble.__cstat.et</file>
+            <file>$PROJ_DIR$\_build\nrf_fprintf_format.__cstat.et</file>
+            <file>$PROJ_DIR$\_build\nrf_dfu_utils.__cstat.et</file>
+            <file>$PROJ_DIR$\_build\nrf_ringbuf.pbi</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\nrf_crypto_eddsa_shared.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\modules\nrfx\mdk\nrf.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\nrf_crypto_types.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\backend\optiga\optiga_backend_ecdsa.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\backend\cc310\cc310_backend_aes.h</file>
+            <file>$PROJ_DIR$\_build\nrf_section_iter.o</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\modules\nrfx\hal\nrf_wdt.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\dfu\nrf_dfu_flash.h</file>
+            <file>$PROJ_DIR$\_build\nrf_nvmc.pbi</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\ble_dfu\nrf_dfu_ble.h</file>
+            <file>$PROJ_DIR$\_build\oberon_backend_eddsa.o</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\external\nano-pb\pb.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\nrf_crypto_hash_backend.h</file>
+            <file>$PROJ_DIR$\_build\nrf_crypto_ecc.pbi</file>
+            <file>$PROJ_DIR$\_build\nrf_dfu_settings_svci.o</file>
+            <file>$PROJ_DIR$\_build\nrf_atomic.pbi</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\external\micro-ecc\micro-ecc\uECC.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\nrf_crypto_aes_backend.h</file>
+            <file>$PROJ_DIR$\_build\nrf_dfu_utils.pbi</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\backend\mbedtls\mbedtls_backend_aes_aead.h</file>
+            <file>$PROJ_DIR$\_build\nrf_sdh_ble.o</file>
+            <file>$PROJ_DIR$\_build\nrf_ringbuf.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\backend\cc310\cc310_backend_aes_aead.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\softdevice\s132\headers\nrf_soc.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\nrf_crypto_aead_shared.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\nrf_crypto_ecdsa_backend.h</file>
+            <file>$PROJ_DIR$\_build\boards.pbi</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\log\nrf_log_backend_interface.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\backend\micro_ecc\micro_ecc_backend_ecc.h</file>
+            <file>$PROJ_DIR$\_build\nrf_sdh_ble.pbi</file>
+            <file>$PROJ_DIR$\_build\nrf_crypto_ecdsa.o</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\modules\nrfx\drivers\nrfx_errors.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\nrf_crypto_eddsa.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\backend\cc310\cc310_backend_eddsa.h</file>
+            <file>$PROJ_DIR$\_build\app_util_platform.pbi</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\util\app_error_weak.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\backend\oberon\oberon_backend_hmac.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\nrf_crypto_ecc_shared.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\boards\pca10040.h</file>
+            <file>$PROJ_DIR$\_build\nrf_assert.pbi</file>
+            <file>$TOOLKIT_DIR$\inc\c\stddef.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\softdevice\s132\headers\nrf_sdm.h</file>
+            <file>$PROJ_DIR$\_build\nrf_dfu_ble.pbi</file>
+            <file>$PROJ_DIR$\_build\nrf_fstorage.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\softdevice\s132\headers\nrf_error_soc.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\nrf_bootloader_app_start.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\backend\cc310_bl\cc310_bl_backend_ecdsa.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\nrf_crypto_rng.h</file>
+            <file>$PROJ_DIR$\_build\oberon_backend_ecdsa.pbi</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\backend\nrf_hw\nrf_hw_backend_rng.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\softdevice\common\nrf_sdh_soc.h</file>
+            <file>$PROJ_DIR$\_build\nrf_dfu_handling_error.o</file>
+            <file>$PROJ_DIR$\_build\nrf_assert.o</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\atomic\nrf_atomic_internal.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\util\app_util_platform.h</file>
+            <file>$PROJ_DIR$\_build\sha256.o</file>
+            <file>$PROJ_DIR$\_build\nrf_log_frontend.o</file>
+            <file>$PROJ_DIR$\_build\nrf_bootloader_dfu_timers.o</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\nrf_crypto_ecdh_shared.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\cmsis_iar.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\nrf_crypto_aead_backend.h</file>
+            <file>$PROJ_DIR$\_build\nrf_dfu_settings_svci.pbi</file>
+            <file>$PROJ_DIR$\_build\app_error_weak.o</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\modules\nrfx\hal\nrf_gpio.h</file>
+            <file>$PROJ_DIR$\_build\nrf_atfifo.pbi</file>
+            <file>$PROJ_DIR$\_build\micro_ecc_backend_ecdsa.pbi</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\strerror\nrf_strerror.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\modules\nrfx\mdk\system_nrf.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\experimental_section_vars\nrf_section.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\balloc\nrf_balloc.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\backend\micro_ecc\micro_ecc_backend_ecdsa.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\nrf_crypto_aes.h</file>
+            <file>$PROJ_DIR$\_build\nrf_dfu_settings_svci.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\inc\c\string.h</file>
+            <file>$PROJ_DIR$\_build\pb_common.o</file>
+            <file>$PROJ_DIR$\_build\oberon_backend_ecdsa.o</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\softdevice\s132\headers\nrf52\nrf_mbr.h</file>
+            <file>$PROJ_DIR$\_build\nrf_fstorage_sd.o</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\dfu\nrf_dfu_req_handler.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\external\nano-pb\pb_common.h</file>
+            <file>$PROJ_DIR$\_build\nrf_atomic.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\backend\micro_ecc\micro_ecc_backend_ecdh.h</file>
+            <file>$TOOLKIT_DIR$\lib\dl7M_tlf.a</file>
+            <file>$PROJ_DIR$\_build\nrf_fstorage_nvmc.__cstat.et</file>
+            <file>$PROJ_DIR$\_build\nrf_crypto_shared.__cstat.et</file>
+            <file>$PROJ_DIR$\_build\nrf_atfifo.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\lib\m7M_tls.a</file>
+            <file>$PROJ_DIR$\_build\main.o</file>
+            <file>$PROJ_DIR$\_build\oberon_backend_hmac.pbi</file>
+            <file>$PROJ_DIR$\_build\nrf_bootloader_app_start_final.o</file>
+            <file>$PROJ_DIR$\_build\nrf_dfu_svci_handler.o</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\dfu\nrf_dfu_validation.h</file>
+            <file>$PROJ_DIR$\_build\crc32.o</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\backend\nrf_hw\nrf_hw_backend_rng_mbedtls.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\dfu\nrf_dfu_ver_validation.h</file>
+            <file>$PROJ_DIR$\_build\dfu_public_key.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\dfu\nrf_dfu.h</file>
+            <file>$PROJ_DIR$\_build\nrf_balloc.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\dfu\nrf_dfu_handling_error.h</file>
+            <file>$PROJ_DIR$\_build\nrfx_atomic.pbi</file>
+            <file>$PROJ_DIR$\_build\nrf_log_frontend.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product_stdlib.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\atomic_fifo\nrf_atfifo.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\modules\nrfx\hal\nrf_rtc.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\integration\nrfx\nrfx_glue.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\fstorage\nrf_fstorage_sd.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\softdevice\s132\headers\nrf_sd_def.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\nrf_bootloader.h</file>
+            <file>$PROJ_DIR$\_build\nrf_balloc.pbi</file>
+            <file>$PROJ_DIR$\_build\dfu-cc.pb.pbi</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\backend\mbedtls\mbedtls_backend_ecdh.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\backend\cc310\cc310_backend_ecc.h</file>
+            <file>$PROJ_DIR$\_build\micro_ecc_backend_ecc.pbi</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\integration\nrfx\nrfx_config.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\util\nordic_common.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\nrf_crypto_ecdh.h</file>
+            <file>$PROJ_DIR$\_build\pb_decode.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdarg.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product_string.h</file>
+            <file>$PROJ_DIR$\secure_bootloader_iar_nRF5x.icf</file>
+            <file>$PROJ_DIR$\_build\nrf_log_str_formatter.__cstat.et</file>
+            <file>$PROJ_DIR$\_build\dfu-cc.pb.o</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\modules\nrfx\hal\nrf_power.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\nrf_crypto.h</file>
+            <file>$PROJ_DIR$\_build\oberon_backend_hash.o</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\modules\nrfx\drivers\nrfx_common.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\softdevice\s132\headers\ble_types.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\backend\mbedtls\mbedtls_backend_ecc.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\log\nrf_log_types.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\softdevice\common\nrf_sdh_ble.h</file>
+            <file>$PROJ_DIR$\_build\nrf_section_iter.__cstat.et</file>
+            <file>$PROJ_DIR$\_build\nrf_dfu_svci.o</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\nrf_crypto_ecdh_backend.h</file>
+            <file>$PROJ_DIR$\_build\system_nrf52.pbi</file>
+            <file>$PROJ_DIR$\_build\micro_ecc_backend_ecc.o</file>
+            <file>$PROJ_DIR$\_build\nrf_dfu_svci_handler.__cstat.et</file>
+            <file>$PROJ_DIR$\_build\nrf_bootloader_fw_activation.__cstat.et</file>
+            <file>$PROJ_DIR$\_build\app_util_platform.o</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\softdevice\s132\headers\nrf_error.h</file>
+            <file>$PROJ_DIR$\_build\app_error_weak.__cstat.et</file>
+            <file>$PROJ_DIR$\_build\nrf_ringbuf.o</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\nrf_crypto_hkdf.h</file>
+            <file>$PROJ_DIR$\_build\nrf_dfu_transport.o</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\fstorage\nrf_fstorage.h</file>
+            <file>$PROJ_DIR$\_build\nrf_sdh_ble.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\nrf_crypto_ecc.h</file>
+            <file>$PROJ_DIR$\_build\nrf_dfu_mbr.o</file>
+            <file>$PROJ_DIR$\_build\nrf_bootloader.o</file>
+            <file>$PROJ_DIR$\_build\nrf_fstorage_sd.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\svc\nrf_svci_async_function.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\ble\common\ble_srv_common.h</file>
+            <file>$PROJ_DIR$\_build\nrf_bootloader_info.pbi</file>
+            <file>$PROJ_DIR$\_build\nrf_bootloader_app_start.o</file>
+            <file>$PROJ_DIR$\_build\app_scheduler.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\modules\nrfx\hal\nrf_nvmc.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\svc\nrf_svc_function.h</file>
+            <file>$PROJ_DIR$\_build\oberon_backend_ecdh.pbi</file>
+            <file>$PROJ_DIR$\_build\nrf_sdh_soc.o</file>
+            <file>$PROJ_DIR$\_build\mem_manager.o</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\softdevice\s132\headers\ble_ranges.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\softdevice\s132\headers\ble_gatt.h</file>
+            <file>$PROJ_DIR$\_build\nrf_fstorage.pbi</file>
+            <file>$PROJ_DIR$\_build\nrf_dfu_settings.o</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\atomic\nrf_atomic.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\backend\oberon\oberon_backend_ecc.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\log\nrf_log_default_backends.h</file>
+            <file>$PROJ_DIR$\_build\nrf_fprintf_format.pbi</file>
+            <file>$PROJ_DIR$\_build\nrf_fstorage_sd.pbi</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\toolchain\cmsis\include\core_cmInstr.h</file>
+            <file>$PROJ_DIR$\_build\nrf_bootloader_wdt.o</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\nrf_crypto_init.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\nrf_crypto_rng_backend.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdio.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\softdevice\s132\headers\ble_l2cap.h</file>
+            <file>$PROJ_DIR$\_build\nrf_section_iter.pbi</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\util\nrf_assert.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\util\sdk_resources.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\softdevice\s132\headers\ble_gattc.h</file>
+            <file>$PROJ_DIR$\_build\boards.o</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\backend\mbedtls\mbedtls_backend_hmac.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\modules\nrfx\nrfx.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdbool.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\modules\nrfx\mdk\nrf52.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\modules\nrfx\soc\nrfx_atomic_internal.h</file>
+            <file>$PROJ_DIR$\_build\nrf_memobj.o</file>
+            <file>$PROJ_DIR$\_build\micro_ecc_backend_ecdh.o</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\backend\optiga\optiga_backend_rng.h</file>
+            <file>$PROJ_DIR$\_build\nrf_sw_backend_hash.o</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\log\src\nrf_log_internal.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\dfu\nrf_dfu_settings.h</file>
+            <file>$PROJ_DIR$\_build\nrf_crypto_hash.pbi</file>
+            <file>$PROJ_DIR$\_build\nrf_atfifo.o</file>
+            <file>$PROJ_DIR$\_build\dfu_public_key.o</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\backend\mbedtls\mbedtls_backend_ecdsa.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\modules\nrfx\mdk\nrf52_name_change.h</file>
+            <file>$PROJ_DIR$\_build\nrf_crypto_init.o</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\util\sdk_os.h</file>
+            <file>$PROJ_DIR$\_build\nrf_svc_handler.pbi</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\nrf_crypto_hmac_backend.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crc32\crc32.h</file>
+            <file>$PROJ_DIR$\_build\system_nrf52.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\softdevice\s132\headers\ble_hci.h</file>
+            <file>$PROJ_DIR$\_build\nrf_strerror.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\backend\cc310\cc310_backend_ecdsa.h</file>
+            <file>$PROJ_DIR$\_build\nrf_sdh.__cstat.et</file>
+            <file>$PROJ_DIR$\_build\nrf_bootloader.pbi</file>
+            <file>$PROJ_DIR$\_build\nrf_dfu_flash.pbi</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\softdevice\common\nrf_sdh.h</file>
+            <file>$PROJ_DIR$\_build\system_nrf52.o</file>
+            <file>$PROJ_DIR$\_build\nrf_sdh.pbi</file>
+            <file>$PROJ_DIR$\_build\sha256.__cstat.et</file>
+            <file>$PROJ_DIR$\_build\oberon_backend_ecc.o</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\external\nano-pb\pb_decode.h</file>
+            <file>$PROJ_DIR$\_build\nrf_dfu_transport.pbi</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\backend\mbedtls\mbedtls_backend_hash.h</file>
+            <file>$PROJ_DIR$\_build\nrf_crypto_ecdsa.pbi</file>
+            <file>$PROJ_DIR$\_build\nrf_sdh_soc.__cstat.et</file>
+            <file>$PROJ_DIR$\_build\nrf_dfu_svci.__cstat.et</file>
+            <file>$PROJ_DIR$\_build\nrf_fprintf.__cstat.et</file>
+            <file>$PROJ_DIR$\_build\nrf_dfu_ver_validation.o</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\modules\nrfx\mdk\system_nrf52.h</file>
+        </outputs>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\nrf_bootloader_app_start.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 204</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 8</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 451</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 262 357 10 493 365 487 237 366 230 356 519 240 37 43 80 143 342 272 379 340 132 206 467 413 250 437 427 297 7 137 481 34 166 122 266 336 374 252 371 495 480 323 337 138 319 341 20 417 474 126 141</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 262 379 37 340 132 356 297 481 122 467 357 10 266 240 519 365 206 34 493 166 342 480 43 437 7 237 336 138 413 374 252 337 250 319 341 230 143 371 417 80 495 20 474 366 487 126 427 137 272 141 323</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\modules\nrfx\mdk\iar_startup_nrf52.s</name>
+            <outputs>
+                <tool>
+                    <name>AARM</name>
+                    <file> 248</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\boards\boards.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 322</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 243</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 477</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 198 262 334 479 412 122 266 413 297 379 37 34 237 11 437 480 403 336 138 481 166 282 351 475 43 361 424 327 80 28 340 132 356 206 493 519 467 240 357 10 365 474 32 374 252 31 331 283 265 258 2 319 341 471 405</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 283 361 479 412 80 424 262 379 37 340 132 356 336 138 480 297 481 122 467 357 10 266 240 519 365 206 34 493 166 28 265 403 282 258 2 474 237 413 374 252 351 319 437 341 11 31 471 43 331 198 32 475 405 327 334</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\external\nano-pb\pb_decode.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 278</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 180</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 415</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 379 511 336 340 307 377 371 138 37 262 480 132 356 417</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 307 262 379 37 340 132 356 336 138 480 371 417 511 377</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\external\nano-pb\pb_common.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 56</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 208</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 372</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 138 262 379 37 307 480 340 336 371 132 356 417 377</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 377 307 262 379 37 340 132 356 336 138 480 371 417</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\ble\common\ble_srv_common.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 39</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 274</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 235</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 122 266 262 336 374 247 417 471 23 37 34 252 1 413 425 459 379 481 166 472 437 458 138 371 31 480 237 340 132 356 297 206 493 519 467 240 357 10 365 476 500 449 54 43 331</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 449 262 379 37 340 132 356 480 425 237 336 138 166 413 297 481 122 467 357 10 266 240 519 365 206 34 493 374 252 23 437 1 247 500 458 472 459 476 54 371 417 31 471 43 331</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\nrf_bootloader_app_start_final.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 49</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 255</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 388</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 262 143 297 319 371 37 252 337 341 488 437 481 237 28 43 166 379 11 480 176 230 34 122 266 495 331 425 80 427 342 7 215 474 340 132 356 206 493 519 467 240 357 10 365 374 138 336 351 247 413 31 500 487 126 265 250 20 417 471 458 1 303 366</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 80 342 262 379 37 340 132 356 480 43 437 297 481 122 467 357 10 266 240 519 365 206 34 493 166 28 265 7 237 336 138 413 374 252 337 250 319 341 176 143 371 417 495 20 474 351 11 31 471 331 247 500 458 425 1 215 488 303 230 366 487 126 427</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\nrf_bootloader_dfu_timers.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 246</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 12</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 354</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 319 143 252 138 327 480 206 357 2 262 20 47 379 340 132 467 166 341 29 356 424 80 28 37 493 519 240 10 365 265 258 297 474 427 479 402 230 412 403 336 481 34 122 266 413 437 471 366 43 417 126 236 282 237 351 198 32 475 374 11 31 331 405 487 371 495</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 236 262 379 37 340 132 356 480 479 412 80 424 336 138 297 481 122 467 357 10 266 240 519 365 206 34 493 166 28 265 403 282 258 2 474 237 413 374 252 351 319 437 341 11 31 471 43 331 198 32 475 405 327 47 402 29 230 143 371 417 495 20 366 487 126 427</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\nrf_bootloader_wdt.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 256</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 27</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 468</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 297 467 132 357 11 262 379 340 43 471 371 479 412 206 32 413 437 341 480 236 356 403 336 37 493 519 240 10 365 474 475 166 495 302 272 230 424 327 80 28 138 481 34 122 266 282 237 351 198 374 252 31 141 143 366 427 210 265 258 2 319 331 405 323 20 417 487 126</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 210 43 262 379 37 340 132 356 437 302 479 412 80 424 336 138 480 297 481 122 467 357 10 266 240 519 365 206 34 493 166 28 265 403 282 258 2 474 237 413 374 252 351 319 341 11 31 471 331 198 32 475 405 327 236 272 427 141 143 371 417 495 20 323 366 230 487 126</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\modules\nrfx\mdk\system_nrf52.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 432</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 499</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 507</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 357 206 379 266 37 262 297 493 519 365 480 340 132 356 481 34 166 122 467 240 10</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 262 379 37 340 132 356 480 297 481 122 467 357 10 266 240 519 365 206 34 493 166</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\nrf_bootloader.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 504</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 44</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 446</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 262 198 376 37 413 303 119 374 371 337 272 519 240 319 361 28 427 80 215 395 356 379 495 437 493 357 10 365 341 480 327 237 143 336 297 29 7 177 340 132 206 467 474 43 500 282 351 479 166 283 421 230 488 210 342 236 390 176 247 138 20 417 481 34 122 266 252 331 425 424 32 475 487 126 141 366 31 229 406 11 471 458 1 334 412 403 265 258 2 405 323 250 397 307</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 406 262 379 37 340 132 356 395 480 176 336 138 143 371 417 80 413 166 495 43 437 237 297 481 122 467 357 10 266 240 519 365 206 34 493 374 252 20 474 351 319 341 11 31 471 331 247 500 458 425 1 376 303 283 361 479 412 424 28 265 403 282 258 2 198 32 475 405 327 334 421 29 230 366 487 126 427 272 141 323 488 215 210 7 337 250 342 119 236 177 390 229 307 397</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\nrf_bootloader_fw_activation.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 124</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 435</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 222</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 262 379 437 357 10 480 132 495 210 340 493 365 341 143 498 43 374 371 413 519 240 37 319 427 176 137 272 356 303 80 237 336 206 467 474 500 488 7 230 215 297 351 247 138 166 20 417 481 34 122 266 252 331 425 337 487 126 141 366 119 11 31 471 458 1 250 323</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 119 262 379 37 340 132 356 480 488 176 336 138 143 371 417 80 413 166 495 43 437 237 297 481 122 467 357 10 266 240 519 365 206 34 493 374 252 20 474 351 319 341 11 31 471 331 247 500 458 425 1 303 137 7 337 250 498 230 366 487 126 427 272 141 323 215 210</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\main.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 127</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 58</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 386</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 519 480 240 237 262 198 374 247 437 272 334 37 336 376 427 337 342 7 356 479 403 493 357 10 365 252 297 331 425 143 395 31 379 340 132 413 412 206 467 282 351 303 43 283 406 236 230 464 29 361 424 327 80 28 138 481 34 166 122 266 474 32 475 11 405 371 495 500 487 126 141 366 319 265 258 2 341 471 176 20 417 458 1 323 250</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 262 379 37 340 132 356 283 361 479 412 80 424 336 138 480 297 481 122 467 357 10 266 240 519 365 206 34 493 166 28 265 403 282 258 2 474 237 413 374 252 351 319 437 341 11 31 471 43 331 198 32 475 405 327 334 406 395 176 143 371 417 495 20 247 500 458 425 1 376 303 342 236 230 366 487 126 427 272 141 323 464 7 337 250 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\nrf_crypto_ecc.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 309</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 226</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 179</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 262 80 413 481 495 120 37 371 166 333 237 437 287 336 374 34 122 266 463 190 444 20 379 340 132 356 43 143 298 16 480 138 417 297 206 493 519 467 240 357 10 365 252 474 35 277 60 410 426 324 312</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 480 262 379 37 340 132 356 413 190 43 437 120 143 371 138 417 80 166 495 237 336 297 481 122 467 357 10 266 240 519 365 206 34 493 374 252 20 474 298 287 16 444 333 60 410 35 426 463 324 312 277</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\dfu_public_key.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 130</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 394</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 491</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 356 379 340 37 132 262 166</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 262 379 37 340 132 356 166</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\nrf_bootloader_info.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 450</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 275</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 42</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 493 341 262 356 365 297 371 80 43 138 357 10 374 166 519 240 37 437 32 453 237 337 480 379 340 132 206 467 252 495 31 500 424 474 405 176 336 413 481 34 122 266 250 351 247 11 331 425 327 28 282 198 475 7 319 143 20 417 471 458 1 479 412 403 265 258 2</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 7 237 262 379 37 340 132 356 480 336 138 166 413 297 481 122 467 357 10 266 240 519 365 206 34 493 374 252 337 437 250 319 341 176 143 371 417 80 495 43 20 474 351 11 31 471 331 247 500 458 425 1 453 479 412 424 28 265 403 282 258 2 198 32 475 405 327</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\nrf_crypto_ecdsa.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 514</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 200</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 326</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 37 413 492 437 237 336 262 324 80 374 480 321 287 467 357 379 410 444 333 206 193 190 426 502 368 371 495 493 519 240 10 365 297 474 120 20 43 340 132 356 60 138 35 463 277 312 251 343 187 299 143 298 16 166 417 481 34 122 266 252</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 190 43 262 379 37 340 132 356 437 444 336 138 333 480 60 80 413 410 35 426 463 324 312 277 193 251 321 502 343 492 187 368 299 120 143 371 417 166 495 237 297 481 122 467 357 10 266 240 519 365 206 34 493 374 252 20 474 298 287 16</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\nrf_crypto_hash.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 489</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 273</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 264</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 224 166 356 262 138 297 379 206 357 120 480 20 467 43 298 190 261 80 340 132 417 493 519 240 10 37 365 143 267 287 279 308 288 371 413 495 237 437 336 374 481 34 122 266 252 221 249 474 513 50 16</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 143 262 379 37 340 132 356 480 371 138 417 80 413 166 495 43 437 237 336 297 481 122 467 357 10 266 240 519 365 206 34 493 374 252 20 474 190 279 298 261 308 221 513 224 50 249 267 120 287 16 288</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\backend\nrf_sw\nrf_sw_backend_hash.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 205</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 225</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 486</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 143 138 357 297 379 206 20 166 356 267 480 467 262 43 190 474 80 340 132 417 493 519 240 10 37 365 427 249 298 261 230 371 413 495 237 437 336 374 481 34 122 266 487 126 252 366</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 143 262 379 37 340 132 356 480 371 138 417 80 413 166 495 43 437 237 336 297 481 122 467 357 10 266 240 519 365 206 34 493 374 252 20 474 249 267 190 298 261 230 366 487 126 427</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\scheduler\app_scheduler.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 284</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 452</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 242</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 519 240 166 437 379 340 474 351 80 132 37 262 43 417 138 493 357 10 365 31 177 319 480 20 356 297 206 467 252 227 371 413 495 237 336 374 481 34 122 266 471 11 341 143 331 400</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 143 262 379 37 340 132 356 480 371 138 417 80 413 166 495 43 437 237 336 297 481 122 467 357 10 266 240 519 365 206 34 493 374 252 20 474 177 31 471 331 227 400 319 341 351 11</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\modules\nrfx\hal\nrf_nvmc.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 304</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 9</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 218</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 262 166 282 467 357 43 327 480 356 379 206 351 475 297 479 424 80 28 340 132 37 493 519 240 10 365 237 198 413 11 437 453 412 403 336 138 481 34 122 266 474 32 374 252 31 331 265 258 2 319 341 471 405</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 479 412 80 424 262 379 37 340 132 356 336 138 480 297 481 122 467 357 10 266 240 519 365 206 34 493 166 28 265 403 282 258 2 474 237 413 374 252 351 319 437 341 11 31 471 43 331 198 32 475 405 327 453</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\dfu\nrf_dfu_settings_svci.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 359</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 370</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 310</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 143 424 37 357 10 297 371 474 230 379 493 365 80 437 488 417 519 240 262 480 475 31 498 138 471 413 206 467 495 252 1 32 43 427 20 453 340 132 356 331 481 34 166 122 266 176 336 351 247 237 374 319 341 458 327 28 282 198 487 126 303 11 500 425 479 412 403 265 258 2 405 366</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 336 379 37 340 132 356 138 371 417 31 262 471 480 297 481 122 467 357 10 266 240 519 365 206 34 493 166 43 437 413 331 20 474 488 176 143 80 495 237 374 252 351 319 341 11 247 500 458 425 1 303 453 479 412 424 28 265 403 282 258 2 198 32 475 405 327 498 230 366 487 126 427</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\dfu\nrf_dfu_validation.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 33</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 192</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 4</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 297 287 17 495 143 413 364 379 437 357 10 166 262 336 511 356 493 458 193 463 80 167 280 291 376 303 288 371 519 240 37 365 237 308 267 43 299 355 392 233 397 488 307 498 390 230 351 247 340 132 374 206 467 11 341 471 250 298 194 60 333 224 251 343 444 26 358 229 176 480 427 215 7 377 422 474 393 272 138 20 417 481 34 122 266 252 31 1 344 440 190 35 277 221 249 187 431 184 52 313 223 315 497 211 46 120 366 323 319 331 500 425 337 469 279 414 369 213 328 16 410 426 324 312 261 513 50 321 502 492 368 139 409 380 470 346 485 203 300 320 318 290 40 478 332 296 329 487 126 141</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 480 176 262 379 37 340 132 356 336 138 143 371 417 80 413 166 495 43 437 237 297 481 122 467 357 10 266 240 519 365 206 34 493 374 252 20 474 351 319 341 11 31 471 331 247 500 458 425 1 488 303 215 7 337 250 307 377 511 229 498 422 469 366 298 120 287 16 444 190 333 60 410 35 426 463 324 312 277 279 261 308 221 513 224 50 249 267 193 251 321 502 343 492 187 368 299 414 355 431 139 26 409 184 380 167 344 17 470 52 346 392 485 369 203 313 300 223 194 320 358 318 280 290 315 40 213 497 233 478 211 332 440 328 296 46 329 291 288 390 397 376 393 364 230 487 126 427 272 141 323</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\util\app_util_platform.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 330</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 191</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 436</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 379 319 357 262 480 493 341 297 474 37 206 467 252 331 166 11 31 340 132 356 481 34 519 240 10 365 437 43 351 122 266 471 413 138</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 351 262 379 37 340 132 356 166 297 481 122 467 357 10 266 240 519 365 206 34 493 319 252 437 341 11 474 31 471 138 480 43 413 331</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\dfu\nrf_dfu_utils.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 314</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 294</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 158</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 336 487 262 480 143 37 374 356 237 467 357 474 297 230 176 80 413 206 252 7 379 340 132 371 495 437 493 519 240 10 365 331 425 337 319 427 397 488 498 390 351 247 138 166 43 20 417 481 34 122 266 341 500 126 307 303 215 11 31 471 458 1 250 366 229 376</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 215 262 379 37 340 132 356 480 176 336 138 143 371 417 80 413 166 495 43 437 237 297 481 122 467 357 10 266 240 519 365 206 34 493 374 252 20 474 351 319 341 11 31 471 331 247 500 458 425 1 488 303 7 337 250 498 230 366 487 126 427 390 229 307 397 376</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\backend\oberon\oberon_backend_hmac.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 387</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 219</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 270</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 481 413 37 262 237 437 166 371 495 336 374 34 122 266 480 80 43 20 379 340 132 356 138 417 297 206 493 519 467 240 357 10 365 474 143 252</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 143 262 379 37 340 132 356 480 371 138 417 80 413 166 495 43 437 237 336 297 481 122 467 357 10 266 240 519 365 206 34 493 374 252 20 474</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\dfu\dfu-cc.pb.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 408</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 281</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 420</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 138 371 379 307 336 340 262 480 37 132 356 417 229</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 229 307 262 379 37 340 132 356 336 138 480 371 417</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\dfu\nrf_dfu_flash.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 505</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 231</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 59</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 37 143 425 43 80 413 34 297 14 262 237 166 122 266 252 331 487 442 230 437 374 379 371 495 480 481 474 366 427 176 404 340 132 356 336 351 247 138 20 417 206 493 519 467 240 357 10 365 319 341 500 126 303 11 31 471 458 1</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 303 262 379 37 340 132 356 480 43 437 176 336 138 143 371 417 80 413 166 495 237 297 481 122 467 357 10 266 240 519 365 206 34 493 374 252 20 474 351 319 341 11 31 471 331 247 500 458 425 1 442 366 404 14 230 487 126 427</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\dfu\nrf_dfu_req_handler.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 125</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 202</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 142</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 143 132 437 336 413 262 229 374 371 206 341 366 344 287 17 215 230 379 340 480 463 80 167 280 291 176 237 422 495 467 319 308 267 43 299 355 392 233 397 487 442 377 177 390 356 37 493 519 240 357 10 474 500 307 444 440 60 333 224 251 343 26 298 358 427 395 376 488 303 7 511 498 20 297 351 247 138 166 417 481 34 122 266 252 331 425 337 193 194 190 35 277 221 249 187 431 184 52 313 223 315 497 211 46 126 365 11 31 471 458 1 250 469 120 279 414 369 213 328 16 410 426 324 312 261 513 50 321 502 492 368 139 409 380 470 346 485 203 300 320 318 290 40 478 332 296 329</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 262 379 37 340 132 356 480 80 395 176 336 138 143 371 417 413 166 495 43 437 237 297 481 122 467 357 10 266 240 519 365 206 34 493 374 252 20 474 351 319 341 11 31 471 331 247 500 458 425 1 376 303 397 488 215 442 366 7 337 250 307 377 511 229 498 177 422 469 298 120 287 16 444 190 333 60 410 35 426 463 324 312 277 279 261 308 221 513 224 50 249 267 193 251 321 502 343 492 187 368 299 414 355 431 139 26 409 184 380 167 344 17 470 52 346 392 485 369 203 313 300 223 194 320 358 318 280 290 315 40 213 497 233 478 211 332 440 328 296 46 329 291 390 230 487 126 427</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\backend\oberon\oberon_backend_ecc.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 0</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 253</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 510</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 413 80</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 80 413</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\backend\oberon\oberon_backend_eddsa.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 41</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 181</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 306</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 413 80</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 80 413</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\backend\oberon\oberon_backend_hash.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 13</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 15</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 423</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 481 413 37 262 237 437 166 371 495 336 374 34 122 266 480 80 43 20 379 340 132 356 138 417 297 206 493 519 467 240 357 10 365 474 143 252</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 143 262 379 37 340 132 356 480 371 138 417 80 413 166 495 43 437 237 336 297 481 122 467 357 10 266 240 519 365 206 34 493 374 252 20 474</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\ble_dfu\nrf_dfu_ble.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 338</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 292</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 159</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 519 240 29 54 37 480 262 137 437 458 425 366 336 379 166 374 237 24 2 176 500 230 1 459 297 493 357 10 247 43 474 80 143 397 23 428 305 134 252 206 467 365 413 351 331 412 265 258 376 337 7 449 506 367 488 340 132 356 472 476 481 34 122 266 138 20 319 341 303 126 427 403 479 405 371 495 417 11 31 471 250 424 327 28 282 198 32 475 487</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 305 262 379 37 340 132 356 54 252 437 500 458 425 1 459 247 23 472 476 297 481 122 467 357 10 266 240 519 365 206 34 493 166 134 366 413 176 336 138 143 480 371 417 80 495 43 237 374 20 474 351 319 341 11 31 471 331 376 303 397 337 250 137 7 449 506 24 428 367 126 427 29 479 412 424 28 265 403 282 258 2 198 32 475 405 327 488 230 487</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\dfu\nrf_dfu_settings.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 117</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 185</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 461</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 143 247 43 351 37 413 336 379 519 240 138 437 262 319 340 132 80 493 357 10 365 297 31 282 371 453 303 356 480 166 20 374 206 467 252 1 327 28 237 198 427 498 230 176 495 417 481 34 122 266 11 341 471 458 424 474 32 475 487 126 488 331 500 425 479 412 403 265 258 2 405 366</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 488 262 379 37 340 132 356 176 336 138 143 480 371 417 80 413 166 495 43 437 237 297 481 122 467 357 10 266 240 519 365 206 34 493 374 252 20 474 351 319 341 11 31 471 331 247 500 458 425 1 303 498 453 479 412 424 28 265 403 282 258 2 198 32 475 405 327 230 366 487 126 427</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\dfu\nrf_dfu_ver_validation.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 3</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 220</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 518</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 190 262 143 374 43 297 469 444 37 252 16 139 320 298 393 379 417 480 166 1 366 333 513 261 336 332 7 80 481 437 369 474 413 502 40 233 176 487 488 230 138 20 34 122 266 31 279 328 426 368 380 346 318 329 376 427 215 422 229 351 247 340 132 356 371 495 237 206 493 519 467 240 357 10 365 11 341 471 458 303 250 120 414 213 410 324 312 50 321 492 355 409 470 485 203 300 290 478 296 307 397 126 319 331 500 425 337 193 344 194 440 287 60 35 463 277 308 221 224 249 267 251 343 187 299 431 26 184 167 17 52 392 313 223 358 280 315 497 211 46 291</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 480 176 262 379 37 340 132 356 336 138 143 371 417 80 413 166 495 43 437 237 297 481 122 467 357 10 266 240 519 365 206 34 493 374 252 20 474 351 319 341 11 31 471 331 247 500 458 425 1 488 303 215 7 337 250 422 469 366 298 120 287 16 444 190 333 60 410 35 426 463 324 312 277 279 261 308 221 513 224 50 249 267 193 251 321 502 343 492 187 368 299 414 355 431 139 26 409 184 380 167 344 17 470 52 346 392 485 369 203 313 300 223 194 320 358 318 280 290 315 40 213 497 233 478 211 332 440 328 296 46 329 291 229 307 393 397 376 230 487 126 427</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\backend\micro_ecc\micro_ecc_backend_ecc.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 411</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 183</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 433</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 493 138 190 365 444 413 357 10 80 20 480 140 262 519 240 37 35 143 298 336 288 379 417 374 206 467 277 237 474 346 16 371 344 324 312 340 132 356 166 297 481 34 122 266 60 437 333 463 470 495 485 252 43 410 426 17 52 392 120 287</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 80 413 480 371 379 37 340 132 356 138 417 336 237 262 166 297 481 122 467 357 10 266 240 519 365 206 34 493 374 252 444 190 43 437 333 60 410 35 426 463 324 312 277 344 143 495 20 474 17 470 52 346 392 485 288 120 298 287 16 140</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\backend\micro_ecc\micro_ecc_backend_ecdsa.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 363</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 21</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 123</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 262 336 413 357 444 467 193 463 80 502 43 140 60 138 437 333 368 206 298 371 120 37 190 379 480 35 277 321 492 20 297 493 519 240 10 365 16 166 288 324 312 340 132 356 417 410 426 251 343 187 299 474 481 34 122 266 143 252 287 495 237 374</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 80 413 262 379 37 340 132 356 480 371 138 417 444 336 190 43 437 333 60 410 35 426 463 324 312 277 193 251 321 502 343 492 187 368 299 288 20 474 297 481 122 467 357 10 266 240 519 365 206 34 493 166 120 143 495 237 374 252 298 287 16 140</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\nrf_crypto_init.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 216</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 197</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 494</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 37 34 495 371 336 374 122 266 262 469 413 237 437 481 166 43 366 480 80 20 379 340 132 356 138 417 297 206 493 519 467 240 357 10 365 474 143 252 298</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 143 262 379 37 340 132 356 480 371 138 417 80 413 166 495 43 437 237 336 297 481 122 467 357 10 266 240 519 365 206 34 493 374 252 20 474 469 366 298</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\dfu\nrf_dfu.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 128</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 18</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 234</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 297 143 262 20 122 266 138 480 166 413 230 34 458 366 487 134 376 37 336 351 247 379 80 43 417 481 11 437 341 471 427 215 176 340 132 356 374 371 495 237 206 493 519 467 240 357 10 365 252 31 1 126 395 474 319 331 500 425 303</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 395 262 379 37 340 132 356 480 176 336 138 143 371 417 80 413 166 495 43 437 237 297 481 122 467 357 10 266 240 519 365 206 34 493 374 252 20 474 351 319 341 11 31 471 331 247 500 458 425 1 376 303 215 134 366 230 487 126 427</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\nrf_crypto_shared.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 289</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 383</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 182</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 417 413 37 122 266 262 138 34 287 237 379 166 288 20 297 481 80 371 495 480 474 120 340 132 356 206 493 519 467 240 357 10 365 143 298 16 43 437 336 374 252</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 80 413 288 20 474 262 379 37 340 132 356 297 481 122 467 357 10 266 240 519 365 206 34 493 166 120 143 480 371 138 417 495 43 437 237 336 374 252 298 287 16</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\dfu\nrf_dfu_handling_error.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 136</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 22</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 348</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 143 297 495 500 379 166 356 122 266 262 176 371 138 34 474 43 376 336 351 247 340 132 37 413 237 417 480 481 319 341 437 427 230 374 80 20 206 493 519 467 240 357 10 365 252 331 425 303 487 126 397 11 31 471 458 1 366</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 397 176 262 379 37 340 132 356 336 138 143 480 371 417 80 413 166 495 43 437 237 297 481 122 467 357 10 266 240 519 365 206 34 493 374 252 20 474 351 319 341 11 31 471 331 247 500 458 425 1 376 303 230 366 487 126 427</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\backend\oberon\oberon_backend_ecdh.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 455</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 263</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 62</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 413 80</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 80 413</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\backend\oberon\oberon_backend_chacha_poly_aead.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 268</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 276</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 214</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 122 266 336 374 252 371 495 37 34 480 262 413 237 437 481 166 40 80 43 20 379 340 132 356 138 417 297 206 493 519 467 240 357 10 365 143 474</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 143 262 379 37 340 132 356 480 371 138 417 80 413 166 495 43 437 237 336 297 481 122 467 357 10 266 240 519 365 206 34 493 374 252 20 474 40</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\dfu\nrf_dfu_transport.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 512</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 57</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 441</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 37 143 413 297 138 480 166 20 122 266 262 176 34 458 487 336 351 247 379 80 43 481 11 437 341 471 427 230 366 340 132 356 374 371 495 237 417 206 493 519 467 240 357 10 365 252 31 1 126 134 474 319 331 500 425</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 134 262 379 37 340 132 356 366 413 176 336 138 143 480 371 417 80 166 495 43 437 237 297 481 122 467 357 10 266 240 519 365 206 34 493 374 252 20 474 351 319 341 11 31 471 331 247 500 458 425 1 230 487 126 427</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\backend\oberon\oberon_backend_ecdsa.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 345</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 285</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 373</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 413 80</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 80 413</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\dfu\nrf_dfu_mbr.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 121</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 178</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 445</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 467 357 166 336 374 262 138 437 7 252 297 480 20 37 206 31 143 176 351 247 379 80 43 413 493 519 240 10 365 1 427 230 340 132 356 371 495 237 417 481 34 122 266 11 341 471 458 487 126 250 137 474 319 331 500 425 366 337</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 137 262 379 37 340 132 356 374 252 176 336 138 143 480 371 417 80 413 166 495 43 437 237 297 481 122 467 357 10 266 240 519 365 206 34 493 20 474 351 319 341 11 31 471 331 247 500 458 425 1 230 366 487 126 427 7 337 250</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\backend\micro_ecc\micro_ecc_backend_ecdh.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 129</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 217</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 484</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 379 444 336 34 262 413 288 410 312 409 43 371 417 60 80 324 122 266 298 355 140 138 37 437 431 190 426 480 139 380 120 474 481 166 16 333 414 340 132 356 35 463 277 26 184 167 20 297 206 493 519 467 240 357 10 365 143 252 287 495 237 374</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 80 413 371 379 37 340 132 356 138 417 333 262 336 480 43 437 355 414 190 444 60 410 35 426 463 324 312 277 431 139 26 409 184 380 167 288 20 474 297 481 122 467 357 10 266 240 519 365 206 34 493 166 120 143 495 237 374 252 298 287 16 140</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\modules\nrfx\soc\nrfx_atomic.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 398</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 6</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 38</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 43 282 262 166 467 357 437 37 327 480 356 379 206 351 475 482 479 424 80 28 340 132 493 519 240 10 365 237 198 413 11 341 405 412 403 336 297 138 481 34 122 266 474 32 374 252 31 331 265 258 2 319 471</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 32 479 412 80 424 262 379 37 340 132 356 336 138 480 297 481 122 467 357 10 266 240 519 365 206 34 493 166 28 265 403 282 258 2 474 237 413 374 252 351 319 437 341 11 31 471 43 331 198 475 405 327 482</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\util\app_error_weak.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 257</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 438</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 360</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 132 262 471 519 240 413 427 379 340 37 480 364 493 357 10 365 80 252 437 272 297 356 206 467 43 417 319 230 351 337 331 138 481 34 166 122 266 366 20 336 374 237 323 143 474 250 31 487 371 495 126 141 11 341</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 31 262 379 37 340 132 356 471 138 480 297 481 122 467 357 10 266 240 519 365 206 34 493 166 43 437 413 331 230 143 371 417 80 495 237 336 374 252 20 474 366 487 126 427 272 141 323 351 319 341 11 364 337 250</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>[ROOT_NODE]</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 254 271</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\atomic_fifo\nrf_atfifo.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 362</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 384</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 490</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 357 166 206 297 43 230 138 401 467 262 336 480 379 417 37 493 519 240 10 365 427 366 80 237 61 340 132 356 413 374 481 34 122 266 252 437 20 371 474 126 143 487 495</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 371 379 37 340 132 356 138 417 262 480 237 336 166 413 297 481 122 467 357 10 266 240 519 365 206 34 493 374 252 401 80 474 43 437 126 366 427 61 230 143 495 20 487</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\fstorage\nrf_fstorage.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 460</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 144</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 339</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 80 442 262 379 37 340 132 356 480 43 437 366 413 336 138 20 474 297 481 122 467 357 10 266 240 519 365 206 34 493 166 230 143 371 417 495 237 374 252 487 126 427</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\balloc\nrf_balloc.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 407</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 396</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 260</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 262 252 480 437 20 467 357 297 351 166 356 138 379 206 80 366 43 340 132 417 493 519 240 10 37 365 31 427 367 230 371 413 495 237 336 374 481 34 122 266 11 341 471 143 474 126 319 331 487</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 143 262 379 37 340 132 356 480 371 138 417 80 413 166 495 43 437 237 336 297 481 122 467 357 10 266 240 519 365 206 34 493 374 252 20 474 366 367 351 319 341 11 31 471 331 126 427 230 487</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\memobj\nrf_memobj.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 207</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 188</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 483</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 232 262 379 37 340 132 356 227 138 400 43 437 367 80 351 166 297 481 122 467 357 10 266 240 519 365 206 34 493 319 252 341 11 474 31 471 480 413 331 237 336 374 126 366 427 462 143 371 417 495 20</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\log\src\nrf_log_frontend.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 135</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 399</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 353</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 143 262 379 37 340 132 356 480 371 138 417 80 413 166 495 43 437 237 336 297 481 122 467 357 10 266 240 519 365 206 34 493 374 252 20 474</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\softdevice\common\nrf_sdh.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 508</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 503</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 209</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 138 143 357 297 379 206 474 351 166 356 437 337 480 20 467 262 366 250 252 487 506 80 230 43 340 132 417 493 519 240 10 37 365 427 11 31 371 413 495 237 336 374 481 34 122 266 24 341 471 319 126 331</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 143 262 379 37 340 132 356 480 371 138 417 80 413 166 495 43 437 237 336 297 481 122 467 357 10 266 240 519 365 206 34 493 374 252 20 474 506 24 366 337 250 319 341 11 31 471 331 351 230 487 126 427</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\util\nrf_assert.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 335</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 196</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 349</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 357 206 297 379 340 132 266 37 262 413 356 493 519 365 437 31 481 34 166 122 467 240 10 471 138 474 480 43 331</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 474 262 379 37 340 132 356 297 481 122 467 357 10 266 240 519 365 206 34 493 166 31 471 138 480 43 437 413 331</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\ringbuf\nrf_ringbuf.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 295</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 317</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 439</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 239 262 379 37 340 132 356 462 143 480 371 138 417 80 413 166 495 43 437 237 336 297 481 122 467 357 10 266 240 519 365 206 34 493 374 252 20 474 351 319 341 11 31 471 331</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\dfu\nrf_dfu_svci_handler.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 30</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 434</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 389</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 371 379 37 340 132 356 138 417 45 454 262 366 413 237 480 336 166 297 481 122 467 357 10 266 240 519 365 206 34 493 374 252 244 31 471 43 437 331 453 479 412 80 424 28 265 403 282 258 2 474 351 319 341 11 198 32 475 405 327 176 143 495 20 247 500 458 425 1 228 448 230 487 126 427 488 303</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\external\fprintf\nrf_fprintf.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 212</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 517</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 55</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 37 34 495 189 371 336 374 122 266 416 262 413 237 437 481 166 379 480 474 80 43 20 340 132 356 138 417 297 206 493 519 467 240 357 10 365 116 143 252</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 143 262 379 37 340 132 356 480 371 138 417 80 413 166 495 43 437 237 336 297 481 122 467 357 10 266 240 519 365 206 34 493 374 252 20 474 189 116</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\fstorage\nrf_fstorage_sd.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 466</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 447</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 375</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 143 262 379 37 340 132 356 480 371 138 417 80 413 166 495 43 437 237 336 297 481 122 467 357 10 266 240 519 365 206 34 493 374 252 20 474 404 442 366 319 341 506 24 347 462 401 126 427 351 11 31 471 331</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\queue\nrf_queue.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 201</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 195</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 186</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 143 262 379 37 340 132 356 480 371 138 417 80 413 166 495 43 437 237 336 297 481 122 467 357 10 266 240 519 365 206 34 493 374 252 20 474</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\svc\nrf_svc_handler.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 496</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 238</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 51</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 480 262 379 37 340 132 356 454 366 413 237 336 138 166 297 481 122 467 357 10 266 240 519 365 206 34 493 374 252 244 437</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\dfu\nrf_dfu_svci.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 118</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 516</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 430</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 262 379 37 340 132 356 480 230 143 371 138 417 80 413 166 495 43 437 237 336 297 481 122 467 357 10 266 240 519 365 206 34 493 374 252 20 474 366 487 126 427 337 250 319 341</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\fstorage\nrf_fstorage_nvmc.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 241</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 382</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 269</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 143 262 379 37 340 132 356 480 371 138 417 80 413 166 495 43 437 237 336 297 481 122 467 357 10 266 240 519 365 206 34 493 374 252 20 474 14 442 366 453 479 412 424 28 265 403 282 258 2 351 319 341 11 31 471 331 198 32 475 405 327 462</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\softdevice\common\nrf_sdh_soc.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 286</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 515</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 456</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 143 262 379 37 340 132 356 480 371 138 417 80 413 166 495 43 437 237 336 297 481 122 467 357 10 266 240 519 365 206 34 493 374 252 20 474 347 24 366 319 341 506 31 471 331 230 487 126 427</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\log\src\nrf_log_str_formatter.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 131</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 419</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 245</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 143 262 379 37 340 132 356 480 371 138 417 80 413 166 495 43 437 237 336 297 481 122 467 357 10 266 240 519 365 206 34 493 374 252 20 474</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\atomic\nrf_atomic.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 311</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 378</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 36</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 37 262 413 481 237 437 166 297 350 371 495 336 374 34 122 266 143 480 80 43 20 379 340 132 356 138 417 206 493 519 467 240 357 10 365 252 462 474</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 462 143 262 379 37 340 132 356 480 371 138 417 80 413 166 495 43 437 237 336 297 481 122 467 357 10 266 240 519 365 206 34 493 374 252 20 474 350</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\softdevice\common\nrf_sdh_ble.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 325</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 443</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 316</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 143 262 379 37 340 132 356 480 371 138 417 80 413 166 495 43 437 237 336 297 481 122 467 357 10 266 240 519 365 206 34 493 374 252 20 474 428 23 1 247 500 458 425 472 459 476 54 24 366 506 31 471 331 364 230 487 126 427</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\mem_manager\mem_manager.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 48</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 25</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 457</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 240 519 143 166 379 340 80 132 37 43 417 262 138 493 357 10 365 259 480 20 356 297 206 467 474 427 230 371 413 495 237 437 336 374 481 34 122 266 487 126 252 366</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 143 262 379 37 340 132 356 480 371 138 417 80 413 166 495 43 437 237 336 297 481 122 467 357 10 266 240 519 365 206 34 493 374 252 20 474 259 230 366 487 126 427</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\experimental_section_vars\nrf_section_iter.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 473</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 429</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 301</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 143 262 379 37 340 132 356 480 371 138 417 80 413 166 495 43 437 237 336 297 481 122 467 357 10 266 240 519 365 206 34 493 374 252 20 474 24 366</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\sha256\sha256.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 19</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 509</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 352</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 227 379 37 340 132 356 138 400 267 262 43 437 143 480 371 417 80 413 166 495 237 336 297 481 122 467 357 10 266 240 519 365 206 34 493 374 252 20 474</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\external\fprintf\nrf_fprintf_format.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 465</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 293</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 199</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 37 34 495 116 371 336 374 122 266 416 262 413 237 437 481 166 480 474 189 80 43 20 379 340 132 356 138 417 297 206 493 519 467 240 357 10 365 143 252</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 143 262 379 37 340 132 356 480 371 138 417 80 413 166 495 43 437 237 336 297 481 122 467 357 10 266 240 519 365 206 34 493 374 252 20 474 116 189</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\strerror\nrf_strerror.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 115</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 501</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 113</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 143 262 379 37 340 132 356 480 371 138 417 80 413 166 495 43 437 237 336 297 481 122 467 357 10 266 240 519 365 206 34 493 374 252 20 474 364</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\crc32\crc32.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 114</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 5</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 391</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 122 266 379 336 374 252 371 495 37 34 498 262 413 237 437 481 166 227 480 80 43 20 340 132 356 138 417 297 206 493 519 467 240 357 10 365 143 474 400</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 143 262 379 37 340 132 356 480 371 138 417 80 413 166 495 43 437 237 336 297 481 122 467 357 10 266 240 519 365 206 34 493 374 252 20 474 498 227 400</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\_build\secure_bootloader_ble_s132_pca10040.out</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 254</file>
+                </tool>
+                <tool>
+                    <name>OBJCOPY</name>
+                    <file> 133</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 418 360 242 436 235 477 391 420 491 248 164 386 457 433 484 123 165 349 490 36 260 446 451 388 354 222 42 468 179 326 264 494 182 234 159 59 348 445 142 461 310 430 389 441 158 4 518 55 199 339 269 375 353 245 483 218 186 439 209 316 456 301 113 51 486 38 214 510 62 373 306 423 270 372 415 352 507 53 385 381</file>
+                </tool>
+            </inputs>
+        </file>
+    </configuration>
+</project>

@@ -1,0 +1,1171 @@
+# SEGGER J-Link RTT Viewer V6.54a Terminal Log File
+# Compiled: 17:46:18 on Oct 31 2019
+# Logging started @ 16 Oct 2020 15:57:32
+
+00> <info> app: Inside main
+00> 
+00> <info> nrf_dfu_settings: Backing up settings page to address 0x7E000.
+00> 
+00> <info> app: No firmware to activate.
+00> 
+00> <info> app: Boot validation failed. No valid app to boot.
+00> 
+00> <info> nrf_bootloader_wdt: WDT is not enabled
+00> 
+00> <info> app: Entering fFU mode.
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_validation: Signature required. Checking signature.
+00> 
+00> <info> nrf_dfu_validation: Calculating hash (len: 64)
+00> 
+00> <info> nrf_dfu_validation: Verify signature
+00> 
+00> <info> nrf_dfu_validation: Image verified
+00> 
+00> <info> nrf_dfu_settings: Backing up settings page to address 0x7E000.
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200033CC
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 20003450
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200034D4
+00> 
+00> <info> nrf_dfu_serial_uart: Allocated buffer 200034D4
+00> 
+# Logging stopped @ 16 Oct 2020 16: 0: 2
