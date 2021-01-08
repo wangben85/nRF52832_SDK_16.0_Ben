@@ -62,7 +62,7 @@
 #include "nrf_log_ctrl.h"
 #include "nrf_log_default_backends.h"
 
-#define DEVNAME_IN_MFGDATA_OUT
+// #define DEVNAME_IN_MFGDATA_OUT
 
 //channel mask for advertising
 /**@brief Channel mask (40 bits).
