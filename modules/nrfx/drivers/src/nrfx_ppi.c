@@ -286,6 +286,8 @@ nrfx_err_t nrfx_ppi_channel_free(nrf_ppi_channel_t channel)
 }
 
 //Function for assigning task and event endpoints to the PPI channel.
+//eep: event
+//tep: task
 nrfx_err_t nrfx_ppi_channel_assign(nrf_ppi_channel_t channel, uint32_t eep, uint32_t tep)
 {
     if ((uint32_t *)eep == NULL || (uint32_t *)tep == NULL)

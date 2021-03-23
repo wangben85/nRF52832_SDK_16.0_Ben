@@ -1,0 +1,361 @@
+###############################################################################
+#
+# IAR ELF Linker V8.30.1.114/W32 for ARM                  22/Mar/2021  16:13:11
+# Copyright 2007-2018 IAR Systems AB.
+#
+#    Output file  =  
+#        C:\Nordic_BLE_SDK\nRF5_SDK_16.0.0_98a08e2\examples\peripheral\gpiote\pca10040\blank\iar\_build\gpiote_pca10040.out
+#    Map file     =  
+#        C:\Nordic_BLE_SDK\nRF5_SDK_16.0.0_98a08e2\examples\peripheral\gpiote\pca10040\blank\iar\_build\gpiote_pca10040.map
+#    Command line =  
+#        -f C:\Users\wangb\AppData\Local\Temp\EW3C7B.tmp
+#        (C:\Nordic_BLE_SDK\nRF5_SDK_16.0.0_98a08e2\examples\peripheral\gpiote\pca10040\blank\iar\_build\app_error.o
+#        C:\Nordic_BLE_SDK\nRF5_SDK_16.0.0_98a08e2\examples\peripheral\gpiote\pca10040\blank\iar\_build\app_error_handler_iar.o
+#        C:\Nordic_BLE_SDK\nRF5_SDK_16.0.0_98a08e2\examples\peripheral\gpiote\pca10040\blank\iar\_build\app_error_weak.o
+#        C:\Nordic_BLE_SDK\nRF5_SDK_16.0.0_98a08e2\examples\peripheral\gpiote\pca10040\blank\iar\_build\app_util_platform.o
+#        C:\Nordic_BLE_SDK\nRF5_SDK_16.0.0_98a08e2\examples\peripheral\gpiote\pca10040\blank\iar\_build\boards.o
+#        C:\Nordic_BLE_SDK\nRF5_SDK_16.0.0_98a08e2\examples\peripheral\gpiote\pca10040\blank\iar\_build\iar_startup_nrf52.o
+#        C:\Nordic_BLE_SDK\nRF5_SDK_16.0.0_98a08e2\examples\peripheral\gpiote\pca10040\blank\iar\_build\main.o
+#        C:\Nordic_BLE_SDK\nRF5_SDK_16.0.0_98a08e2\examples\peripheral\gpiote\pca10040\blank\iar\_build\nrf_assert.o
+#        C:\Nordic_BLE_SDK\nRF5_SDK_16.0.0_98a08e2\examples\peripheral\gpiote\pca10040\blank\iar\_build\nrf_atomic.o
+#        C:\Nordic_BLE_SDK\nRF5_SDK_16.0.0_98a08e2\examples\peripheral\gpiote\pca10040\blank\iar\_build\nrf_balloc.o
+#        C:\Nordic_BLE_SDK\nRF5_SDK_16.0.0_98a08e2\examples\peripheral\gpiote\pca10040\blank\iar\_build\nrf_drv_ppi.o
+#        C:\Nordic_BLE_SDK\nRF5_SDK_16.0.0_98a08e2\examples\peripheral\gpiote\pca10040\blank\iar\_build\nrf_fprintf.o
+#        C:\Nordic_BLE_SDK\nRF5_SDK_16.0.0_98a08e2\examples\peripheral\gpiote\pca10040\blank\iar\_build\nrf_fprintf_format.o
+#        C:\Nordic_BLE_SDK\nRF5_SDK_16.0.0_98a08e2\examples\peripheral\gpiote\pca10040\blank\iar\_build\nrf_log_frontend.o
+#        C:\Nordic_BLE_SDK\nRF5_SDK_16.0.0_98a08e2\examples\peripheral\gpiote\pca10040\blank\iar\_build\nrf_log_str_formatter.o
+#        C:\Nordic_BLE_SDK\nRF5_SDK_16.0.0_98a08e2\examples\peripheral\gpiote\pca10040\blank\iar\_build\nrf_memobj.o
+#        C:\Nordic_BLE_SDK\nRF5_SDK_16.0.0_98a08e2\examples\peripheral\gpiote\pca10040\blank\iar\_build\nrf_ringbuf.o
+#        C:\Nordic_BLE_SDK\nRF5_SDK_16.0.0_98a08e2\examples\peripheral\gpiote\pca10040\blank\iar\_build\nrf_strerror.o
+#        C:\Nordic_BLE_SDK\nRF5_SDK_16.0.0_98a08e2\examples\peripheral\gpiote\pca10040\blank\iar\_build\nrfx_atomic.o
+#        C:\Nordic_BLE_SDK\nRF5_SDK_16.0.0_98a08e2\examples\peripheral\gpiote\pca10040\blank\iar\_build\nrfx_gpiote.o
+#        C:\Nordic_BLE_SDK\nRF5_SDK_16.0.0_98a08e2\examples\peripheral\gpiote\pca10040\blank\iar\_build\nrfx_ppi.o
+#        C:\Nordic_BLE_SDK\nRF5_SDK_16.0.0_98a08e2\examples\peripheral\gpiote\pca10040\blank\iar\_build\nrfx_timer.o
+#        C:\Nordic_BLE_SDK\nRF5_SDK_16.0.0_98a08e2\examples\peripheral\gpiote\pca10040\blank\iar\_build\system_nrf52.o
+#        --redirect _Printf=_PrintfFull --redirect _Scanf=_ScanfFull
+#        --no_out_extension -o
+#        C:\Nordic_BLE_SDK\nRF5_SDK_16.0.0_98a08e2\examples\peripheral\gpiote\pca10040\blank\iar\_build\gpiote_pca10040.out
+#        --map
+#        C:\Nordic_BLE_SDK\nRF5_SDK_16.0.0_98a08e2\examples\peripheral\gpiote\pca10040\blank\iar\_build\gpiote_pca10040.map
+#        --config
+#        C:\Nordic_BLE_SDK\nRF5_SDK_16.0.0_98a08e2\examples\peripheral\gpiote\pca10040\blank\iar\gpiote_iar_nRF5x.icf
+#        --warnings_are_errors --entry __iar_program_start --inline --vfe
+#        --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because no calls to memory allocation
+functions were found in the application outside of system library
+functions, and there are calls to deallocation functions in the
+application.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at 0x0 { ro section .intvec };
+define block RO_END with size = 0M, alignment = 8 { };
+"P1":  place in [from 0x0 to 0x7'ffff] { ro, block RO_END };
+define block CSTACK with size = 8K, alignment = 8 { };
+define block HEAP with size = 8K, alignment = 8 { };
+"P2":  place in [from 0x2000'0000 to 0x2000'ffff] {
+          rw, block CSTACK, block HEAP };
+initialize by copy { rw };
+keep { section .intvec };
+
+  Section            Kind         Address    Size  Object
+  -------            ----         -------    ----  ------
+"A0":                                       0x200
+  .intvec            ro code          0x0   0x200  iar_startup_nrf52.o [1]
+                                  - 0x200   0x200
+
+"P1":                                       0xc84
+  .text              ro code        0x200   0x3c4  nrfx_gpiote.o [1]
+  .text              ro code        0x5c4    0x3a  ABImemset48.o [4]
+  .text              ro code        0x5fe    0x3a  zero_init3.o [4]
+  .text              ro code        0x638     0x6  ABImemclr.o [4]
+  .text              ro code        0x63e     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0x640    0x5e  ABImemset.o [4]
+  .text              ro code        0x69e     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0x6a0   0x2c0  system_nrf52.o [1]
+  .text              ro code        0x960   0x1a4  nrfx_timer.o [1]
+  .text              ro code        0xb04    0xe8  nrfx_ppi.o [1]
+  .text              ro code        0xbec    0x24  app_util_platform.o [1]
+  .text              ro code        0xc10    0xbc  main.o [1]
+  .text              ro code        0xccc    0x14  nrf_drv_ppi.o [1]
+  .text              ro code        0xce0    0x1e  app_error.o [1]
+  .text              ro code        0xcfe     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xd00    0x34  app_error_weak.o [1]
+  .text              ro code        0xd34    0x2c  copy_init3.o [4]
+  .text              ro code        0xd60    0x28  data_init.o [4]
+  .text              ro code        0xd88    0x22  fpinit_M.o [3]
+  .iar.init_table    const          0xdac    0x24  - Linker created -
+  .text              ro code        0xdd0     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xdd4    0x1e  cmain.o [4]
+  .text              ro code        0xdf2     0x4  exit.o [2]
+  .text              ro code        0xdf6     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xdf8     0xa  cexit.o [4]
+  .text              ro code        0xe02     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xe04     0xc  XXexit.o [4]
+  .text              ro code        0xe10    0x10  iar_startup_nrf52.o [1]
+  .text              ro code        0xe20     0xc  cstartup_M.o [4]
+  Initializer bytes  const          0xe2c     0xc  <for P2-1>
+  .text              ro code        0xe38     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xe3a     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xe3c     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xe3e     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xe40     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xe42     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xe44     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xe46     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xe48     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xe4a     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xe4c     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xe4e     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xe50     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xe52     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xe54     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xe56     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xe58     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xe5a     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xe5c     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xe5e     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xe60     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xe62     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xe64     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xe66     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xe68     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xe6a     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xe6c     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xe6e     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xe70     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xe72     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xe74     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xe76     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xe78     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xe7a     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xe7c     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xe7e     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xe80     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xe82     0x2  iar_startup_nrf52.o [1]
+  .rodata            const          0xe84     0x0  zero_init3.o [4]
+  .rodata            const          0xe84     0x0  copy_init3.o [4]
+                                  - 0xe84   0xc84
+
+"P2", part 1 of 3:                            0xc
+  P2-1                        0x2000'0000     0xc  <Init block>
+    .data            inited   0x2000'0000     0x8  main.o [1]
+    .data            inited   0x2000'0008     0x4  system_nrf52.o [1]
+                            - 0x2000'000c     0xc
+
+"P2", part 2 of 3:                           0x68
+  .bss               zero     0x2000'000c    0x4c  nrfx_gpiote.o [1]
+  .bss               zero     0x2000'0058     0xc  nrfx_timer.o [1]
+  .bss               zero     0x2000'0064     0x8  nrfx_ppi.o [1]
+  .bss               zero     0x2000'006c     0x4  app_util_platform.o [1]
+  .bss               zero     0x2000'0070     0x1  nrf_drv_ppi.o [1]
+                            - 0x2000'0071    0x65
+
+"P2", part 3 of 3:                         0x2000
+  CSTACK                      0x2000'0078  0x2000  <Block>
+    CSTACK           uninit   0x2000'0078  0x2000  <Block tail>
+                            - 0x2000'2078  0x2000
+
+Unused ranges:
+
+         From           To      Size
+         ----           --      ----
+        0xe84     0x7'ffff  0x7'f17c
+  0x2000'0074  0x2000'0077       0x4
+  0x2000'2078  0x2000'ffff    0xdf88
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address      Size
+          -------      ----
+Zero (__iar_zero_init3)
+    1 destination range, total size 0x65:
+          0x2000'000c  0x65
+
+Copy (__iar_copy_init3)
+    1 source range, total size 0xc:
+                0xe2c   0xc
+    1 destination range, total size 0xc:
+          0x2000'0000   0xc
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module               ro code  ro data  rw data
+    ------               -------  -------  -------
+command line/config:
+    ----------------------------------------------
+    Total:
+
+C:\Nordic_BLE_SDK\nRF5_SDK_16.0.0_98a08e2\examples\peripheral\gpiote\pca10040\blank\iar\_build: [1]
+    app_error.o               30
+    app_error_weak.o          52
+    app_util_platform.o       36                 4
+    iar_startup_nrf52.o      616
+    main.o                   188        8        8
+    nrf_drv_ppi.o             20                 1
+    nrfx_gpiote.o            964                76
+    nrfx_ppi.o               232                 8
+    nrfx_timer.o             420                12
+    system_nrf52.o           704        4        4
+    ----------------------------------------------
+    Total:                 3 262       12      113
+
+dl7M_tlf.a: [2]
+    exit.o                     4
+    ----------------------------------------------
+    Total:                     4
+
+m7M_tls.a: [3]
+    fpinit_M.o                34
+    ----------------------------------------------
+    Total:                    34
+
+rt7M_tl.a: [4]
+    ABImemclr.o                6
+    ABImemset.o               94
+    ABImemset48.o             58
+    XXexit.o                  12
+    cexit.o                   10
+    cmain.o                   30
+    copy_init3.o              44
+    cstartup_M.o              12
+    data_init.o               40
+    zero_init3.o              58
+    ----------------------------------------------
+    Total:                   364
+
+    Gaps                       2        2
+    Linker created                     36    8 192
+--------------------------------------------------
+    Grand Total:           3 666       50    8 305
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                       Address   Size  Type      Object
+-----                       -------   ----  ----      ------
+.iar.init_table$$Base         0xdac          --   Gb  - Linker created -
+.iar.init_table$$Limit        0xdd0          --   Gb  - Linker created -
+?main                         0xdd5         Code  Gb  cmain.o [4]
+CSTACK$$Base            0x2000'0078          --   Gb  - Linker created -
+CSTACK$$Limit           0x2000'2078          --   Gb  - Linker created -
+GPIOTE_IRQHandler             0x45b  0x140  Code  Gb  nrfx_gpiote.o [1]
+Region$$Table$$Base           0xdac          --   Gb  - Linker created -
+Region$$Table$$Limit          0xdd0          --   Gb  - Linker created -
+SystemCoreClock         0x2000'0008    0x4  Data  Gb  system_nrf52.o [1]
+SystemInit                    0x6a1  0x25c  Code  Gb  system_nrf52.o [1]
+TIMER0_IRQHandler             0xae9    0x8  Code  Gb  nrfx_timer.o [1]
+__ICFEDIT_region_RAM_end__ {Abs}
+                        0x2000'ffff         Data  Gb  <internal module>
+__ICFEDIT_region_RAM_start__ {Abs}
+                        0x2000'0000         Data  Gb  <internal module>
+__Vectors                       0x0          --   Gb  iar_startup_nrf52.o [1]
+__Vectors_End                 0x200         Data  Gb  iar_startup_nrf52.o [1]
+__Vectors_Size {Abs}          0x200          --   Gb  iar_startup_nrf52.o [1]
+__aeabi_memclr                0x639         Code  Gb  ABImemclr.o [4]
+__aeabi_memset4               0x5c5         Code  Gb  ABImemset48.o [4]
+__aeabi_memset8               0x5c5         Code  Gb  ABImemset48.o [4]
+__cmain                       0xdd5         Code  Gb  cmain.o [4]
+__exit                        0xe05         Code  Gb  XXexit.o [4]
+__iar_Memset4_word            0x5cd         Code  Gb  ABImemset48.o [4]
+__iar_Memset8_word            0x5cd         Code  Gb  ABImemset48.o [4]
+__iar_Memset_word             0x641         Code  Gb  ABImemset.o [4]
+__iar_copy_init3              0xd35   0x2c  Code  Gb  copy_init3.o [4]
+__iar_data_init3              0xd61   0x28  Code  Gb  data_init.o [4]
+__iar_init_vfp                0xd89         Code  Gb  fpinit_M.o [3]
+__iar_program_start           0xe21         Code  Gb  cstartup_M.o [4]
+__iar_zero_init3              0x5ff   0x3a  Code  Gb  zero_init3.o [4]
+__vector_table                  0x0         Data  Gb  iar_startup_nrf52.o [1]
+_call_main                    0xde1         Code  Gb  cmain.o [4]
+_exit                         0xdf9         Code  Gb  cexit.o [4]
+_main                         0xdef         Code  Gb  cmain.o [4]
+app_error_fault_handler
+                              0xd01   0x34  Code  Wk  app_error_weak.o [1]
+app_error_handler_bare        0xce1   0x1e  Code  Gb  app_error.o [1]
+app_util_critical_region_enter
+                              0xbfd    0x2  Code  Gb  app_util_platform.o [1]
+app_util_critical_region_exit
+                              0xc0b    0x2  Code  Gb  app_util_platform.o [1]
+app_util_enable_irq           0xbed    0xe  Code  Gb  app_util_platform.o [1]
+channel_free                  0x301   0x18  Code  Lc  nrfx_gpiote.o [1]
+channel_port_alloc            0x2bf   0x42  Code  Lc  nrfx_gpiote.o [1]
+exit                          0xdf3    0x4  Code  Gb  exit.o [2]
+irq_handler                   0xaa3   0x46  Code  Lc  nrfx_timer.o [1]
+is_allocated_channel          0xb05   0x14  Code  Lc  nrfx_ppi.o [1]
+m_cb                    0x2000'000c   0x4c  Data  Lc  nrfx_gpiote.o [1]
+m_cb                    0x2000'0058    0xc  Data  Lc  nrfx_timer.o [1]
+m_channels_allocated    0x2000'0068    0x4  Data  Lc  nrfx_ppi.o [1]
+m_drv_state             0x2000'0070    0x1  Data  Lc  nrf_drv_ppi.o [1]
+m_groups_allocated      0x2000'0064    0x1  Data  Lc  nrfx_ppi.o [1]
+m_in_critical_region    0x2000'006c    0x4  Data  Lc  app_util_platform.o [1]
+main                          0xc15   0x9e  Code  Gb  main.o [1]
+nrf_bitmask_bit_is_set        0x291   0x12  Code  Lc  nrfx_gpiote.o [1]
+nrf_bitmask_bit_set           0x2a3   0x16  Code  Lc  nrfx_gpiote.o [1]
+nrf_drv_ppi_init              0xccd   0x10  Code  Gb  nrf_drv_ppi.o [1]
+nrf_gpio_cfg                  0x22b   0x20  Code  Lc  nrfx_gpiote.o [1]
+nrf_gpio_cfg_sense_set        0x24b   0x22  Code  Lc  nrfx_gpiote.o [1]
+nrf_gpio_ports_read           0x26d   0x24  Code  Lc  nrfx_gpiote.o [1]
+nrf_gpiote_event_clear        0x213   0x18  Code  Lc  nrfx_gpiote.o [1]
+nrf_gpiote_event_is_set
+                              0x201   0x12  Code  Lc  nrfx_gpiote.o [1]
+nrf_timer_event_clear         0x961   0x10  Code  Lc  nrfx_timer.o [1]
+nrfx_gpiote_init              0x319   0x62  Code  Gb  nrfx_gpiote.o [1]
+nrfx_gpiote_out_init          0x37b   0xa6  Code  Gb  nrfx_gpiote.o [1]
+nrfx_gpiote_out_task_addr_get
+                              0x43f   0x10  Code  Gb  nrfx_gpiote.o [1]
+nrfx_gpiote_out_task_enable
+                              0x421   0x18  Code  Gb  nrfx_gpiote.o [1]
+nrfx_ppi_channel_alloc        0xb19   0x44  Code  Gb  nrfx_ppi.o [1]
+nrfx_ppi_channel_assign
+                              0xb5d   0x3c  Code  Gb  nrfx_ppi.o [1]
+nrfx_ppi_channel_enable
+                              0xb99   0x22  Code  Gb  nrfx_ppi.o [1]
+nrfx_timer_compare            0xa43   0x36  Code  Gb  nrfx_timer.o [1]
+nrfx_timer_enable             0xa2b    0xc  Code  Gb  nrfx_timer.o [1]
+nrfx_timer_extended_compare
+                              0xa79   0x2a  Code  Gb  nrfx_timer.o [1]
+nrfx_timer_init               0x971   0xa0  Code  Gb  nrfx_timer.o [1]
+pin_configured_set            0x2b9    0x6  Code  Lc  nrfx_gpiote.o [1]
+timer                   0x2000'0000    0x8  Data  Lc  main.o [1]
+timer_dummy_handler           0xc11    0x2  Code  Gb  main.o [1]
+
+
+[1] = C:\Nordic_BLE_SDK\nRF5_SDK_16.0.0_98a08e2\examples\peripheral\gpiote\pca10040\blank\iar\_build
+[2] = dl7M_tlf.a
+[3] = m7M_tls.a
+[4] = rt7M_tl.a
+
+  3 666 bytes of readonly  code memory
+     50 bytes of readonly  data memory
+  8 305 bytes of readwrite data memory
+
+Errors: none
+Warnings: none

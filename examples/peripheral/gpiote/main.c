@@ -65,8 +65,8 @@
     #error "Please indicate output pin"
 #endif
 
-//#define TIME_OUT_PERIOD   200 * 1000UL   //200 ms
-#define TIME_OUT_PERIOD   1000 * 1000UL   //1000 ms
+#define TIME_OUT_PERIOD   200 * 1000UL   //200 ms
+//#define TIME_OUT_PERIOD   1000 * 1000UL   //1000 ms
 
 static nrf_drv_timer_t timer = NRF_DRV_TIMER_INSTANCE(0);
 

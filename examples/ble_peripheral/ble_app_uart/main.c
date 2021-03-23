@@ -82,7 +82,8 @@
 #include "nrf_log_ctrl.h"
 #include "nrf_log_default_backends.h"
 
-//#define UART_HW_CONTROL_ENABLE       //enable UART HW control
+// #define UART_HW_CONTROL_ENABLE       //enable UART HW control
+                                        //Not enable HW control
 
 #define APP_BLE_CONN_CFG_TAG            1                                           /**< A tag identifying the SoftDevice BLE configuration. */
 
@@ -729,7 +730,7 @@ int main(void)
     */
     gap_params_init();//sd_ble_gap_ppcp_set,Set GAP Peripheral Preferred Connection Parameters.
     //NRF_SDH_BLE_GATT_MAX_MTU_SIZE = 247
-    gatt_init();//nrf_ble_gatt_att_mtu_periph_set£¬ set GATT MTU size 
+    gatt_init();//nrf_ble_gatt_att_mtu_periph_setï¿½ï¿½ set GATT MTU size 
     services_init(); // Initialize NUS services and characteristics
     advertising_init();//adv configuration, including APP_ADV_INTERVAL and APP_ADV_DURATION, etc.
     

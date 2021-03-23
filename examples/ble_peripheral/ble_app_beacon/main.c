@@ -62,7 +62,7 @@
 #include "nrf_log_ctrl.h"
 #include "nrf_log_default_backends.h"
 
-// #define DEVNAME_IN_MFGDATA_OUT
+#define DEVNAME_IN_MFGDATA_OUT
 
 //channel mask for advertising
 /**@brief Channel mask (40 bits).
@@ -241,6 +241,19 @@ static void advertising_init(void)
      */
     m_adv_params.channel_mask[4] = CHANNEL_38_ONLY; // advertising only in this channel
 
+    if (m_adv_params.channel_mask[4] == CHANNEL_37_ONLY)
+    {
+      NRF_LOG_INFO("Advertising on channel 37\n");
+    }
+    else if (m_adv_params.channel_mask[4] == CHANNEL_38_ONLY)
+    {
+      NRF_LOG_INFO("Advertising on channel 38\n");
+    }
+    else if (m_adv_params.channel_mask[4] == CHANNEL_39_ONLY)
+    {
+      NRF_LOG_INFO("Advertising on channel 39\n");
+    }
+
     err_code = ble_advdata_encode(&advdata, m_adv_data.adv_data.p_data, &m_adv_data.adv_data.len);
     APP_ERROR_CHECK(err_code);
 
@@ -353,7 +366,7 @@ int main(void)
     // Initialize.
     static uint32_t m_device_addr0; // device mac address
     static uint32_t m_device_addr1; // device mac adddress
-    log_init();
+    log_init();  // RTT LOG enabled
     timers_init();
     leds_init();
     power_management_init();
@@ -374,7 +387,7 @@ int main(void)
             (m_device_addr0 & 0x0F000000)>>24,(m_device_addr0 & 0xFF0000)>>16,(m_device_addr0 & 0xFF00)>>8,(m_device_addr0 & 0xFF));
 
     NRF_LOG_INFO("Beacon example started.");
-    NRF_LOG_INFO("SW version is 003.");
+    NRF_LOG_INFO("SW version is 001.");
     advertising_start();
 
     // nrfjprog --snr <Segger-chip-Serial-Number> --memwr 0x10001080 --val 0xabcd0102
