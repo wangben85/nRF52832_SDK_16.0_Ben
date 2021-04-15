@@ -1,0 +1,24 @@
+Output/Release/Obj/ble_app_hrs_pca10040_s132_uart/app_error.o: \
+ C\:\Nordic_BLE_SDK\nRF5_SDK_16.0.0_98a08e2\components\libraries\util\app_error.c \
+ ../../../../../../modules/nrfx/mdk/nrf.h \
+ ../../../../../../modules/nrfx/mdk/nrf52.h \
+ ../../../../../../components/toolchain/cmsis/include/core_cm4.h \
+ C\:/ncs/v1.5.0/toolchain/segger_embedded_studio/include/stdint.h \
+ ../../../../../../components/toolchain/cmsis/include/core_cmInstr.h \
+ ../../../../../../components/toolchain/cmsis/include/cmsis_gcc.h \
+ ../../../../../../components/toolchain/cmsis/include/core_cmFunc.h \
+ ../../../../../../components/toolchain/cmsis/include/core_cmSimd.h \
+ ../../../../../../modules/nrfx/mdk/system_nrf52.h \
+ ../../../../../../modules/nrfx/mdk/system_nrf.h \
+ ../../../../../../modules/nrfx/mdk/nrf52_bitfields.h \
+ ../../../../../../modules/nrfx/mdk/nrf51_to_nrf52.h \
+ ../../../../../../modules/nrfx/mdk/nrf52_name_change.h \
+ ../../../../../../modules/nrfx/mdk/compiler_abstraction.h \
+ C\:/ncs/v1.5.0/toolchain/segger_embedded_studio/include/stdio.h \
+ C\:/ncs/v1.5.0/toolchain/segger_embedded_studio/include/__crossworks.h \
+ C\:\Nordic_BLE_SDK\nRF5_SDK_16.0.0_98a08e2\components\libraries\util\app_error.h \
+ C\:/ncs/v1.5.0/toolchain/segger_embedded_studio/include/stdbool.h \
+ C\:\Nordic_BLE_SDK\nRF5_SDK_16.0.0_98a08e2\components\libraries\util\sdk_errors.h \
+ ../../../../../../components/softdevice/s132/headers/nrf_error.h \
+ C\:\Nordic_BLE_SDK\nRF5_SDK_16.0.0_98a08e2\components\libraries\util\nordic_common.h \
+ C\:\Nordic_BLE_SDK\nRF5_SDK_16.0.0_98a08e2\components\libraries\util\app_error_weak.h

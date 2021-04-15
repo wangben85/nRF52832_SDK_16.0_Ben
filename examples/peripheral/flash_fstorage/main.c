@@ -234,6 +234,9 @@ int main(void)
 
     NRF_LOG_INFO("fstorage example started.");
 
+    // API for flash operation
+    // BLE with SoftDevice: nrf_fstorage_sd
+    // bare metal: nrf_fstorage_nvmc
     nrf_fstorage_api_t * p_fs_api;
 
 #ifdef SOFTDEVICE_PRESENT

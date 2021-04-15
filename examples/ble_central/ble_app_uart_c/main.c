@@ -71,7 +71,7 @@
 
 #define NUS_SERVICE_UUID_TYPE   BLE_UUID_TYPE_VENDOR_BEGIN              /**< UUID type for the Nordic UART Service (vendor specific). */
 
-#define ECHOBACK_BLE_UART_DATA  1                                       /**< Echo the UART data that is received over the Nordic UART Service (NUS) back to the sender. */
+#define ECHOBACK_BLE_UART_DATA  0                                       /**< Echo the UART data that is received over the Nordic UART Service (NUS) back to the sender. */
 
 
 BLE_NUS_C_DEF(m_ble_nus_c);                                             /**< BLE Nordic UART Service (NUS) client instance. */
@@ -238,7 +238,7 @@ static void ble_nus_chars_received_uart_print(uint8_t * p_data, uint16_t data_le
     {
         while (app_uart_put('\n') == NRF_ERROR_BUSY);
     }
-    if (ECHOBACK_BLE_UART_DATA)
+    if (ECHOBACK_BLE_UART_DATA) // echo back the data by BLE to the sender
     {
         // Send data back to the peripheral.
         do
@@ -325,7 +325,7 @@ static void ble_nus_c_evt_handler(ble_nus_c_t * p_ble_nus_c, ble_nus_c_evt_t con
 
     switch (p_ble_nus_evt->evt_type)
     {
-        case BLE_NUS_C_EVT_DISCOVERY_COMPLETE:
+        case BLE_NUS_C_EVT_DISCOVERY_COMPLETE: // master find device and service
             NRF_LOG_INFO("Discovery complete.");
             err_code = ble_nus_c_handles_assign(p_ble_nus_c, p_ble_nus_evt->conn_handle, &p_ble_nus_evt->handles);
             APP_ERROR_CHECK(err_code);
@@ -335,7 +335,7 @@ static void ble_nus_c_evt_handler(ble_nus_c_t * p_ble_nus_c, ble_nus_c_evt_t con
             NRF_LOG_INFO("Connected to device with Nordic UART Service.");
             break;
 
-        case BLE_NUS_C_EVT_NUS_TX_EVT:
+        case BLE_NUS_C_EVT_NUS_TX_EVT: // Event indicating that the central received something from a peer. 
             ble_nus_chars_received_uart_print(p_ble_nus_evt->p_data, p_ble_nus_evt->data_len);
             break;
 
@@ -575,7 +575,7 @@ static void nus_c_init(void)
     ret_code_t       err_code;
     ble_nus_c_init_t init;
 
-    init.evt_handler   = ble_nus_c_evt_handler;
+    init.evt_handler   = ble_nus_c_evt_handler;//event callback
     init.error_handler = nus_error_handler;
     init.p_gatt_queue  = &m_ble_gatt_queue;
 

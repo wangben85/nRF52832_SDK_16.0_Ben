@@ -73,7 +73,11 @@ static void gatt_error_handler(uint32_t   nrf_error,
     }
 }
 
-
+//Function for handling events from the Database Discovery module.
+//This function handles an event from the Database Discovery module, and determines whether it 
+//relates to the discovery of NUS at the peer. 
+//If it does, the function calls the application's event handler to indicate that NUS was discovered at the peer. 
+//The function also populates the event with service-related information before providing it to the application.
 void ble_nus_c_on_db_disc_evt(ble_nus_c_t * p_ble_nus_c, ble_db_discovery_evt_t * p_evt)
 {
     ble_nus_c_evt_t nus_c_evt;
@@ -130,7 +134,7 @@ static void on_hvx(ble_nus_c_t * p_ble_nus_c, ble_evt_t const * p_ble_evt)
     {
         ble_nus_c_evt_t ble_nus_c_evt;
 
-        ble_nus_c_evt.evt_type = BLE_NUS_C_EVT_NUS_TX_EVT;
+        ble_nus_c_evt.evt_type = BLE_NUS_C_EVT_NUS_TX_EVT;/**< Event indicating that the central received something from a peer. */
         ble_nus_c_evt.p_data   = (uint8_t *)p_ble_evt->evt.gattc_evt.params.hvx.data;
         ble_nus_c_evt.data_len = p_ble_evt->evt.gattc_evt.params.hvx.len;
 
@@ -153,7 +157,7 @@ uint32_t ble_nus_c_init(ble_nus_c_t * p_ble_nus_c, ble_nus_c_init_t * p_ble_nus_
     VERIFY_SUCCESS(err_code);
 
     uart_uuid.type = p_ble_nus_c->uuid_type;
-    uart_uuid.uuid = BLE_UUID_NUS_SERVICE;
+    uart_uuid.uuid = BLE_UUID_NUS_SERVICE; // the service looking for
 
     p_ble_nus_c->conn_handle           = BLE_CONN_HANDLE_INVALID;
     p_ble_nus_c->evt_handler           = p_ble_nus_c_init->evt_handler;
@@ -165,6 +169,7 @@ uint32_t ble_nus_c_init(ble_nus_c_t * p_ble_nus_c, ble_nus_c_init_t * p_ble_nus_
     return ble_db_discovery_evt_register(&uart_uuid);
 }
 
+// Function for handling BLE events from the SoftDevice.
 void ble_nus_c_on_ble_evt(ble_evt_t const * p_ble_evt, void * p_context)
 {
     ble_nus_c_t * p_ble_nus_c = (ble_nus_c_t *)p_context;
@@ -183,7 +188,7 @@ void ble_nus_c_on_ble_evt(ble_evt_t const * p_ble_evt, void * p_context)
 
     switch (p_ble_evt->header.evt_id)
     {
-        case BLE_GATTC_EVT_HVX:
+        case BLE_GATTC_EVT_HVX: // Handle Value Notification or Indication event from the slave side
             on_hvx(p_ble_nus_c, p_ble_evt);
             break;
 
@@ -193,7 +198,7 @@ void ble_nus_c_on_ble_evt(ble_evt_t const * p_ble_evt, void * p_context)
             {
                 ble_nus_c_evt_t nus_c_evt;
 
-                nus_c_evt.evt_type = BLE_NUS_C_EVT_DISCONNECTED;
+                nus_c_evt.evt_type = BLE_NUS_C_EVT_DISCONNECTED; // Event indicating that the NUS server disconnected. go back to main to 'SCAN' again
 
                 p_ble_nus_c->conn_handle = BLE_CONN_HANDLE_INVALID;
                 p_ble_nus_c->evt_handler(p_ble_nus_c, &nus_c_evt);
@@ -201,15 +206,15 @@ void ble_nus_c_on_ble_evt(ble_evt_t const * p_ble_evt, void * p_context)
             break;
         
         //BENWANG
-        case BLE_GATTC_EVT_WRITE_CMD_TX_COMPLETE: //write command complete
-           {
-                NRF_LOG_INFO("BENWANG Transfter complete.");
-                ble_nus_c_evt_t nus_c_evt;
-
-                nus_c_evt.evt_type = BLE_NUS_C_EVT_TXSEND_CONTINUE;
-                
-                p_ble_nus_c->evt_handler(p_ble_nus_c, &nus_c_evt);
-           }
+//        case BLE_GATTC_EVT_WRITE_CMD_TX_COMPLETE: //write command complete
+//           {
+//                NRF_LOG_INFO("BENWANG Transfter complete.");
+//                ble_nus_c_evt_t nus_c_evt;
+//
+//                nus_c_evt.evt_type = BLE_NUS_C_EVT_TXSEND_CONTINUE;
+//                
+//                p_ble_nus_c->evt_handler(p_ble_nus_c, &nus_c_evt);
+//           }
         
 //         case BLE_GATTC_EVT_WRITE_RSP: // write request response
 //           {
@@ -252,7 +257,7 @@ static uint32_t cccd_configure(ble_nus_c_t * p_ble_nus_c, bool notification_enab
     return nrf_ble_gq_item_add(p_ble_nus_c->p_gatt_queue, &cccd_req, p_ble_nus_c->conn_handle);
 }
 
-
+//Function for requesting the peer to start sending notification of TX characteristic
 uint32_t ble_nus_c_tx_notif_enable(ble_nus_c_t * p_ble_nus_c)
 {
     VERIFY_PARAM_NOT_NULL(p_ble_nus_c);
@@ -266,7 +271,8 @@ uint32_t ble_nus_c_tx_notif_enable(ble_nus_c_t * p_ble_nus_c)
     return cccd_configure(p_ble_nus_c, true);
 }
 
-
+//Function for sending a string to the server.
+//This function writes the RX characteristic of the server.
 uint32_t ble_nus_c_string_send(ble_nus_c_t * p_ble_nus_c, uint8_t * p_string, uint16_t length)
 {
     VERIFY_PARAM_NOT_NULL(p_ble_nus_c);
@@ -293,14 +299,17 @@ uint32_t ble_nus_c_string_send(ble_nus_c_t * p_ble_nus_c, uint8_t * p_string, ui
     write_req.params.gattc_write.len      = length;
     write_req.params.gattc_write.offset   = 0;
     write_req.params.gattc_write.p_value  = p_string;
-    write_req.params.gattc_write.write_op = BLE_GATT_OP_WRITE_CMD; //through put is much better than write request
-    //write_req.params.gattc_write.write_op = BLE_GATT_OP_WRITE_REQ;//BENWANG
+    write_req.params.gattc_write.write_op = BLE_GATT_OP_WRITE_CMD; /**< Write Command. */
+    //write_req.params.gattc_write.write_op = BLE_GATT_OP_WRITE_REQ;/**< Write Request. */
     write_req.params.gattc_write.flags    = BLE_GATT_EXEC_WRITE_FLAG_PREPARED_WRITE;
 
     return nrf_ble_gq_item_add(p_ble_nus_c->p_gatt_queue, &write_req, p_ble_nus_c->conn_handle);
 }
 
-
+//Function for assigning handles to this instance of nus_c.
+//Call this function when a link has been established with a peer to associate the link to this instance of the module. 
+//This makes it possible to handle several links and associate each link to a particular instance of this module. 
+//The connection handle and attribute handles are provided from the discovery event BLE_NUS_C_EVT_DISCOVERY_COMPLETE.
 uint32_t ble_nus_c_handles_assign(ble_nus_c_t               * p_ble_nus,
                                   uint16_t                    conn_handle,
                                   ble_nus_c_handles_t const * p_peer_handles)

@@ -526,7 +526,9 @@ ret_code_t nrf_ble_gq_item_add(nrf_ble_gq_t const * const p_gatt_queue,
     return err_code;
 }
 
-
+//Function for registering connection handle in the BGQ instance.
+//This function is used for registering connection handle in the BGQ instance. From this point, 
+//the BGQ instance can handle GATT requests associated with the handle until connection is no longer valid (disconnect event occurs).
 ret_code_t nrf_ble_gq_conn_handle_register(nrf_ble_gq_t * const p_gatt_queue, uint16_t conn_handle)
 {
     ret_code_t err_code = NRF_SUCCESS;

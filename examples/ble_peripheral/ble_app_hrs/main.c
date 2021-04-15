@@ -958,7 +958,7 @@ int main(void)
     bool erase_bonds;
 
     // Initialize.
-    log_init(); //default is using the UART LOG
+    log_init(); //default is using LOG system enabled
     timers_init();
     buttons_leds_init(&erase_bonds);
     power_management_init();

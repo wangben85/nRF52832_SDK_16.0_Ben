@@ -123,8 +123,8 @@ typedef enum
 {
     BLE_NUS_C_EVT_DISCOVERY_COMPLETE,   /**< Event indicating that the NUS service and its characteristics were found. */
     BLE_NUS_C_EVT_NUS_TX_EVT,           /**< Event indicating that the central received something from a peer. */
-    BLE_NUS_C_EVT_DISCONNECTED,          /**< Event indicating that the NUS server disconnected. */
-    BLE_NUS_C_EVT_TXSEND_CONTINUE       /**< Event to continue send data*///BENWANG
+    BLE_NUS_C_EVT_DISCONNECTED,         /**< Event indicating that the NUS server disconnected. */
+    BLE_NUS_C_EVT_TXSEND_CONTINUE       /**< Event to continue send data*/ //BENWANG selfdefined
 } ble_nus_c_evt_type_t;
 
 /**@brief Handles on the connected peer device needed to interact with it. */
