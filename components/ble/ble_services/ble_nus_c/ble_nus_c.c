@@ -204,28 +204,6 @@ void ble_nus_c_on_ble_evt(ble_evt_t const * p_ble_evt, void * p_context)
                 p_ble_nus_c->evt_handler(p_ble_nus_c, &nus_c_evt);
             }
             break;
-        
-        //BENWANG
-//        case BLE_GATTC_EVT_WRITE_CMD_TX_COMPLETE: //write command complete
-//           {
-//                NRF_LOG_INFO("BENWANG Transfter complete.");
-//                ble_nus_c_evt_t nus_c_evt;
-//
-//                nus_c_evt.evt_type = BLE_NUS_C_EVT_TXSEND_CONTINUE;
-//                
-//                p_ble_nus_c->evt_handler(p_ble_nus_c, &nus_c_evt);
-//           }
-        
-//         case BLE_GATTC_EVT_WRITE_RSP: // write request response
-//           {
-//                NRF_LOG_INFO("BENWANG Transfter complete.");
-//                ble_nus_c_evt_t nus_c_evt;
-//
-//                nus_c_evt.evt_type = BLE_NUS_C_EVT_TXSEND_CONTINUE;
-//                
-//                p_ble_nus_c->evt_handler(p_ble_nus_c, &nus_c_evt);
-//           }
-            
         default:
             // No implementation needed.
             break;

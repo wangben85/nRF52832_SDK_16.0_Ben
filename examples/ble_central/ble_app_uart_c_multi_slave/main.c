@@ -213,9 +213,8 @@ static void scan_init(void)
 static void db_disc_handler(ble_db_discovery_evt_t * p_evt)
 {
 //    ble_nus_c_on_db_disc_evt(&m_ble_nus_c, p_evt);
-    NRF_LOG_INFO("call to ble_lbs_on_db_disc_evt for instance %d and link 0x%x!",
-                  p_evt->conn_handle,
-                  p_evt->conn_handle);
+    NRF_LOG_INFO("call to ble_lbs_on_db_disc_evt for link 0x%x!",
+                            p_evt->conn_handle);
 
     ble_nus_c_on_db_disc_evt(&m_ble_nus_c[p_evt->conn_handle], p_evt);
 }
@@ -255,16 +254,18 @@ static void ble_nus_chars_received_uart_print(uint8_t * p_data, uint16_t data_le
         do
         {
 //            ret_val = ble_nus_c_string_send(&m_ble_nus_c, p_data, data_len);
-            for (uint8_t i = 0; i < NRF_SDH_BLE_CENTRAL_LINK_COUNT; i++)
+//            for (uint8_t i = 0; i < NRF_SDH_BLE_CENTRAL_LINK_COUNT; i++)
+           for (uint8_t i = 0; i < ble_conn_state_central_conn_count(); i++)
             {
-                NRF_LOG_INFO("Sent on connection handle 0x%04x.\n",0);
-                ble_nus_c_string_send(&m_ble_nus_c[i], p_data, data_len); 
+                NRF_LOG_INFO("Sent on connection handle 0x%04x.\n",i);
+                ret_val =  ble_nus_c_string_send(&m_ble_nus_c[i], p_data, data_len); 
+                if ((ret_val != NRF_SUCCESS) && (ret_val != NRF_ERROR_BUSY))
+                {
+                  NRF_LOG_ERROR("Failed sending NUS message. Error 0x%x. ", ret_val);
+                  APP_ERROR_CHECK(ret_val);
+                }
             }            
-            if ((ret_val != NRF_SUCCESS) && (ret_val != NRF_ERROR_BUSY))
-            {
-                NRF_LOG_ERROR("Failed sending NUS message. Error 0x%x. ", ret_val);
-                APP_ERROR_CHECK(ret_val);
-            }
+
         } while (ret_val == NRF_ERROR_BUSY);
     }
 }
