@@ -75,11 +75,11 @@
 #define ECHOBACK_BLE_UART_DATA  0                                       /**< Echo the UART data that is received over the Nordic UART Service (NUS) back to the sender. */
 
 
-//BLE_NUS_C_DEF(m_ble_nus_c);                                             /**< BLE Nordic UART Service (NUS) client instance. */
-BLE_NUS_C_ARRAY_DEF(m_ble_nus_c, NRF_SDH_BLE_CENTRAL_LINK_COUNT);           /**< LED button client instances. */
+//BLE_NUS_C_DEF(m_ble_nus_c);                                             /**< Single: BLE Nordic UART Service (NUS) client instance. */
+BLE_NUS_C_ARRAY_DEF(m_ble_nus_c, NRF_SDH_BLE_CENTRAL_LINK_COUNT);         /**< Array: BLE Nordic UART Service (NUS) client instances. */
 
-//BLE_DB_DISCOVERY_DEF(m_db_disc);                                        /**< Database discovery module instance. */
-BLE_DB_DISCOVERY_ARRAY_DEF(m_db_disc, NRF_SDH_BLE_CENTRAL_LINK_COUNT);  /**< Database discovery module instances. */
+//BLE_DB_DISCOVERY_DEF(m_db_disc);                                        /**< Single: Database discovery module instance. */
+BLE_DB_DISCOVERY_ARRAY_DEF(m_db_disc, NRF_SDH_BLE_CENTRAL_LINK_COUNT);    /**< Array: Database discovery module instances. */
 
 NRF_BLE_SCAN_DEF(m_scan);                                               /**< Scanning Module instance. */
 

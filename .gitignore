@@ -4,3 +4,6 @@
 /examples/ble_central/ble_app_uart_c_multi_slave/settings
 /examples/ble_central/ble_app_uart_c_multi_slave/pca10040/s132/iar/settings
 /examples/ble_central/ble_app_uart_c_multi_slave/pca10040/s132/iar/_build
+/examples/ble_peripheral/experimental/ble_app_multiperipheral/pca10040/s132/iar/settings
+/examples/ble_peripheral/experimental/ble_app_multiperipheral/pca10040/s132/iar/_build
+/examples/ble_peripheral/experimental/ble_app_multiperipheral/settings
