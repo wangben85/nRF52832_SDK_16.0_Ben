@@ -87,7 +87,7 @@
 
 #define APP_BLE_CONN_CFG_TAG            1                                           /**< A tag identifying the SoftDevice BLE configuration. */
 
-#define DEVICE_NAME                     "EXTAL_Nordic_UART"                               /**< Name of device. Will be included in the advertising data. */
+#define DEVICE_NAME                     "uart_multi_master"                               /**< Name of device. Will be included in the advertising data. */
 #define NUS_SERVICE_UUID_TYPE           BLE_UUID_TYPE_VENDOR_BEGIN                  /**< UUID type for the Nordic UART Service (vendor specific). */
 
 #define APP_BLE_OBSERVER_PRIO           3                                           /**< Application's BLE observer priority. You shouldn't need to modify this value. */
@@ -774,24 +774,16 @@ int main(void)
     buttons_leds_init(&erase_bonds);
     power_management_init();
     ble_stack_init();
-    /*
-    #define MIN_CONN_INTERVAL               MSEC_TO_UNITS(20, UNIT_1_25_MS)  //Minimum acceptable connection interval (20 ms), Connection interval uses 1.25 ms units. 
-    #define MAX_CONN_INTERVAL               MSEC_TO_UNITS(75, UNIT_1_25_MS)  //Maximum acceptable connection interval (75 ms), Connection interval uses 1.25 ms units. 
-    #define SLAVE_LATENCY                   0                                //Slave latency. 
-    #define CONN_SUP_TIMEOUT                MSEC_TO_UNITS(4000, UNIT_10_MS)  // Connection supervisory timeout (4 seconds), Supervision Timeout uses 10 ms units. 
-    */
     gap_params_init();//sd_ble_gap_ppcp_set,Set GAP Peripheral Preferred Connection Parameters.
-    //NRF_SDH_BLE_GATT_MAX_MTU_SIZE = 247
-    gatt_init();//nrf_ble_gatt_att_mtu_periph_set�� set GATT MTU size 
+    gatt_init();//nrf_ble_gatt_att_mtu_periph_set, set GATT MTU size 
     services_init(); // Initialize NUS services and characteristics
     advertising_init();//adv configuration, including APP_ADV_INTERVAL and APP_ADV_DURATION, etc.
     
-//  all options and data needed for initialization of the connection parameters negotiation module. */
+    // all options and data needed for initialization of the connection parameters negotiation module. 
     conn_params_init();
-
     // Start execution.
-    printf("\r\nUART started.\r\n");
-    NRF_LOG_INFO("Debug logging for UART over RTT started.");
+    NRF_LOG_INFO("BLE UART peripheral wit multiple master example started.");
+    NRF_LOG_INFO("Software version is 0x01");
     advertising_start();
 
     // Enter main loop.
@@ -800,8 +792,3 @@ int main(void)
         idle_state_handle();
     }
 }
-
-
-/**
- * @}
- */
