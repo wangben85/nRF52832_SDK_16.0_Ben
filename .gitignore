@@ -7,3 +7,6 @@
 /examples/ble_peripheral/experimental/ble_app_multiperipheral/pca10040/s132/iar/settings
 /examples/ble_peripheral/experimental/ble_app_multiperipheral/pca10040/s132/iar/_build
 /examples/ble_peripheral/experimental/ble_app_multiperipheral/settings
+/examples/ble_peripheral/ble_app_uart_multi_master/settings
+/examples/ble_peripheral/ble_app_uart_multi_master/pca10040/s132/iar/settings
+/examples/ble_peripheral/ble_app_uart_multi_master/pca10040/s132/iar/_build
