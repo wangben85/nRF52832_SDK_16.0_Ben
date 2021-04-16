@@ -722,8 +722,8 @@ int main(void)
     scan_init();
 
     // Start execution.
-//    printf("BLE UART central example started.\r\n");
-    NRF_LOG_INFO("BLE UART central example started.");
+    NRF_LOG_INFO("BLE UART central with multiple slave example started.");
+    NRF_LOG_INFO("Software version is 0x01");
     scan_start();
 
     // Enter main loop.
