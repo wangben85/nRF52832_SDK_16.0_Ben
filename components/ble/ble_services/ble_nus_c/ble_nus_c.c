@@ -53,6 +53,12 @@
 NRF_LOG_MODULE_REGISTER();
 
 
+extern uint8_t devAddrList[NRF_SDH_BLE_CENTRAL_LINK_COUNT][BLE_GAP_ADDR_LEN];
+extern bool devaddrListSearch(uint8_t addr[], uint8_t* pos );
+extern void devaddrListItemInsert(uint8_t pos, uint8_t addrInput[]);
+extern void devaddrListItemDelete(uint8_t index);
+
+
 /**@brief Function for intercepting the errors of GATTC and the BLE GATT Queue.
  *
  * @param[in] nrf_error   Error code.
@@ -192,18 +198,20 @@ void ble_nus_c_on_ble_evt(ble_evt_t const * p_ble_evt, void * p_context)
             on_hvx(p_ble_nus_c, p_ble_evt);
             break;
 
+        // remove item test
         case BLE_GAP_EVT_DISCONNECTED:
             if (p_ble_evt->evt.gap_evt.conn_handle == p_ble_nus_c->conn_handle
                     && p_ble_nus_c->evt_handler != NULL)
             {
                 ble_nus_c_evt_t nus_c_evt;
+                devaddrListItemDelete(p_ble_nus_c->conn_handle);
 
                 nus_c_evt.evt_type = BLE_NUS_C_EVT_DISCONNECTED; // Event indicating that the NUS server disconnected. go back to main to 'SCAN' again
-
                 p_ble_nus_c->conn_handle = BLE_CONN_HANDLE_INVALID;
                 p_ble_nus_c->evt_handler(p_ble_nus_c, &nus_c_evt);
             }
             break;
+
         default:
             // No implementation needed.
             break;

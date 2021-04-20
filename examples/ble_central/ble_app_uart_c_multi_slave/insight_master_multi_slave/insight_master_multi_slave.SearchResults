@@ -1,0 +1,4 @@
+---- devaddrListItemInsert Matches (3 in 2 files) ----
+Ble_nus_c.c (c:\nordic_ble_sdk\nrf5_sdk_16.0.0_98a08e2\components\ble\ble_services\ble_nus_c):extern void devaddrListItemInsert(uint8_t pos, uint8_t addrInput[]);
+Main.c (c:\nordic_ble_sdk\nrf5_sdk_16.0.0_98a08e2\examples\ble_central\ble_app_uart_c_multi_slave):void devaddrListItemInsert(uint8_t pos, uint8_t addrInput[])
+Main.c (c:\nordic_ble_sdk\nrf5_sdk_16.0.0_98a08e2\examples\ble_central\ble_app_uart_c_multi_slave):            devaddrListItemInsert(p_gap_evt->conn_handle, (uint8_t* )p_gap_evt->params.connected.peer_addr.addr);

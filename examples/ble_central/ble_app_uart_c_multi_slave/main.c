@@ -75,10 +75,8 @@
 #define ECHOBACK_BLE_UART_DATA  0                                       /**< Echo the UART data that is received over the Nordic UART Service (NUS) back to the sender. */
 
 
-//BLE_NUS_C_DEF(m_ble_nus_c);                                             /**< Single: BLE Nordic UART Service (NUS) client instance. */
 BLE_NUS_C_ARRAY_DEF(m_ble_nus_c, NRF_SDH_BLE_CENTRAL_LINK_COUNT);         /**< Array: BLE Nordic UART Service (NUS) client instances. */
 
-//BLE_DB_DISCOVERY_DEF(m_db_disc);                                        /**< Single: Database discovery module instance. */
 BLE_DB_DISCOVERY_ARRAY_DEF(m_db_disc, NRF_SDH_BLE_CENTRAL_LINK_COUNT);    /**< Array: Database discovery module instances. */
 
 NRF_BLE_SCAN_DEF(m_scan);                                               /**< Scanning Module instance. */
@@ -97,6 +95,62 @@ static ble_uuid_t const m_nus_uuid =
     .type = NUS_SERVICE_UUID_TYPE
 };
 
+// The device lists addr table, which this device connected to
+uint8_t devAddrList[NRF_SDH_BLE_CENTRAL_LINK_COUNT][BLE_GAP_ADDR_LEN] = {{0}};
+// The 00:00:00:00:00:00 mac address
+uint8_t blankItem[BLE_GAP_ADDR_LEN] = {0};
+
+/**@brief Function for checking if the new connected device already in the device list
+ *
+ * @param[in]   addr        The new device address which needs to connect.
+ * @param[out]  pos         if found the device in the table, return the position index.
+ */
+bool devaddrListSearch(uint8_t addr[], uint8_t* pos )
+{
+    uint8_t arraylength = sizeof(devAddrList) / sizeof(devAddrList[0]);
+     for ( uint8_t i = 0; i < arraylength; i++ )
+        for ( uint8_t j = 0; j < BLE_GAP_ADDR_LEN; j++) 
+        {
+             if (( devAddrList[i][j] == addr[j]) && (j == BLE_GAP_ADDR_LEN - 1) )
+             {
+                *pos = i;   // find the item existing ,return the position
+                return true;
+             }
+             else if ( devAddrList[i][j] != addr[j])
+             {
+                break;  // no item found
+             }
+        }
+    return false;
+}
+
+/**@brief Function for insert a new device into the device list
+ *
+ * @param[in]   addrInput   The new device address which needs to insert.
+ * @param[in]   pos         Insert the position index, which actually is the connection handle index
+ */
+void devaddrListItemInsert(uint8_t pos, uint8_t addrInput[])
+{
+   uint8_t dummy;
+   if (devaddrListSearch(addrInput,&dummy))
+   {
+       return;   // do nothing if item already exists  
+   }
+   else
+   {
+       memcpy(devAddrList[pos], addrInput, BLE_GAP_ADDR_LEN); 
+   }
+}
+
+/**@brief Function for Delete the device addr in the device list
+ *
+ * @param[in]   index   the delete addr index, which actually is the connection handle index.
+ */
+void devaddrListItemDelete(uint8_t index)
+{
+   // copy the blankItem addr (00:00:00:00:00:00) into the addr list
+   memcpy(devAddrList[index], blankItem, BLE_GAP_ADDR_LEN ); 
+}
 
 /**@brief Function for handling asserts in the SoftDevice.
  *
@@ -144,6 +198,8 @@ static void scan_evt_handler(scan_evt_t const * p_scan_evt)
 {
     ret_code_t err_code;
 
+    //static int devNum = 0;
+
     switch(p_scan_evt->scan_evt_id)
     {
          case NRF_BLE_SCAN_EVT_CONNECTING_ERROR:
@@ -154,17 +210,43 @@ static void scan_evt_handler(scan_evt_t const * p_scan_evt)
 
          case NRF_BLE_SCAN_EVT_CONNECTED:
          {
-              ble_gap_evt_connected_t const * p_connected =
-                               p_scan_evt->params.connected.p_connected;
-             // Scan is automatically stopped by the connection.
-             NRF_LOG_INFO("Connecting to target %02x%02x%02x%02x%02x%02x",
-                      p_connected->peer_addr.addr[0],
-                      p_connected->peer_addr.addr[1],
-                      p_connected->peer_addr.addr[2],
-                      p_connected->peer_addr.addr[3],
-                      p_connected->peer_addr.addr[4],
-                      p_connected->peer_addr.addr[5]
-                      );
+             // debug only
+             // ble_gap_evt_connected_t const * p_connected =
+             //                  p_scan_evt->params.connected.p_connected;
+             //// Scan is automatically stopped by the connection.
+
+             //NRF_LOG_INFO("Connecting to target No.%d",devNum);
+             //NRF_LOG_INFO("which address is  %02x%02x%02x%02x%02x%02x",
+             //         p_connected->peer_addr.addr[0],
+             //         p_connected->peer_addr.addr[1],
+             //         p_connected->peer_addr.addr[2],
+             //         p_connected->peer_addr.addr[3],
+             //         p_connected->peer_addr.addr[4],
+             //         p_connected->peer_addr.addr[5]
+             //         );
+             //memcpy(devAddrList[devNum], p_connected->peer_addr.addr, sizeof(p_connected->peer_addr.addr)); 
+             //devaddrListItemInsert(devNum, (uint8_t* )p_connected->peer_addr.addr);
+             //if ( devNum > NRF_SDH_BLE_CENTRAL_LINK_COUNT)
+             //{
+             //  devNum = 0;
+             //  NRF_LOG_INFO("scan_evt_handler, Error!\n")
+             //}
+             //else if ( devNum == NRF_SDH_BLE_CENTRAL_LINK_COUNT - 1) 
+             //{
+             //   for ( int j = 0; j <= devNum ; j++)
+             //   {
+             //         NRF_LOG_INFO("Summary: All the Connected devices are %02x%02x%02x%02x%02x%02x\n",
+             //         devAddrList[j][0],
+             //         devAddrList[j][1],
+             //         devAddrList[j][2],
+             //         devAddrList[j][3],
+             //         devAddrList[j][4],
+             //         devAddrList[j][5]
+             //         );
+             //   }
+             //  devNum = 0;
+             //}
+             //else{ devNum++;}
          } break;
 
          case NRF_BLE_SCAN_EVT_SCAN_TIMEOUT:
@@ -253,8 +335,6 @@ static void ble_nus_chars_received_uart_print(uint8_t * p_data, uint16_t data_le
         // Send data back to the peripheral.
         do
         {
-//            ret_val = ble_nus_c_string_send(&m_ble_nus_c, p_data, data_len);
-//            for (uint8_t i = 0; i < NRF_SDH_BLE_CENTRAL_LINK_COUNT; i++)
            for (uint8_t i = 0; i < ble_conn_state_central_conn_count(); i++)
             {
                 NRF_LOG_INFO("Sent on connection handle 0x%04x.\n",i);
@@ -298,19 +378,14 @@ void uart_event_handle(app_uart_evt_t * p_event)
                 NRF_LOG_HEXDUMP_DEBUG(data_array, index);
                 do
                 {
-//                    ret_val = ble_nus_c_string_send(&m_ble_nus_c, data_array, index);
-//                    for (uint8_t i = 0; i < NRF_SDH_BLE_CENTRAL_LINK_COUNT; i++)
                    for (uint8_t i = 0; i < ble_conn_state_central_conn_count(); i++)
                     {
-//                        if ( m_ble_nus_c[i].conn_handle != NULL )
-//                        {
-                            NRF_LOG_INFO("Sent on connection handle 0x%04x.\n",i);
-                            ret_val = ble_nus_c_string_send(&m_ble_nus_c[i], data_array, index); 
-                            if ( (ret_val != NRF_ERROR_INVALID_STATE) && (ret_val != NRF_ERROR_RESOURCES) )
-                            {
-                              APP_ERROR_CHECK(ret_val);
-                            }
-//                        }
+                        NRF_LOG_INFO("Sent on connection handle 0x%04x.\n",i);
+                        ret_val = ble_nus_c_string_send(&m_ble_nus_c[i], data_array, index); 
+                        if ( (ret_val != NRF_ERROR_INVALID_STATE) && (ret_val != NRF_ERROR_RESOURCES) )
+                        {
+                            APP_ERROR_CHECK(ret_val);
+                        }
                   }                   
                 } while (ret_val == NRF_ERROR_RESOURCES);
 
@@ -412,6 +487,7 @@ static void ble_evt_handler(ble_evt_t const * p_ble_evt, void * p_context)
 {
     ret_code_t            err_code;
     ble_gap_evt_t const * p_gap_evt = &p_ble_evt->evt.gap_evt;
+	 //uint8_t               dummy;
 
     switch (p_ble_evt->header.evt_id)
     {
@@ -419,19 +495,40 @@ static void ble_evt_handler(ble_evt_t const * p_ble_evt, void * p_context)
             NRF_LOG_INFO("Connection 0x%x established, starting DB discovery.",
                          p_gap_evt->conn_handle);
             APP_ERROR_CHECK_BOOL(p_gap_evt->conn_handle < NRF_SDH_BLE_CENTRAL_LINK_COUNT);
-            
-//            err_code = ble_nus_c_handles_assign(&m_ble_nus_c, p_ble_evt->evt.gap_evt.conn_handle, NULL);
+            NRF_LOG_INFO("Connecting to target No.%d",p_gap_evt->conn_handle);
+            devaddrListItemInsert(p_gap_evt->conn_handle, (uint8_t* )p_gap_evt->params.connected.peer_addr.addr);
+            NRF_LOG_INFO("which address is  %02x%02x%02x%02x%02x%02x",
+                      p_gap_evt->params.connected.peer_addr.addr[0],
+                      p_gap_evt->params.connected.peer_addr.addr[1],
+                      p_gap_evt->params.connected.peer_addr.addr[2],
+                      p_gap_evt->params.connected.peer_addr.addr[3],
+                      p_gap_evt->params.connected.peer_addr.addr[4],
+                      p_gap_evt->params.connected.peer_addr.addr[5]
+                      );
+
+            for (uint8_t i = 0; i < NRF_SDH_BLE_CENTRAL_LINK_COUNT; i++)
+            { 
+              if ( (devAddrList[i][0] == 0 ) &&
+                   (devAddrList[i][1] == 0 ) && 
+                   (devAddrList[i][2] == 0 ) && 
+                   (devAddrList[i][3] == 0 ) && 
+                   (devAddrList[i][4] == 0 ) && 
+                   (devAddrList[i][5] == 0 ) ) 
+                   
+              {
+                // disconnect the duplicated connection handle
+                sd_ble_gap_disconnect(i,BLE_HCI_REMOTE_USER_TERMINATED_CONNECTION);
+              }
+            }
             err_code = ble_nus_c_handles_assign(&m_ble_nus_c[p_gap_evt->conn_handle],//m_ble_nus_c[0], m_ble_nus_c[1]...m_ble_nus_c[7]
                                                 p_gap_evt->conn_handle, // assign the connection handle
                                                 NULL); //NULL, actually RX and Tx characteristics nothing to assgin
-
             APP_ERROR_CHECK(err_code);
 
             err_code = bsp_indication_set(BSP_INDICATE_CONNECTED);
             APP_ERROR_CHECK(err_code);
 
             // start discovery of services. The NUS Client waits for a discovery result
-//            err_code = ble_db_discovery_start(&m_db_disc, p_ble_evt->evt.gap_evt.conn_handle);
             err_code = ble_db_discovery_start(&m_db_disc[p_gap_evt->conn_handle],//m_db_disc[0],m_db_disc[1],...m_db_disc[7],
                                               p_gap_evt->conn_handle);// find the connection handle, and do discovery
             APP_ERROR_CHECK(err_code);
@@ -626,8 +723,6 @@ static void nus_c_init(void)
     init.error_handler = nus_error_handler;
     init.p_gatt_queue  = &m_ble_gatt_queue;
 
-//    err_code = ble_nus_c_init(&m_ble_nus_c, &init);
-//    APP_ERROR_CHECK(err_code);
     for (uint32_t i = 0; i < NRF_SDH_BLE_CENTRAL_LINK_COUNT; i++)
     {
         //different connection may have differert services, so we need to use the array define
@@ -723,7 +818,7 @@ int main(void)
 
     // Start execution.
     NRF_LOG_INFO("BLE UART central with multiple slave example started.");
-    NRF_LOG_INFO("Software version is 0x01");
+    NRF_LOG_INFO("Software version is 0x02");
     scan_start();
 
     // Enter main loop.
