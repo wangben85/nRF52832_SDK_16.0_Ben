@@ -427,10 +427,10 @@ static void ble_evt_handler(ble_evt_t const * p_ble_evt, void * p_context)
                                               p_ble_evt->evt.gap_evt.params.disconnected.reason);   
             // LED indication will be changed when advertising starts.
 //            m_conn_handle = BLE_CONN_HANDLE_INVALID;
-            if (periph_link_cnt == 0)
-            {
-                 APP_ERROR_CHECK(err_code);
-            }
+//            if (periph_link_cnt < 0)
+//            {
+//                 APP_ERROR_CHECK(err_code);
+//            }
 
             if (periph_link_cnt == (NRF_SDH_BLE_PERIPHERAL_LINK_COUNT - 1))
             {
