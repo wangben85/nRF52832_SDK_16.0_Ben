@@ -56,6 +56,11 @@
 #include "nrf_log.h"
 NRF_LOG_MODULE_REGISTER();
 
+// extern, defined in main.c
+extern uint8_t devAddrList[NRF_SDH_BLE_CENTRAL_LINK_COUNT][BLE_GAP_ADDR_LEN];
+extern bool devaddrListSearch(uint8_t addr[], uint8_t* pos );
+extern void devaddrListItemInsert(uint8_t pos, uint8_t addrInput[]);
+extern void devaddrListItemDelete(uint8_t index);
 
 /**@brief Function for establishing the connection with a device.
  *
@@ -73,6 +78,7 @@ static void nrf_ble_scan_connect_with_target(nrf_ble_scan_t           const * co
 {
     ret_code_t err_code;
     scan_evt_t scan_evt;
+	 uint8_t    dummy_pos;
 
     // For readability.
     ble_gap_addr_t const        * p_addr        = &p_adv_report->peer_addr;
@@ -85,6 +91,13 @@ static void nrf_ble_scan_connect_with_target(nrf_ble_scan_t           const * co
     {
         return;
     }
+
+	 //test
+	 if ( devaddrListSearch((uint8_t *)p_addr->addr, &dummy_pos ))
+	 {
+	     return;
+	 }
+	 //test end
 
     // Stop scanning.
     nrf_ble_scan_stop();

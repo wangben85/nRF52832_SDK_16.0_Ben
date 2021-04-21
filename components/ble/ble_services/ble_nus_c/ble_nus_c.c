@@ -52,7 +52,7 @@
 #include "nrf_log.h"
 NRF_LOG_MODULE_REGISTER();
 
-
+// extern, defined in main.c
 extern uint8_t devAddrList[NRF_SDH_BLE_CENTRAL_LINK_COUNT][BLE_GAP_ADDR_LEN];
 extern bool devaddrListSearch(uint8_t addr[], uint8_t* pos );
 extern void devaddrListItemInsert(uint8_t pos, uint8_t addrInput[]);

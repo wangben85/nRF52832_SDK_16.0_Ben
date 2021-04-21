@@ -113,12 +113,13 @@ bool devaddrListSearch(uint8_t addr[], uint8_t* pos )
         {
              if (( devAddrList[i][j] == addr[j]) && (j == BLE_GAP_ADDR_LEN - 1) )
              {
-                *pos = i;   // find the item existing ,return the position
+                *pos = i;   // find the item existing ,put the position to pos
+                            // and return true
                 return true;
              }
              else if ( devAddrList[i][j] != addr[j])
              {
-                break;  // no item found
+                break;  // no item found, return false
              }
         }
     return false;
@@ -506,20 +507,6 @@ static void ble_evt_handler(ble_evt_t const * p_ble_evt, void * p_context)
                       p_gap_evt->params.connected.peer_addr.addr[5]
                       );
 
-            for (uint8_t i = 0; i < NRF_SDH_BLE_CENTRAL_LINK_COUNT; i++)
-            { 
-              if ( (devAddrList[i][0] == 0 ) &&
-                   (devAddrList[i][1] == 0 ) && 
-                   (devAddrList[i][2] == 0 ) && 
-                   (devAddrList[i][3] == 0 ) && 
-                   (devAddrList[i][4] == 0 ) && 
-                   (devAddrList[i][5] == 0 ) ) 
-                   
-              {
-                // disconnect the duplicated connection handle
-                sd_ble_gap_disconnect(i,BLE_HCI_REMOTE_USER_TERMINATED_CONNECTION);
-              }
-            }
             err_code = ble_nus_c_handles_assign(&m_ble_nus_c[p_gap_evt->conn_handle],//m_ble_nus_c[0], m_ble_nus_c[1]...m_ble_nus_c[7]
                                                 p_gap_evt->conn_handle, // assign the connection handle
                                                 NULL); //NULL, actually RX and Tx characteristics nothing to assgin
@@ -682,6 +669,10 @@ void bsp_event_handler(bsp_event_t event)
 //            }
 //            break;
 
+		  case BSP_EVENT_KEY_3:
+	         asm("NOP");
+		  	   break;
+
         default:
             break;
     }
@@ -738,7 +729,8 @@ static void buttons_leds_init(void)
     ret_code_t err_code;
     bsp_event_t startup_event;
 
-    err_code = bsp_init(BSP_INIT_LEDS, bsp_event_handler);
+    //err_code = bsp_init(BSP_INIT_LEDS, bsp_event_handler);
+    err_code = bsp_init(BSP_INIT_LEDS | BSP_INIT_BUTTONS, bsp_event_handler);
     APP_ERROR_CHECK(err_code);
 
     err_code = bsp_btn_ble_init(NULL, &startup_event);
@@ -818,7 +810,7 @@ int main(void)
 
     // Start execution.
     NRF_LOG_INFO("BLE UART central with multiple slave example started.");
-    NRF_LOG_INFO("Software version is 0x02");
+    NRF_LOG_INFO("Software version is 0x01");
     scan_start();
 
     // Enter main loop.
