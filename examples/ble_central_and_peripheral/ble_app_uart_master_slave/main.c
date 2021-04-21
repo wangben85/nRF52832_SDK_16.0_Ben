@@ -84,8 +84,8 @@
 
 #define DEVICE_NAME                     "uart_master_slave_both" 
 #define APP_ADV_INTERVAL                64                                          /**< The advertising interval (in units of 0.625 ms. This value corresponds to 40 ms). */
-#define APP_ADV_DURATION                18000  
-//#define APP_ADV_DURATION                0  // no advertising timeout  
+//#define APP_ADV_DURATION                18000  
+#define APP_ADV_DURATION                0  // no advertising timeout  
 #define MIN_CONN_INTERVAL               MSEC_TO_UNITS(20, UNIT_1_25_MS)             /**< Minimum acceptable connection interval (20 ms), Connection interval uses 1.25 ms units. */
 #define MAX_CONN_INTERVAL               MSEC_TO_UNITS(75, UNIT_1_25_MS)             /**< Maximum acceptable connection interval (75 ms), Connection interval uses 1.25 ms units. */
 #define SLAVE_LATENCY                   0                                           /**< Slave latency. */
@@ -582,6 +582,18 @@ static void advertising_restart(void)
 }
 #endif
 
+#if 0
+
+static void advertising_stop(void)
+{
+    ret_code_t err_code;
+
+    err_code = sd_ble_gap_adv_stop(m_advertising.adv_handle);
+
+    APP_ERROR_CHECK(err_code);
+}
+
+#endif
 
 /**@brief Function for handling BLE events.
  *
@@ -658,6 +670,7 @@ static void ble_evt_handler(ble_evt_t const * p_ble_evt, void * p_context)
             if (periph_link_cnt == NRF_SDH_BLE_PERIPHERAL_LINK_COUNT) 
             {
                // the maximum link count has not been reached, not advertising any more
+               //advertising_stop();
             }
             else
             {
@@ -682,7 +695,17 @@ static void ble_evt_handler(ble_evt_t const * p_ble_evt, void * p_context)
 			   {
               NRF_LOG_INFO("Connection 0x%x has been disconnected. Reason: 0x%X\n",
                                               p_ble_evt->evt.gap_evt.conn_handle,
-                                              p_ble_evt->evt.gap_evt.params.disconnected.reason);   
+                                              p_ble_evt->evt.gap_evt.params.disconnected.reason);
+              if (periph_link_cnt == NRF_SDH_BLE_PERIPHERAL_LINK_COUNT) 
+              {
+               // the maximum link count has not been reached, not advertising any more
+                //advertising_stop();
+              }
+              else if (periph_link_cnt == NRF_SDH_BLE_PERIPHERAL_LINK_COUNT - 1) 
+              {
+               // Continue advertising. More connections can be established because the maximum link count has not been reached.
+                //advertising_restart();
+              } 				  
 			   }
             break;
 
@@ -1099,8 +1122,8 @@ static void advertising_init(void)
 
     init.advdata.name_type          = BLE_ADVDATA_FULL_NAME;
     init.advdata.include_appearance = false;
-    //init.advdata.flags              = BLE_GAP_ADV_FLAGS_LE_ONLY_GENERAL_DISC_MODE;
-    init.advdata.flags              = BLE_GAP_ADV_FLAGS_LE_ONLY_LIMITED_DISC_MODE;
+    init.advdata.flags              = BLE_GAP_ADV_FLAGS_LE_ONLY_GENERAL_DISC_MODE;
+    //init.advdata.flags              = BLE_GAP_ADV_FLAGS_LE_ONLY_LIMITED_DISC_MODE;
     
     init.srdata.uuids_complete.uuid_cnt = sizeof(m_adv_uuids) / sizeof(m_adv_uuids[0]);
     init.srdata.uuids_complete.p_uuids  = m_adv_uuids;
