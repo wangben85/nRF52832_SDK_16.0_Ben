@@ -402,7 +402,7 @@ void uart_event_handle(app_uart_evt_t * p_event)
 {
     static uint8_t data_array[BLE_NUS_MAX_DATA_LEN];
     static uint16_t index = 0;
-    uint32_t err_code;
+    //uint32_t err_code;
     uint32_t ret_val;
 	 ble_conn_state_conn_handle_list_t conn_handles = ble_conn_state_periph_handles();
 
@@ -410,8 +410,6 @@ void uart_event_handle(app_uart_evt_t * p_event)
     {
         /**@snippet [Handling data from UART] */
         case APP_UART_DATA_READY:
-		  //if ( role == BLE_GAP_ROLE_CENTRAL )	// work role as central
-		  //{
             UNUSED_VARIABLE(app_uart_get(&data_array[index]));
             index++;
 
@@ -423,7 +421,8 @@ void uart_event_handle(app_uart_evt_t * p_event)
                 NRF_LOG_HEXDUMP_DEBUG(data_array, index);
                 do
                 {
-                   for (uint8_t i = 0; i < ble_conn_state_central_conn_count(); i++) // master send to all connected slaves
+                   // master send to all connected slaves
+                   for (uint8_t i = 0; i < ble_conn_state_central_conn_count(); i++) 
                    {
                         NRF_LOG_INFO("Sent on connection handle 0x%04x.\n",i);
                         ret_val = ble_nus_c_string_send(&m_ble_nus_c[i], data_array, index); 
@@ -433,56 +432,23 @@ void uart_event_handle(app_uart_evt_t * p_event)
                         }
                    }  
 
-                   for (uint8_t i = 0; i < conn_handles.len; i++) // slave send to all connected masters
+					    // slave send to all connected masters
+                   for (uint8_t i = 0; i < conn_handles.len; i++) 
                    {
                         NRF_LOG_INFO("Sent on connection handle 0x%04x.\n", conn_handles.conn_handles[i]); 
-                        err_code = ble_nus_data_send(&m_nus, data_array, &index, conn_handles.conn_handles[i]); 
-                        if ((err_code != NRF_ERROR_INVALID_STATE) &&
-                            (err_code != NRF_ERROR_RESOURCES) &&
-                            (err_code != NRF_ERROR_NOT_FOUND))
+                        ret_val = ble_nus_data_send(&m_nus, data_array, &index, conn_handles.conn_handles[i]); 
+                        if ((ret_val != NRF_ERROR_INVALID_STATE) &&
+                            (ret_val != NRF_ERROR_RESOURCES) &&
+                            (ret_val != NRF_ERROR_NOT_FOUND))
                         {
-                            APP_ERROR_CHECK(err_code);
+                            APP_ERROR_CHECK(ret_val);
                         }
                    } 						 
                 } while (ret_val == NRF_ERROR_RESOURCES);
 
                 index = 0;
             }
-		  	//}
-		  //else if ( role == BLE_GAP_ROLE_PERIPH )	// work role as peripheral
-		  //{
-    //        UNUSED_VARIABLE(app_uart_get(&data_array[index]));
-    //        index++;
 
-    //        if ((data_array[index - 1] == '\n') ||
-    //            (data_array[index - 1] == '\r') ||
-    //            (index >= m_ble_nus_max_data_len))
-    //        {
-    //            if (index > 1)
-    //            {
-    //                NRF_LOG_DEBUG("Ready to send data over BLE NUS");
-    //                NRF_LOG_HEXDUMP_DEBUG(data_array, index);
-
-    //                do
-    //                {
-    //                    uint16_t length = (uint16_t)index;
-    //                    for (uint8_t i = 0; i < conn_handles.len; i++)
-    //                    {
-    //                      NRF_LOG_INFO("Sent on connection handle 0x%04x.\n", conn_handles.conn_handles[i]); 
-    //                      err_code = ble_nus_data_send(&m_nus, data_array, &length, conn_handles.conn_handles[i]); 
-    //                      if ((err_code != NRF_ERROR_INVALID_STATE) &&
-    //                          (err_code != NRF_ERROR_RESOURCES) &&
-    //                          (err_code != NRF_ERROR_NOT_FOUND))
-    //                      {
-    //                        APP_ERROR_CHECK(err_code);
-    //                      }
-    //                    }  
-    //                } while (err_code == NRF_ERROR_RESOURCES);
-    //            }
-
-    //            index = 0;
-    //        }		  
-		  // }
             break;
 
         /**@snippet [Handling data from UART] */
@@ -708,6 +674,12 @@ static void ble_evt_handler(ble_evt_t const * p_ble_evt, void * p_context)
               } 				  
 			   }
             break;
+
+        case BLE_GATTS_EVT_SYS_ATTR_MISSING: // Note: if not have this item, destop ble explore will fail
+            // No system attributes have been stored.
+            err_code = sd_ble_gatts_sys_attr_set(p_ble_evt->evt.gap_evt.conn_handle, NULL, 0, 0);
+            APP_ERROR_CHECK(err_code);
+            break;				
 
         case BLE_GAP_EVT_TIMEOUT:
             if (p_gap_evt->params.timeout.src == BLE_GAP_TIMEOUT_SRC_CONN)
@@ -1053,7 +1025,6 @@ static void services_init(void)
     // Initialize Queued Write Module.
     qwr_init.error_handler = nrf_qwr_error_handler;
 
-    //for (uint32_t i = 0; i < NRF_SDH_BLE_TOTAL_LINK_COUNT; i++)
     for (uint32_t i = 0; i < NRF_SDH_BLE_PERIPHERAL_LINK_COUNT; i++)
     {
         err_code = nrf_ble_qwr_init(&m_qwr[i], &qwr_init);
@@ -1150,7 +1121,6 @@ static void advertising_init(void)
  *
  * @param[in] p_evt  Event received from the Connection Parameters Module.
  */
-#if 1
 static void on_conn_params_evt(ble_conn_params_evt_t * p_evt)
 {
 //    uint32_t err_code;
@@ -1171,10 +1141,8 @@ static void conn_params_error_handler(uint32_t nrf_error)
 {
     APP_ERROR_HANDLER(nrf_error);
 }
-#endif
 /**@brief Function for initializing the Connection Parameters module.
  */
-#if 1
 static void conn_params_init(void)
 {
     uint32_t               err_code;
@@ -1194,7 +1162,6 @@ static void conn_params_init(void)
     err_code = ble_conn_params_init(&cp_init);
     APP_ERROR_CHECK(err_code);
 }
-#endif
 
 
 int main(void)
@@ -1221,7 +1188,7 @@ int main(void)
     // Start execution.
     conn_params_init();
     NRF_LOG_INFO("BLE UART work as both central and periperhal.");
-    NRF_LOG_INFO("Software version is 0x01");
+    NRF_LOG_INFO("Software version is 0x11");
     scan_start();
 	 advertising_start();
 
