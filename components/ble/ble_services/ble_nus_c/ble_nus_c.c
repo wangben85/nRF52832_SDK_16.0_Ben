@@ -205,7 +205,6 @@ void ble_nus_c_on_ble_evt(ble_evt_t const * p_ble_evt, void * p_context)
             {
                 ble_nus_c_evt_t nus_c_evt;
                 devaddrListItemDelete(p_ble_nus_c->conn_handle);
-
                 nus_c_evt.evt_type = BLE_NUS_C_EVT_DISCONNECTED; // Event indicating that the NUS server disconnected. go back to main to 'SCAN' again
                 p_ble_nus_c->conn_handle = BLE_CONN_HANDLE_INVALID;
                 p_ble_nus_c->evt_handler(p_ble_nus_c, &nus_c_evt);

@@ -44,7 +44,6 @@
 #include "app_error.h"
 #include "app_uart.h"
 #include "app_util_platform.h"
-#include "ble_db_discovery.h"
 #include "app_timer.h"
 #include "app_util.h"
 #include "bsp_btn_ble.h"
@@ -54,38 +53,36 @@
 #include "nrf_sdh.h"
 #include "nrf_sdh_ble.h"
 #include "nrf_sdh_soc.h"
-#include "ble_nus_c.h"
 #include "nrf_ble_gatt.h"
 #include "nrf_pwr_mgmt.h"
-#include "nrf_ble_scan.h"
 #include "ble_conn_state.h"
-#include "ble_advertising.h"
 #include "ble_conn_params.h"
-#include "nrf_ble_gatt.h"
 #include "nrf_ble_qwr.h"
-#include "ble_nus.h"
 #include "bsp_btn_ble.h"
-
-
+// Nus central
+#include "ble_db_discovery.h"
+#include "ble_nus_c.h"
+#include "nrf_ble_scan.h"
+// Nus peripheral
+#include "ble_advertising.h"
+#include "ble_nus.h"
+// Log
 #include "nrf_log.h"
 #include "nrf_log_ctrl.h"
 #include "nrf_log_default_backends.h"
 
-
-#define APP_BLE_CONN_CFG_TAG    1                                       /**< Tag that refers to the BLE stack configuration set with @ref sd_ble_cfg_set. The default tag is @ref BLE_CONN_CFG_TAG_DEFAULT. */
-#define APP_BLE_OBSERVER_PRIO   3                                       /**< BLE observer priority of the application. There is no need to modify this value. */
-
 #define UART_TX_BUF_SIZE        256                                     /**< UART TX buffer size. */
 #define UART_RX_BUF_SIZE        256                                     /**< UART RX buffer size. */
 
+#define APP_BLE_CONN_CFG_TAG    1                                       /**< Tag that refers to the BLE stack configuration set with @ref sd_ble_cfg_set. The default tag is @ref BLE_CONN_CFG_TAG_DEFAULT. */
+#define APP_BLE_OBSERVER_PRIO   3                                       /**< BLE observer priority of the application. There is no need to modify this value. */
 #define NUS_SERVICE_UUID_TYPE   BLE_UUID_TYPE_VENDOR_BEGIN              /**< UUID type for the Nordic UART Service (vendor specific). */
 
-#define ECHOBACK_BLE_UART_DATA  0                                       /**< Echo the UART data that is received over the Nordic UART Service (NUS) back to the sender. */
 
 #define DEVICE_NAME                     "uart_master_slave_both" 
 #define APP_ADV_INTERVAL                64                                          /**< The advertising interval (in units of 0.625 ms. This value corresponds to 40 ms). */
-//#define APP_ADV_DURATION                18000  
-#define APP_ADV_DURATION                0  // no advertising timeout  
+//#define APP_ADV_DURATION                18000                                     /**< The advertising duration (180 seconds) in units of 10 milliseconds. */
+#define APP_ADV_DURATION                0                                           /**< 0 means no timeout, advertising forever */
 #define MIN_CONN_INTERVAL               MSEC_TO_UNITS(20, UNIT_1_25_MS)             /**< Minimum acceptable connection interval (20 ms), Connection interval uses 1.25 ms units. */
 #define MAX_CONN_INTERVAL               MSEC_TO_UNITS(75, UNIT_1_25_MS)             /**< Maximum acceptable connection interval (75 ms), Connection interval uses 1.25 ms units. */
 #define SLAVE_LATENCY                   0                                           /**< Slave latency. */
@@ -94,40 +91,43 @@
 #define NEXT_CONN_PARAMS_UPDATE_DELAY   APP_TIMER_TICKS(30000)                      /**< Time between each call to sd_ble_gap_conn_param_update after the first call (30 seconds). */
 #define MAX_CONN_PARAMS_UPDATE_COUNT    3   
 
-NRF_BLE_GATT_DEF(m_gatt);                                              /**< GATT module instance. */
-
+// definitions for the central and peripheral
+NRF_BLE_GATT_DEF(m_gatt);                                                           /**< GATT module instance. */
 // connection handle for central
 static uint16_t m_conn_handle_central = BLE_CONN_HANDLE_INVALID;  
 // connection handle for peripheral
 static uint16_t m_conn_handle_peripheral = BLE_CONN_HANDLE_INVALID; 
 
 // central definition
-BLE_NUS_C_ARRAY_DEF(m_ble_nus_c, NRF_SDH_BLE_CENTRAL_LINK_COUNT);         /**< Array: BLE Nordic UART Service (NUS) client instances. */
-BLE_DB_DISCOVERY_ARRAY_DEF(m_db_disc, NRF_SDH_BLE_CENTRAL_LINK_COUNT);    /**< Array: Database discovery module instances. */
-NRF_BLE_SCAN_DEF(m_scan);                                               /**< Scanning Module instance. */
-NRF_BLE_GQ_DEF(m_ble_gatt_queue,                                        /**< BLE GATT Queue instance. */
+BLE_NUS_C_ARRAY_DEF(m_ble_nus_c, NRF_SDH_BLE_CENTRAL_LINK_COUNT);                    /**< Array: BLE Nordic UART Service (NUS) client instances. */
+BLE_DB_DISCOVERY_ARRAY_DEF(m_db_disc, NRF_SDH_BLE_CENTRAL_LINK_COUNT);               /**< Array: Database discovery module instances. */
+NRF_BLE_SCAN_DEF(m_scan);                                                            /**< Scanning Module instance. */
+NRF_BLE_GQ_DEF(m_ble_gatt_queue,                                                     /**< BLE GATT Queue instance. */
                NRF_SDH_BLE_CENTRAL_LINK_COUNT,
                NRF_BLE_GQ_QUEUE_SIZE);
 
 // periperhal definition
-BLE_NUS_DEF(m_nus, NRF_SDH_BLE_TOTAL_LINK_COUNT);                                   /**< BLE NUS service instance. */
-NRF_BLE_QWRS_DEF(m_qwr, NRF_SDH_BLE_TOTAL_LINK_COUNT);                                /**< Array:Context for the Queued Write module.*/
-BLE_ADVERTISING_DEF(m_advertising);                                                 /**< Advertising module instance. */
+BLE_NUS_DEF(m_nus, NRF_SDH_BLE_TOTAL_LINK_COUNT);                                    /**< BLE NUS service instance. */
+NRF_BLE_QWRS_DEF(m_qwr, NRF_SDH_BLE_TOTAL_LINK_COUNT);                               /**< Array:Context for the Queued Write module.*/
+BLE_ADVERTISING_DEF(m_advertising);                                                  /**< Advertising module instance. */
+
+static bool shutdown_handler(nrf_pwr_mgmt_evt_t event);
+NRF_PWR_MGMT_HANDLER_REGISTER(shutdown_handler, APP_SHUTDOWN_HANDLER_PRIORITY);
 
 static uint16_t m_ble_nus_max_data_len = BLE_GATT_ATT_MTU_DEFAULT - OPCODE_LENGTH - HANDLE_LENGTH; /**< Maximum length of data (in bytes) that can be transmitted to the peer by the Nordic UART service module. */
 
 /**@brief NUS UUID. */
-static ble_uuid_t const m_nus_uuid =
-{
-    .uuid = BLE_UUID_NUS_SERVICE,
-    .type = NUS_SERVICE_UUID_TYPE
-};
+//static ble_uuid_t const m_nus_uuid =
+//{
+//    .uuid = BLE_UUID_NUS_SERVICE,
+//    .type = NUS_SERVICE_UUID_TYPE
+//};
 static ble_uuid_t m_adv_uuids[]          =                                          /**< Universally unique service identifier. */
 {
     {BLE_UUID_NUS_SERVICE, NUS_SERVICE_UUID_TYPE}
 };
 
-// The device lists addr table, which this device connected to
+// The device lists addr table, which this devices connected to
 uint8_t devAddrList[NRF_SDH_BLE_CENTRAL_LINK_COUNT][BLE_GAP_ADDR_LEN] = {{0}};
 // The 00:00:00:00:00:00 mac address
 uint8_t blankItem[BLE_GAP_ADDR_LEN] = {0};
@@ -251,43 +251,7 @@ static void scan_evt_handler(scan_evt_t const * p_scan_evt)
 
          case NRF_BLE_SCAN_EVT_CONNECTED:
          {
-             // debug only
-             // ble_gap_evt_connected_t const * p_connected =
-             //                  p_scan_evt->params.connected.p_connected;
-             //// Scan is automatically stopped by the connection.
-
-             //NRF_LOG_INFO("Connecting to target No.%d",devNum);
-             //NRF_LOG_INFO("which address is  %02x%02x%02x%02x%02x%02x",
-             //         p_connected->peer_addr.addr[0],
-             //         p_connected->peer_addr.addr[1],
-             //         p_connected->peer_addr.addr[2],
-             //         p_connected->peer_addr.addr[3],
-             //         p_connected->peer_addr.addr[4],
-             //         p_connected->peer_addr.addr[5]
-             //         );
-             //memcpy(devAddrList[devNum], p_connected->peer_addr.addr, sizeof(p_connected->peer_addr.addr)); 
-             //devaddrListItemInsert(devNum, (uint8_t* )p_connected->peer_addr.addr);
-             //if ( devNum > NRF_SDH_BLE_CENTRAL_LINK_COUNT)
-             //{
-             //  devNum = 0;
-             //  NRF_LOG_INFO("scan_evt_handler, Error!\n")
-             //}
-             //else if ( devNum == NRF_SDH_BLE_CENTRAL_LINK_COUNT - 1) 
-             //{
-             //   for ( int j = 0; j <= devNum ; j++)
-             //   {
-             //         NRF_LOG_INFO("Summary: All the Connected devices are %02x%02x%02x%02x%02x%02x\n",
-             //         devAddrList[j][0],
-             //         devAddrList[j][1],
-             //         devAddrList[j][2],
-             //         devAddrList[j][3],
-             //         devAddrList[j][4],
-             //         devAddrList[j][5]
-             //         );
-             //   }
-             //  devNum = 0;
-             //}
-             //else{ devNum++;}
+             NRF_LOG_INFO("Scaned Devices Connected, implementation in ble_evt_handler.\n");
          } break;
 
          case NRF_BLE_SCAN_EVT_SCAN_TIMEOUT:
@@ -317,7 +281,9 @@ static void scan_init(void)
     err_code = nrf_ble_scan_init(&m_scan, &init_scan, scan_evt_handler);
     APP_ERROR_CHECK(err_code);
 
-    err_code = nrf_ble_scan_filter_set(&m_scan, SCAN_UUID_FILTER, &m_nus_uuid);
+    //err_code = nrf_ble_scan_filter_set(&m_scan, SCAN_UUID_FILTER, &m_nus_uuid);
+    err_code = nrf_ble_scan_filter_set(&m_scan, SCAN_UUID_FILTER, &m_adv_uuids);
+    
     APP_ERROR_CHECK(err_code);
 
     err_code = nrf_ble_scan_filters_enable(&m_scan, NRF_BLE_SCAN_UUID_FILTER, false);
@@ -371,24 +337,6 @@ static void ble_nus_chars_received_uart_print(uint8_t * p_data, uint16_t data_le
     {
         while (app_uart_put('\n') == NRF_ERROR_BUSY);
     }
-    if (ECHOBACK_BLE_UART_DATA) // echo back the data by BLE to the sender
-    {
-        // Send data back to the peripheral.
-        do
-        {
-           for (uint8_t i = 0; i < ble_conn_state_central_conn_count(); i++)
-            {
-                NRF_LOG_INFO("Sent on connection handle 0x%04x.\n",i);
-                ret_val =  ble_nus_c_string_send(&m_ble_nus_c[i], p_data, data_len); 
-                if ((ret_val != NRF_SUCCESS) && (ret_val != NRF_ERROR_BUSY))
-                {
-                  NRF_LOG_ERROR("Failed sending NUS message. Error 0x%x. ", ret_val);
-                  APP_ERROR_CHECK(ret_val);
-                }
-            }            
-
-        } while (ret_val == NRF_ERROR_BUSY);
-    }
 }
 
 
@@ -404,7 +352,8 @@ void uart_event_handle(app_uart_evt_t * p_event)
     static uint16_t index = 0;
     //uint32_t err_code;
     uint32_t ret_val;
-	 ble_conn_state_conn_handle_list_t conn_handles = ble_conn_state_periph_handles();
+    // get the device role : central or peripheral
+    ble_conn_state_conn_handle_list_t conn_handles = ble_conn_state_periph_handles();
 
     switch (p_event->evt_type)
     {
@@ -421,10 +370,10 @@ void uart_event_handle(app_uart_evt_t * p_event)
                 NRF_LOG_HEXDUMP_DEBUG(data_array, index);
                 do
                 {
-                   // master send to all connected slaves
+                   // master(central) send to all connected slaves(peripherals)
                    for (uint8_t i = 0; i < ble_conn_state_central_conn_count(); i++) 
                    {
-                        NRF_LOG_INFO("Sent on connection handle 0x%04x.\n",i);
+                        NRF_LOG_INFO("Central node sent to the peripheral connection handle 0x%04x.\n",i);
                         ret_val = ble_nus_c_string_send(&m_ble_nus_c[i], data_array, index); 
                         if ( (ret_val != NRF_ERROR_INVALID_STATE) && (ret_val != NRF_ERROR_RESOURCES) )
                         {
@@ -533,11 +482,9 @@ static bool shutdown_handler(nrf_pwr_mgmt_evt_t event)
     return true;
 }
 
-NRF_PWR_MGMT_HANDLER_REGISTER(shutdown_handler, APP_SHUTDOWN_HANDLER_PRIORITY);
 
 /**@brief Function for advertising restart.
  */
-#if 1
 static void advertising_restart(void)
 {
     ret_code_t err_code;
@@ -546,10 +493,10 @@ static void advertising_restart(void)
 
     APP_ERROR_CHECK(err_code);
 }
-#endif
 
 #if 0
-
+/**@brief Function for advertising stop.
+ */
 static void advertising_stop(void)
 {
     ret_code_t err_code;
@@ -558,7 +505,6 @@ static void advertising_stop(void)
 
     APP_ERROR_CHECK(err_code);
 }
-
 #endif
 
 /**@brief Function for handling BLE events.
@@ -570,21 +516,22 @@ static void ble_evt_handler(ble_evt_t const * p_ble_evt, void * p_context)
 {
     ret_code_t            err_code;
     ble_gap_evt_t const * p_gap_evt = &p_ble_evt->evt.gap_evt;
-    uint16_t role        = ble_conn_state_role(p_gap_evt->conn_handle);//querying the role of the local device in a connection
+    //querying the role of the local device in a connection
+    uint16_t role        = ble_conn_state_role(p_gap_evt->conn_handle);
     uint32_t periph_link_cnt = ble_conn_state_peripheral_conn_count();
-	 //uint8_t               dummy;
 
     switch (p_ble_evt->header.evt_id)
     {
-        case BLE_GAP_EVT_CONNECTED:
-		  	   if ( role == BLE_GAP_ROLE_CENTRAL )  // work role as central
-		  	  {
+        case BLE_GAP_EVT_CONNECTED: 
+        if ( role == BLE_GAP_ROLE_CENTRAL )  // device role is central
+		{
             NRF_LOG_INFO("Connection 0x%x established, starting DB discovery.",
                          p_gap_evt->conn_handle);
             APP_ERROR_CHECK_BOOL(p_gap_evt->conn_handle < NRF_SDH_BLE_CENTRAL_LINK_COUNT);
             NRF_LOG_INFO("Connecting to target No.%d",p_gap_evt->conn_handle);
+            // add the connected device into device list(table)
             devaddrListItemInsert(p_gap_evt->conn_handle, (uint8_t* )p_gap_evt->params.connected.peer_addr.addr);
-            NRF_LOG_INFO("which address is  %02x%02x%02x%02x%02x%02x",
+            NRF_LOG_INFO("Connected slave address is  %02x%02x%02x%02x%02x%02x",
                       p_gap_evt->params.connected.peer_addr.addr[0],
                       p_gap_evt->params.connected.peer_addr.addr[1],
                       p_gap_evt->params.connected.peer_addr.addr[2],
@@ -593,8 +540,8 @@ static void ble_evt_handler(ble_evt_t const * p_ble_evt, void * p_context)
                       p_gap_evt->params.connected.peer_addr.addr[5]
                       );
             
-            m_conn_handle_central = p_ble_evt->evt.gap_evt.conn_handle;
-            err_code = ble_nus_c_handles_assign(&m_ble_nus_c[p_gap_evt->conn_handle],//m_ble_nus_c[0], m_ble_nus_c[1]...m_ble_nus_c[7]
+            m_conn_handle_central = p_gap_evt->conn_handle;
+            err_code = ble_nus_c_handles_assign(&m_ble_nus_c[m_conn_handle_central],//m_ble_nus_c[0], m_ble_nus_c[1]...m_ble_nus_c[7]
                                                 m_conn_handle_central, // assign the connection handle
                                                 NULL); //NULL, actually RX and Tx characteristics nothing to assgin
             APP_ERROR_CHECK(err_code);
@@ -603,10 +550,11 @@ static void ble_evt_handler(ble_evt_t const * p_ble_evt, void * p_context)
             APP_ERROR_CHECK(err_code);
 
             // start discovery of services. The NUS Client waits for a discovery result
-            err_code = ble_db_discovery_start(&m_db_disc[p_gap_evt->conn_handle],//m_db_disc[0],m_db_disc[1],...m_db_disc[7],
-                                              p_gap_evt->conn_handle);// find the connection handle, and do discovery
+            err_code = ble_db_discovery_start(&m_db_disc[m_conn_handle_central],//m_db_disc[0],m_db_disc[1],...m_db_disc[7],
+                                              m_conn_handle_central);// find the connection handle, and do discovery
             APP_ERROR_CHECK(err_code);
-            
+
+            // Central connected peripheral devices reach to Max 
             if (ble_conn_state_central_conn_count() == NRF_SDH_BLE_CENTRAL_LINK_COUNT)
             {
                 // no longer scan when the peripheral links reach the max
@@ -615,14 +563,14 @@ static void ble_evt_handler(ble_evt_t const * p_ble_evt, void * p_context)
             {
                 scan_start();
             }
-		  	  }
+		}
 
-			  else if ( role == BLE_GAP_ROLE_PERIPH )   // work role as peripheral
-			  {
+        else if ( role == BLE_GAP_ROLE_PERIPH )   // device role is peripheral
+        {
             NRF_LOG_INFO("Connection with link 0x%x established.\n", p_ble_evt->evt.gap_evt.conn_handle); 
             err_code = bsp_indication_set(BSP_INDICATE_CONNECTED);
             APP_ERROR_CHECK(err_code);
-            m_conn_handle_peripheral = p_ble_evt->evt.gap_evt.conn_handle;
+            m_conn_handle_peripheral = p_gap_evt->conn_handle;
             // Assign connection handle to available instance of QWR module.
             for (uint32_t i = 0; i < NRF_SDH_BLE_PERIPHERAL_LINK_COUNT; i++)
             {
@@ -633,7 +581,7 @@ static void ble_evt_handler(ble_evt_t const * p_ble_evt, void * p_context)
                 break;
               }
             }
-            if (periph_link_cnt == NRF_SDH_BLE_PERIPHERAL_LINK_COUNT) 
+            if (ble_conn_state_peripheral_conn_count() == NRF_SDH_BLE_PERIPHERAL_LINK_COUNT) 
             {
                // the maximum link count has not been reached, not advertising any more
                //advertising_stop();
@@ -648,7 +596,7 @@ static void ble_evt_handler(ble_evt_t const * p_ble_evt, void * p_context)
 
         case BLE_GAP_EVT_DISCONNECTED:
 
-            if ( role == BLE_GAP_ROLE_CENTRAL )  // work role as central
+            if ( role == BLE_GAP_ROLE_CENTRAL )  // device role is central
             {
               NRF_LOG_INFO("Disconnected. conn_handle: 0x%x, reason: 0x%x",
                          p_gap_evt->conn_handle,
@@ -657,25 +605,26 @@ static void ble_evt_handler(ble_evt_t const * p_ble_evt, void * p_context)
               // continue scanning after disconnected.
               scan_start();
             }
-				else if ( role == BLE_GAP_ROLE_PERIPH )	// work role as peripheral
-			   {
+			
+            else if ( role == BLE_GAP_ROLE_PERIPH )	// device role s peripheral
+		    {
               NRF_LOG_INFO("Connection 0x%x has been disconnected. Reason: 0x%X\n",
                                               p_ble_evt->evt.gap_evt.conn_handle,
                                               p_ble_evt->evt.gap_evt.params.disconnected.reason);
               if (periph_link_cnt == NRF_SDH_BLE_PERIPHERAL_LINK_COUNT) 
               {
-               // the maximum link count has not been reached, not advertising any more
-                //advertising_stop();
+                // the maximum link count has not been reached, not advertising any more
               }
               else if (periph_link_cnt == NRF_SDH_BLE_PERIPHERAL_LINK_COUNT - 1) 
               {
-               // Continue advertising. More connections can be established because the maximum link count has not been reached.
+                // Continue advertising. More connections can be established because the maximum link count has not been reached.
                 //advertising_restart();
               } 				  
-			   }
+            }
             break;
-
-        case BLE_GATTS_EVT_SYS_ATTR_MISSING: // Note: if not have this item, destop ble explore will fail
+        
+        // Note: if not have this item, destop ble explore will fail
+        case BLE_GATTS_EVT_SYS_ATTR_MISSING: 
             // No system attributes have been stored.
             err_code = sd_ble_gatts_sys_attr_set(p_ble_evt->evt.gap_evt.conn_handle, NULL, 0, 0);
             APP_ERROR_CHECK(err_code);
@@ -800,17 +749,8 @@ void bsp_event_handler(bsp_event_t event)
         case BSP_EVENT_SLEEP:
             nrf_pwr_mgmt_shutdown(NRF_PWR_MGMT_SHUTDOWN_GOTO_SYSOFF);
             break;
-
-//        case BSP_EVENT_DISCONNECT:
-//            err_code = sd_ble_gap_disconnect(m_ble_nus_c.conn_handle,
-//                                             BLE_HCI_REMOTE_USER_TERMINATED_CONNECTION);
-//            if (err_code != NRF_ERROR_INVALID_STATE)
-//            {
-//                APP_ERROR_CHECK(err_code);
-//            }
-//            break;
-
-		  case BSP_EVENT_KEY_3:
+        
+        case BSP_EVENT_KEY_3:
 	         asm("NOP");
 		  	   break;
 
@@ -985,7 +925,6 @@ static void gap_params_init(void)
 /**@snippet [Handling the data received over BLE] */
 static void nus_data_handler(ble_nus_evt_t * p_evt)
 {
-
     if (p_evt->type == BLE_NUS_EVT_RX_DATA)
     {
         uint32_t err_code;
@@ -1094,7 +1033,6 @@ static void advertising_init(void)
     init.advdata.name_type          = BLE_ADVDATA_FULL_NAME;
     init.advdata.include_appearance = false;
     init.advdata.flags              = BLE_GAP_ADV_FLAGS_LE_ONLY_GENERAL_DISC_MODE;
-    //init.advdata.flags              = BLE_GAP_ADV_FLAGS_LE_ONLY_LIMITED_DISC_MODE;
     
     init.srdata.uuids_complete.uuid_cnt = sizeof(m_adv_uuids) / sizeof(m_adv_uuids[0]);
     init.srdata.uuids_complete.p_uuids  = m_adv_uuids;
@@ -1123,13 +1061,7 @@ static void advertising_init(void)
  */
 static void on_conn_params_evt(ble_conn_params_evt_t * p_evt)
 {
-//    uint32_t err_code;
-
-//    if (p_evt->evt_type == BLE_CONN_PARAMS_EVT_FAILED)
-//    {
-//        err_code = sd_ble_gap_disconnect(m_conn_handle, BLE_HCI_CONN_INTERVAL_UNACCEPTABLE);
-//        APP_ERROR_CHECK(err_code);
-//    }
+    NRF_LOG_INFO("DO Nothing");
 }
 
 
@@ -1177,20 +1109,20 @@ int main(void)
     gap_params_init();
     gatt_init();
 
-	// work as periperhal(slave role)
+	// device work as periperhal(slave role)
     services_init(); // Initialize NUS services and characteristics
     advertising_init();//adv configuration, including APP_ADV_INTERVAL and APP_ADV_DURATION, etc.
 
-    // work as central(master role)
+    // device work as central(master role)
     nus_c_init();
     scan_init();
 
     // Start execution.
     conn_params_init();
     NRF_LOG_INFO("BLE UART work as both central and periperhal.");
-    NRF_LOG_INFO("Software version is 0x11");
+    NRF_LOG_INFO("Software version is 0x01");
     scan_start();
-	 advertising_start();
+    advertising_start();
 
     // Enter main loop.
     for (;;)
