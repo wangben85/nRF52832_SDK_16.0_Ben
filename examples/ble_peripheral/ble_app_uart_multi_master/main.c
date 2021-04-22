@@ -396,8 +396,6 @@ static void ble_evt_handler(ble_evt_t const * p_ble_evt, void * p_context)
            err_code = bsp_indication_set(BSP_INDICATE_CONNECTED);
            APP_ERROR_CHECK(err_code);
            m_conn_handle = p_ble_evt->evt.gap_evt.conn_handle;
-//            err_code = nrf_ble_qwr_conn_handle_assign(&m_qwr, m_conn_handle);
-//            APP_ERROR_CHECK(err_code);
             // Assign connection handle to available instance of QWR module.
            for (uint32_t i = 0; i < NRF_SDH_BLE_PERIPHERAL_LINK_COUNT; i++)
            {
@@ -515,7 +513,7 @@ static void ble_stack_init(void)
 void gatt_evt_handler(nrf_ble_gatt_t * p_gatt, nrf_ble_gatt_evt_t const * p_evt)
 {
     if ((m_conn_handle == p_evt->conn_handle) && (p_evt->evt_id == NRF_BLE_GATT_EVT_ATT_MTU_UPDATED))
-    {
+   {
         m_ble_nus_max_data_len = p_evt->params.att_mtu_effective - OPCODE_LENGTH - HANDLE_LENGTH;
         NRF_LOG_INFO("Data len is set to 0x%X(%d)", m_ble_nus_max_data_len, m_ble_nus_max_data_len);
     }
@@ -610,7 +608,6 @@ void uart_event_handle(app_uart_evt_t * p_event)
                         uint16_t length = (uint16_t)index;
                         for (uint8_t i = 0; i < conn_handles.len; i++)
                         {
-//                        err_code = ble_nus_data_send(&m_nus, data_array, &length, m_conn_handle);
                           NRF_LOG_INFO("Sent on connection handle 0x%04x.\n", conn_handles.conn_handles[i]); 
                           err_code = ble_nus_data_send(&m_nus, data_array, &length, conn_handles.conn_handles[i]); 
                           if ((err_code != NRF_ERROR_INVALID_STATE) &&
@@ -784,7 +781,7 @@ int main(void)
     conn_params_init();
     // Start execution.
     NRF_LOG_INFO("BLE UART peripheral wit multiple master example started.");
-    NRF_LOG_INFO("Software version is 0x01");
+    NRF_LOG_INFO("Software version is 0x02");
     advertising_start();
 
     // Enter main loop.
