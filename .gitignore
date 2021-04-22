@@ -15,3 +15,4 @@
 /examples/ble_central_and_peripheral/ble_app_uart_master_slave/settings
 /examples/ble_central_and_peripheral/ble_app_uart_master_slave/pca10040/s132/iar/settings
 /examples/ble_central_and_peripheral/ble_app_uart_master_slave/pca10040/s132/iar/_build
+/examples/ble_peripheral/ble_app_uart_multi_master/insight_slave_to_multi_master
