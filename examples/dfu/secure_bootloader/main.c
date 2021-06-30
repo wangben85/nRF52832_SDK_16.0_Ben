@@ -138,22 +138,12 @@ int main(void)
     APP_ERROR_CHECK(ret_val);
 
     (void) NRF_LOG_INIT(nrf_bootloader_dfu_timer_counter_get);
-    NRF_LOG_DEFAULT_BACKENDS_INIT();//RTTI log enable in debug version  
-                                    //RTTI log disable in non-debug version
-    
-    /*
-    // <0=> Off 
-    // <1=> Error 
-    // <2=> Warning 
-    // <3=> Info 
-    // <4=> Debug 
-       #ifndef NRF_LOG_DEFAULT_LEVEL
-       #define NRF_LOG_DEFAULT_LEVEL 4    // Debug Log above will print
-       #define NRF_LOG_DEFAULT_LEVEL 3    // Info Log above will print
-       #endif
-    */
+	 //RTTI log disabled in release version by default
+    NRF_LOG_DEFAULT_BACKENDS_INIT();
 
-    NRF_LOG_INFO("Inside main");
+    NRF_LOG_INFO("Inside bootloader release \n");
+	 
+    NRF_LOG_INFO("Boot version is 0x1\n");
 
     //call main.c dfu_observer : Function for notifying DFU state.
     ret_val = nrf_bootloader_init(dfu_observer);

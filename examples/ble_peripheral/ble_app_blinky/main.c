@@ -68,6 +68,8 @@
 #include "nrf_log_ctrl.h"
 #include "nrf_log_default_backends.h"
 
+#include "nrf_delay.h"
+
 
 #define ADVERTISING_LED                 BSP_BOARD_LED_0                         /**< Is on when device is advertising. */
 //#define ADVERTISING_LED                 BSP_BOARD_LED_2                         /**< Is on when device is advertising. */
@@ -588,8 +590,17 @@ int main(void)
     conn_params_init();
 
     // Start execution.
-    NRF_LOG_INFO("Blinky example started.");
+    NRF_LOG_INFO("App: Blinky example started v3 .");  
     advertising_start();
+    
+    for (int j = 0; j < 5; j++)// execute five times
+    {
+       for (int i = 0; i < 3; i++)
+      {
+            bsp_board_led_invert(i);
+            nrf_delay_ms(500);
+      }
+    }  
 
     // Enter main loop.
     for (;;)

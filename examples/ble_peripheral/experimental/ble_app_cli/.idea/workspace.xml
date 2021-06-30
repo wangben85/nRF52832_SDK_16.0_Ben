@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6c7f9ce2-5dd7-40c6-9407-73f3c0885ddc" name="Default Changelist" comment="" />
+    <list default="true" id="6c7f9ce2-5dd7-40c6-9407-73f3c0885ddc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../ble_central_and_peripheral/ble_app_uart_master_slave/pca10040/s132/iar/ble_app_uart_master_slave_pca10040_s132.dep" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ble_central_and_peripheral/ble_app_uart_master_slave/pca10040/s132/iar/ble_app_uart_master_slave_pca10040_s132.dep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ble_app_uart_multi_master/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../ble_app_uart_multi_master/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ble_app_uart_multi_master/pca10040/s132/iar/ble_app_uart_multi_master_pca10040_s132.dep" beforeDir="false" afterPath="$PROJECT_DIR$/../../ble_app_uart_multi_master/pca10040/s132/iar/ble_app_uart_multi_master_pca10040_s132.dep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flash_device/slave1_ble_app_uart_pca10040_s132.hex" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../flash_device/slave1_ble_app_uart_pca10040_s132.hex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flash_device/slave2_ble_app_uart_pca10040_s132.hex" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../flash_device/slave2_ble_app_uart_pca10040_s132.hex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flash_device/slave3_ble_app_uart_pca10040_s132.hex" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../flash_device/slave3_ble_app_uart_pca10040_s132.hex" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,7 +20,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ble_serial.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
+            <state relative-caret-position="580">
               <caret line="29" column="79" selection-start-line="29" selection-start-column="79" selection-end-line="29" selection-end-column="79" />
               <folding>
                 <element signature="e#1992#2006#0" expanded="true" />
@@ -34,17 +41,22 @@
       </file>
     </leaf>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1937" />
     <option name="height" value="1035" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -56,7 +68,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -117,9 +128,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1035" extended-state="6" />
+    <frame x="-7" y="-7" width="2062" height="1105" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24973656" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24938272" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -141,7 +152,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/ble_serial.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
+        <state relative-caret-position="580">
           <caret line="29" column="79" selection-start-line="29" selection-start-column="79" selection-end-line="29" selection-end-column="79" />
           <folding>
             <element signature="e#1992#2006#0" expanded="true" />

@@ -1431,6 +1431,21 @@
     <group>
         <name>nRF_Log</name>
         <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\log\src\nrf_log_backend_flash.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\log\src\nrf_log_backend_rtt.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\log\src\nrf_log_backend_serial.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\log\src\nrf_log_backend_uart.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\log\src\nrf_log_default_backends.c</name>
+        </file>
+        <file>
             <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\log\src\nrf_log_frontend.c</name>
         </file>
         <file>
@@ -1447,6 +1462,18 @@
         <name>nRF_Oberon_Crypto</name>
         <file>
             <name>$PROJ_DIR$\..\..\..\..\..\external\nrf_oberon\lib\cortex-m4\hard-float\short-wchar\liboberon_3.0.1.a</name>
+        </file>
+    </group>
+    <group>
+        <name>nRF_Segger_RTT</name>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\external\segger_rtt\SEGGER_RTT.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\external\segger_rtt\SEGGER_RTT_printf.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\external\segger_rtt\SEGGER_RTT_Syscalls_IAR.c</name>
         </file>
     </group>
     <group>
