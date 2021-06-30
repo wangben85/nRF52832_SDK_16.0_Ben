@@ -1,2 +1,15 @@
----- Signature required Matches (1 in 1 files) ----
-Nrf_dfu_validation.c (c:\nordic_ble_sdk\nrf5_sdk_16.0.0_98a08e2\components\libraries\bootloader\dfu):    NRF_LOG_INFO("Signature required. Checking signature.")
+---- NRF_DFU_DEBUG Matches (14 in 4 files) ----
+Main.c (c:\nordic_ble_sdk\nrf5_sdk_16.0.0_98a08e2\examples\dfu\secure_bootloader):#ifdef NRF_DFU_DEBUG_VERSION
+Nrf_bootloader_info.h (c:\nordic_ble_sdk\nrf5_sdk_16.0.0_98a08e2\components\libraries\bootloader):/** @brief Macro based on @c NRF_DFU_DEBUG_VERSION that can be checked for true/false instead of defined/not defined.
+Nrf_bootloader_info.h (c:\nordic_ble_sdk\nrf5_sdk_16.0.0_98a08e2\components\libraries\bootloader):#ifndef NRF_DFU_DEBUG
+Nrf_bootloader_info.h (c:\nordic_ble_sdk\nrf5_sdk_16.0.0_98a08e2\components\libraries\bootloader):#ifdef NRF_DFU_DEBUG_VERSION
+Nrf_bootloader_info.h (c:\nordic_ble_sdk\nrf5_sdk_16.0.0_98a08e2\components\libraries\bootloader):#define NRF_DFU_DEBUG 1
+Nrf_bootloader_info.h (c:\nordic_ble_sdk\nrf5_sdk_16.0.0_98a08e2\components\libraries\bootloader):#define NRF_DFU_DEBUG 0
+Nrf_dfu_validation.c (c:\nordic_ble_sdk\nrf5_sdk_16.0.0_98a08e2\components\libraries\bootloader\dfu):    if (!NRF_DFU_DEBUG ||
+Nrf_dfu_validation.c (c:\nordic_ble_sdk\nrf5_sdk_16.0.0_98a08e2\components\libraries\bootloader\dfu):                (NRF_DFU_DEBUG && (p_init->has_is_debug == false || p_init->is_debug == false)))
+Nrf_dfu_validation.c (c:\nordic_ble_sdk\nrf5_sdk_16.0.0_98a08e2\components\libraries\bootloader\dfu):        if (!NRF_DFU_DEBUG ||
+Nrf_dfu_validation.c (c:\nordic_ble_sdk\nrf5_sdk_16.0.0_98a08e2\components\libraries\bootloader\dfu):            (NRF_DFU_DEBUG && (p_init->has_is_debug == false || p_init->is_debug == false)))
+Nrf_dfu_validation.c (c:\nordic_ble_sdk\nrf5_sdk_16.0.0_98a08e2\components\libraries\bootloader\dfu):                NRF_LOG_DEBUG("CRC check of app failed. Return %d", NRF_DFU_DEBUG);
+Nrf_dfu_validation.c (c:\nordic_ble_sdk\nrf5_sdk_16.0.0_98a08e2\components\libraries\bootloader\dfu):                return NRF_DFU_DEBUG;
+Nrf_dfu_ver_validation.c (c:\nordic_ble_sdk\nrf5_sdk_16.0.0_98a08e2\components\libraries\bootloader\dfu):    else if (!NRF_DFU_DEBUG ||
+Nrf_dfu_ver_validation.c (c:\nordic_ble_sdk\nrf5_sdk_16.0.0_98a08e2\components\libraries\bootloader\dfu):            (NRF_DFU_DEBUG && ((p_init->has_is_debug == false) || (p_init->is_debug == false))))

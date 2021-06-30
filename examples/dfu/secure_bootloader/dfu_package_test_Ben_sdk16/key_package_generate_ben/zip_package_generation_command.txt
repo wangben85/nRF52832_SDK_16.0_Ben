@@ -16,10 +16,10 @@ nrfutil pkg generate --hw-version 52 --bootloader-version 1 --bootloader secure_
 
 
 /// Generate the combined image App + BL + SD
-nrfutil pkg generate --hw-version 52 --application-version 2 --application two_led_toggle_v2.hex --bootloader-version 1 --bootloader secure_bootloader_uart_v1.hex --softdevice s132_nrf52_7.0.1_softdevice.hex --sd-req 0xcb --key-file private.pem --sd-id 0xcb combined_two_led.zip
+nrfutil pkg generate --hw-version 52 --application-version 2 --application two_led_toggle_v2.hex --bootloader-version 1 --bootloader secure_bootloader_release_v1.hex --softdevice s132_nrf52_7.0.1_softdevice.hex --sd-req 0xcb --key-file private.pem --sd-id 0xcb combined_two_led.zip
 
 
-nrfutil pkg generate --hw-version 52 --application-version 3 --application three_led_toggle_v3.hex --bootloader-version 2 --bootloader secure_bootloader_uart_v2.hex --softdevice s132_nrf52_7.0.1_softdevice.hex --sd-req 0xcb --key-file private.pem --sd-id 0xcb combined_three_led.zip
+nrfutil pkg generate --hw-version 52 --application-version 3 --application three_led_toggle_v3.hex --bootloader-version 2 --bootloader secure_bootloader_release_v2.hex --softdevice s132_nrf52_7.0.1_softdevice.hex --sd-req 0xcb --key-file private.pem --sd-id 0xcb combined_three_led.zip
 
 
 
