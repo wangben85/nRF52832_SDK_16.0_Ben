@@ -47,6 +47,7 @@ extern "C" {
 #include "nrf_gpio.h"
 
 // LEDs definitions for PCA10040
+#ifndef SLXD3
 #define LEDS_NUMBER    4
 
 #define LED_START      17
@@ -66,6 +67,23 @@ extern "C" {
 #define BSP_LED_1      LED_2
 #define BSP_LED_2      LED_3
 #define BSP_LED_3      LED_4
+
+#else
+// LEDs definitions for SLXD3 board
+#define LEDS_NUMBER    1
+
+#define LED_START      3
+#define LED_1          3
+#define LED_STOP       3
+   
+#define LEDS_ACTIVE_STATE 0
+
+#define LEDS_INV_MASK  LEDS_MASK
+
+#define LEDS_LIST      { LED_1 }
+
+#define BSP_LED_0      LED_1
+#endif
 
 #define BUTTONS_NUMBER 4
 

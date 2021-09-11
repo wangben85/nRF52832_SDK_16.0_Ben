@@ -228,6 +228,7 @@
                 </option>
                 <option>
                     <name>CCDefines</name>
+                    <state>CLK_INTERN_RC</state>
                     <state>APP_TIMER_V2</state>
                     <state>APP_TIMER_V2_RTC1_ENABLED</state>
                     <state>BOARD_PCA10040</state>

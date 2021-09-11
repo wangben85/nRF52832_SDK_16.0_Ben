@@ -11783,6 +11783,7 @@
 #define NRF_SDH_DISPATCH_MODEL 0
 #endif
 
+#if 0
 // </h> 
 //==========================================================
 
@@ -11830,7 +11831,72 @@
 #ifndef NRF_SDH_CLOCK_LF_ACCURACY
 #define NRF_SDH_CLOCK_LF_ACCURACY 7
 #endif
+#endif
 
+//For SLXD3 test
+// </h> 
+//==========================================================
+
+// <h> Clock - SoftDevice clock configuration
+
+//==========================================================
+// <o> NRF_SDH_CLOCK_LF_SRC  - SoftDevice clock source.
+ 
+// <0=> NRF_CLOCK_LF_SRC_RC 
+// <1=> NRF_CLOCK_LF_SRC_XTAL 
+// <2=> NRF_CLOCK_LF_SRC_SYNTH 
+
+#ifndef NRF_SDH_CLOCK_LF_SRC
+  #ifdef CLK_INTERN_RC
+  #define NRF_SDH_CLOCK_LF_SRC 0
+  #else
+  #define NRF_SDH_CLOCK_LF_SRC 1	
+  #endif	
+#endif
+
+// <o> NRF_SDH_CLOCK_LF_RC_CTIV - SoftDevice calibration timer interval. 
+#ifndef NRF_SDH_CLOCK_LF_RC_CTIV
+  #ifdef CLK_INTERN_RC
+  #define NRF_SDH_CLOCK_LF_RC_CTIV 16
+  #else
+  #define NRF_SDH_CLOCK_LF_RC_CTIV 0
+  #endif
+#endif
+
+// <o> NRF_SDH_CLOCK_LF_RC_TEMP_CTIV - SoftDevice calibration timer interval under constant temperature. 
+// <i> How often (in number of calibration intervals) the RC oscillator shall be calibrated
+// <i>  if the temperature has not changed.
+
+#ifndef NRF_SDH_CLOCK_LF_RC_TEMP_CTIV
+  #ifdef CLK_INTERN_RC
+  #define NRF_SDH_CLOCK_LF_RC_TEMP_CTIV 2
+  #else
+  #define NRF_SDH_CLOCK_LF_RC_TEMP_CTIV 0
+  #endif
+#endif
+
+// <o> NRF_SDH_CLOCK_LF_ACCURACY  - External clock accuracy used in the LL to compute timing.
+ 
+// <0=> NRF_CLOCK_LF_ACCURACY_250_PPM 
+// <1=> NRF_CLOCK_LF_ACCURACY_500_PPM 
+// <2=> NRF_CLOCK_LF_ACCURACY_150_PPM 
+// <3=> NRF_CLOCK_LF_ACCURACY_100_PPM 
+// <4=> NRF_CLOCK_LF_ACCURACY_75_PPM 
+// <5=> NRF_CLOCK_LF_ACCURACY_50_PPM 
+// <6=> NRF_CLOCK_LF_ACCURACY_30_PPM 
+// <7=> NRF_CLOCK_LF_ACCURACY_20_PPM 
+// <8=> NRF_CLOCK_LF_ACCURACY_10_PPM 
+// <9=> NRF_CLOCK_LF_ACCURACY_5_PPM 
+// <10=> NRF_CLOCK_LF_ACCURACY_2_PPM 
+// <11=> NRF_CLOCK_LF_ACCURACY_1_PPM 
+
+#ifndef NRF_SDH_CLOCK_LF_ACCURACY
+  #ifdef CLK_INTERN_RC
+  #define NRF_SDH_CLOCK_LF_ACCURACY 1   //NRF_CLOCK_LF_ACCURACY_500_PPM is for NRF_CLOCK_LF_SRC_RC
+  #else
+  #define NRF_SDH_CLOCK_LF_ACCURACY 7 //NRF_CLOCK_LF_ACCURACY_20_PPM is for NRF_CLOCK_LF_SRC_XTAL
+  #endif
+#endif
 // </h> 
 //==========================================================
 

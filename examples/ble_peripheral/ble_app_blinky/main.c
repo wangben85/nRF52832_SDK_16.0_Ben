@@ -79,7 +79,7 @@
 #define LEDBUTTON_BUTTON                BSP_BUTTON_0                            /**< Button that will trigger the notification event with the LED Button Service */
 
 //GAP device name.
-#define DEVICE_NAME                     "Ben_Nordic_Blinky"                         /**< Name of device. Will be included in the advertising data. */
+#define DEVICE_NAME                     "Test2_Nordic_Blinky"                         /**< Name of device. Will be included in the advertising data. */
 
 #define APP_BLE_OBSERVER_PRIO           3                                       /**< Application's BLE observer priority. You shouldn't need to modify this value. */
 #define APP_BLE_CONN_CFG_TAG            1                                       /**< A tag identifying the SoftDevice BLE configuration. */
@@ -496,48 +496,48 @@ static void ble_stack_init(void)
  * @param[in] pin_no        The pin that the event applies to.
  * @param[in] button_action The button action (press/release).
  */
-static void button_event_handler(uint8_t pin_no, uint8_t button_action)
-{
-    ret_code_t err_code = 0;
-
-    switch (pin_no)
-    {
-        case LEDBUTTON_BUTTON:
-            NRF_LOG_INFO("Send button state change.");
-            err_code = ble_lbs_on_button_change(m_conn_handle, &m_lbs, button_action);
-            //err_code = 0x6; //just for APP_ERROR_CHECK debug
-            if (err_code != NRF_SUCCESS &&
-                err_code != BLE_ERROR_INVALID_CONN_HANDLE &&
-                err_code != NRF_ERROR_INVALID_STATE &&
-                err_code != BLE_ERROR_GATTS_SYS_ATTR_MISSING)
-            {
-                APP_ERROR_CHECK(err_code);
-            }
-            break;
-
-        default:
-            APP_ERROR_HANDLER(pin_no);
-            break;
-    }
-}
+//static void button_event_handler(uint8_t pin_no, uint8_t button_action)
+//{
+//    ret_code_t err_code = 0;
+//
+//    switch (pin_no)
+//    {
+//        case LEDBUTTON_BUTTON:
+//            NRF_LOG_INFO("Send button state change.");
+//            err_code = ble_lbs_on_button_change(m_conn_handle, &m_lbs, button_action);
+//            //err_code = 0x6; //just for APP_ERROR_CHECK debug
+//            if (err_code != NRF_SUCCESS &&
+//                err_code != BLE_ERROR_INVALID_CONN_HANDLE &&
+//                err_code != NRF_ERROR_INVALID_STATE &&
+//                err_code != BLE_ERROR_GATTS_SYS_ATTR_MISSING)
+//            {
+//                APP_ERROR_CHECK(err_code);
+//            }
+//            break;
+//
+//        default:
+//            APP_ERROR_HANDLER(pin_no);
+//            break;
+//    }
+//}
 
 
 /**@brief Function for initializing the button handler module.
  */
-static void buttons_init(void)
-{
-    ret_code_t err_code;
-
-    //The array must be static because a pointer to it will be saved in the button handler module.
-    static app_button_cfg_t buttons[] =
-    {
-        {LEDBUTTON_BUTTON, false, BUTTON_PULL, button_event_handler}
-    };
-
-    err_code = app_button_init(buttons, ARRAY_SIZE(buttons),
-                               BUTTON_DETECTION_DELAY);
-    APP_ERROR_CHECK(err_code);
-}
+//static void buttons_init(void)
+//{
+//    ret_code_t err_code;
+//
+//    //The array must be static because a pointer to it will be saved in the button handler module.
+//    static app_button_cfg_t buttons[] =
+//    {
+//        {LEDBUTTON_BUTTON, false, BUTTON_PULL, button_event_handler}
+//    };
+//
+//    err_code = app_button_init(buttons, ARRAY_SIZE(buttons),
+//                               BUTTON_DETECTION_DELAY);
+//    APP_ERROR_CHECK(err_code);
+//}
 
 
 static void log_init(void)
@@ -580,7 +580,7 @@ int main(void)
     log_init(); //UART log enable
     leds_init();
     timers_init();//app_timer_init
-    buttons_init();//LEDBUTTON_BUTTON = BUTTON0, button_event_handler will trigger button state notification through BLE
+//    buttons_init();//LEDBUTTON_BUTTON = BUTTON0, button_event_handler will trigger button state notification through BLE
     power_management_init();
     ble_stack_init();// Enable BLE stack.
     gap_params_init();

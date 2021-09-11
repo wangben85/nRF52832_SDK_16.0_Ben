@@ -1,0 +1,309 @@
+###############################################################################
+#
+# IAR ELF Linker V8.30.1.114/W32 for ARM                  11/Aug/2021  10:18:25
+# Copyright 2007-2018 IAR Systems AB.
+#
+#    Output file  =  
+#        C:\Nordic_BLE_SDK\nRF5_SDK_16.0.0_98a08e2\examples\peripheral\blinky\pca10040\blank\iar\_build\blinky_pca10040.out
+#    Map file     =  
+#        C:\Nordic_BLE_SDK\nRF5_SDK_16.0.0_98a08e2\examples\peripheral\blinky\pca10040\blank\iar\_build\blinky_pca10040.map
+#    Command line =  
+#        -f C:\Users\wangb\AppData\Local\Temp\EWCAFA.tmp
+#        (C:\Nordic_BLE_SDK\nRF5_SDK_16.0.0_98a08e2\examples\peripheral\blinky\pca10040\blank\iar\_build\app_error.o
+#        C:\Nordic_BLE_SDK\nRF5_SDK_16.0.0_98a08e2\examples\peripheral\blinky\pca10040\blank\iar\_build\app_error_handler_iar.o
+#        C:\Nordic_BLE_SDK\nRF5_SDK_16.0.0_98a08e2\examples\peripheral\blinky\pca10040\blank\iar\_build\app_error_weak.o
+#        C:\Nordic_BLE_SDK\nRF5_SDK_16.0.0_98a08e2\examples\peripheral\blinky\pca10040\blank\iar\_build\app_util_platform.o
+#        C:\Nordic_BLE_SDK\nRF5_SDK_16.0.0_98a08e2\examples\peripheral\blinky\pca10040\blank\iar\_build\boards.o
+#        C:\Nordic_BLE_SDK\nRF5_SDK_16.0.0_98a08e2\examples\peripheral\blinky\pca10040\blank\iar\_build\iar_startup_nrf52.o
+#        C:\Nordic_BLE_SDK\nRF5_SDK_16.0.0_98a08e2\examples\peripheral\blinky\pca10040\blank\iar\_build\main.o
+#        C:\Nordic_BLE_SDK\nRF5_SDK_16.0.0_98a08e2\examples\peripheral\blinky\pca10040\blank\iar\_build\nrf_assert.o
+#        C:\Nordic_BLE_SDK\nRF5_SDK_16.0.0_98a08e2\examples\peripheral\blinky\pca10040\blank\iar\_build\nrf_atomic.o
+#        C:\Nordic_BLE_SDK\nRF5_SDK_16.0.0_98a08e2\examples\peripheral\blinky\pca10040\blank\iar\_build\nrf_balloc.o
+#        C:\Nordic_BLE_SDK\nRF5_SDK_16.0.0_98a08e2\examples\peripheral\blinky\pca10040\blank\iar\_build\nrf_fprintf.o
+#        C:\Nordic_BLE_SDK\nRF5_SDK_16.0.0_98a08e2\examples\peripheral\blinky\pca10040\blank\iar\_build\nrf_fprintf_format.o
+#        C:\Nordic_BLE_SDK\nRF5_SDK_16.0.0_98a08e2\examples\peripheral\blinky\pca10040\blank\iar\_build\nrf_log_frontend.o
+#        C:\Nordic_BLE_SDK\nRF5_SDK_16.0.0_98a08e2\examples\peripheral\blinky\pca10040\blank\iar\_build\nrf_log_str_formatter.o
+#        C:\Nordic_BLE_SDK\nRF5_SDK_16.0.0_98a08e2\examples\peripheral\blinky\pca10040\blank\iar\_build\nrf_memobj.o
+#        C:\Nordic_BLE_SDK\nRF5_SDK_16.0.0_98a08e2\examples\peripheral\blinky\pca10040\blank\iar\_build\nrf_ringbuf.o
+#        C:\Nordic_BLE_SDK\nRF5_SDK_16.0.0_98a08e2\examples\peripheral\blinky\pca10040\blank\iar\_build\nrf_strerror.o
+#        C:\Nordic_BLE_SDK\nRF5_SDK_16.0.0_98a08e2\examples\peripheral\blinky\pca10040\blank\iar\_build\nrfx_atomic.o
+#        C:\Nordic_BLE_SDK\nRF5_SDK_16.0.0_98a08e2\examples\peripheral\blinky\pca10040\blank\iar\_build\system_nrf52.o
+#        --redirect _Printf=_PrintfFull --redirect _Scanf=_ScanfFull
+#        --no_out_extension -o
+#        C:\Nordic_BLE_SDK\nRF5_SDK_16.0.0_98a08e2\examples\peripheral\blinky\pca10040\blank\iar\_build\blinky_pca10040.out
+#        --map
+#        C:\Nordic_BLE_SDK\nRF5_SDK_16.0.0_98a08e2\examples\peripheral\blinky\pca10040\blank\iar\_build\blinky_pca10040.map
+#        --config
+#        C:\Nordic_BLE_SDK\nRF5_SDK_16.0.0_98a08e2\examples\peripheral\blinky\pca10040\blank\iar\blinky_iar_nRF5x.icf
+#        --warnings_are_errors --entry __iar_program_start --inline --vfe
+#        --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because no calls to memory allocation
+functions were found in the application outside of system library
+functions, and there are calls to deallocation functions in the
+application.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at 0x0 { ro section .intvec };
+define block RO_END with size = 0M, alignment = 8 { };
+"P1":  place in [from 0x0 to 0x7'ffff] { ro, block RO_END };
+define block CSTACK with size = 8K, alignment = 8 { };
+define block HEAP with size = 8K, alignment = 8 { };
+"P2":  place in [from 0x2000'0000 to 0x2000'ffff] {
+          rw, block CSTACK, block HEAP };
+initialize by copy { rw };
+keep { section .intvec };
+
+  Section            Kind         Address    Size  Object
+  -------            ----         -------    ----  ------
+"A0":                                       0x200
+  .intvec            ro code          0x0   0x200  iar_startup_nrf52.o [1]
+                                  - 0x200   0x200
+
+"P1":                                       0x8f5
+  .text              ro code        0x200   0x5b8  system_nrf52.o [1]
+  .text              ro code        0x7b8   0x18a  boards.o [1]
+  .text              ro code        0x942     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0x944    0x58  main.o [1]
+  .text              ro code        0x99c    0x2c  copy_init3.o [4]
+  .text              ro code        0x9c8    0x28  data_init.o [4]
+  .text              ro code        0x9f0    0x22  fpinit_M.o [3]
+  .iar.init_table    const          0xa14    0x14  - Linker created -
+  .text              ro code        0xa28     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xa2c    0x1e  cmain.o [4]
+  .text              ro code        0xa4a     0x4  exit.o [2]
+  .text              ro code        0xa4e     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xa50     0xa  cexit.o [4]
+  .text              ro code        0xa5a     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xa5c     0xc  XXexit.o [4]
+  .text              ro code        0xa68    0x10  iar_startup_nrf52.o [1]
+  .text              ro code        0xa78     0xc  cstartup_M.o [4]
+  .rodata            const          0xa90     0x8  main.o [1]
+  .rodata            const          0xa98     0x4  boards.o [1]
+  Initializer bytes  const          0xa9c     0x4  <for P2-1>
+  .text              ro code        0xaa0     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xaa2     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xaa4     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xaa6     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xaa8     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xaaa     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xaac     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xaae     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xab0     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xab2     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xab4     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xab6     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xab8     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xaba     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xabc     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xabe     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xac0     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xac2     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xac4     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xac6     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xac8     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xaca     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xacc     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xace     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xad0     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xad2     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xad4     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xad6     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xad8     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xada     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xadc     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xade     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xae0     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xae2     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xae4     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xae6     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xae8     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xaea     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xaec     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xaee     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xaf0     0x2  iar_startup_nrf52.o [1]
+  .text              ro code        0xaf2     0x2  iar_startup_nrf52.o [1]
+  .rodata            const          0xaf4     0x1  boards.o [1]
+  .rodata            const          0xaf5     0x0  copy_init3.o [4]
+                                  - 0xaf5   0x8f5
+
+"P2", part 1 of 2:                            0x4
+  P2-1                        0x2000'0000     0x4  <Init block>
+    .data            inited   0x2000'0000     0x4  system_nrf52.o [1]
+                            - 0x2000'0004     0x4
+
+"P2", part 2 of 2:                         0x2000
+  CSTACK                      0x2000'0008  0x2000  <Block>
+    CSTACK           uninit   0x2000'0008  0x2000  <Block tail>
+                            - 0x2000'2008  0x2000
+
+Unused ranges:
+
+         From           To      Size
+         ----           --      ----
+        0xaf5     0x7'ffff  0x7'f50b
+  0x2000'0004  0x2000'0007       0x4
+  0x2000'2008  0x2000'ffff    0xdff8
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address      Size
+          -------      ----
+Copy (__iar_copy_init3)
+    1 source range, total size 0x4:
+                0xa9c   0x4
+    1 destination range, total size 0x4:
+          0x2000'0000   0x4
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module               ro code  ro data  rw data
+    ------               -------  -------  -------
+command line/config:
+    ----------------------------------------------
+    Total:
+
+C:\Nordic_BLE_SDK\nRF5_SDK_16.0.0_98a08e2\examples\peripheral\blinky\pca10040\blank\iar\_build: [1]
+    boards.o                 394        5
+    iar_startup_nrf52.o      620
+    main.o                    88        8
+    system_nrf52.o         1 464        4        4
+    ----------------------------------------------
+    Total:                 2 566       17        4
+
+dl7M_tlf.a: [2]
+    exit.o                     4
+    ----------------------------------------------
+    Total:                     4
+
+m7M_tls.a: [3]
+    fpinit_M.o                34
+    ----------------------------------------------
+    Total:                    34
+
+rt7M_tl.a: [4]
+    XXexit.o                  12
+    cexit.o                   10
+    cmain.o                   30
+    copy_init3.o              44
+    cstartup_M.o              12
+    data_init.o               40
+    ----------------------------------------------
+    Total:                   148
+
+    Gaps                       2       14
+    Linker created                     20    8 192
+--------------------------------------------------
+    Grand Total:           2 754       51    8 196
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                       Address   Size  Type      Object
+-----                       -------   ----  ----      ------
+.iar.init_table$$Base         0xa14          --   Gb  - Linker created -
+.iar.init_table$$Limit        0xa28          --   Gb  - Linker created -
+?main                         0xa2d         Code  Gb  cmain.o [4]
+CSTACK$$Base            0x2000'0008          --   Gb  - Linker created -
+CSTACK$$Limit           0x2000'2008          --   Gb  - Linker created -
+NVIC_SystemReset              0x201   0x1e  Code  Lc  system_nrf52.o [1]
+Region$$Table$$Base           0xa14          --   Gb  - Linker created -
+Region$$Table$$Limit          0xa28          --   Gb  - Linker created -
+SystemCoreClock         0x2000'0000    0x4  Data  Gb  system_nrf52.o [1]
+SystemCoreClockUpdate         0x21f    0xc  Code  Gb  system_nrf52.o [1]
+SystemInit                    0x22b  0x22e  Code  Gb  system_nrf52.o [1]
+__ICFEDIT_region_RAM_end__ {Abs}
+                        0x2000'ffff         Data  Gb  <internal module>
+__ICFEDIT_region_RAM_start__ {Abs}
+                        0x2000'0000         Data  Gb  <internal module>
+__Vectors                       0x0          --   Gb  iar_startup_nrf52.o [1]
+__Vectors_End                 0x200         Data  Gb  iar_startup_nrf52.o [1]
+__Vectors_Size {Abs}          0x200          --   Gb  iar_startup_nrf52.o [1]
+__cmain                       0xa2d         Code  Gb  cmain.o [4]
+__exit                        0xa5d         Code  Gb  XXexit.o [4]
+__iar_copy_init3              0x99d   0x2c  Code  Gb  copy_init3.o [4]
+__iar_data_init3              0x9c9   0x28  Code  Gb  data_init.o [4]
+__iar_init_vfp                0x9f1         Code  Gb  fpinit_M.o [3]
+__iar_program_start           0xa79         Code  Gb  cstartup_M.o [4]
+__vector_table                  0x0         Data  Gb  iar_startup_nrf52.o [1]
+_call_main                    0xa39         Code  Gb  cmain.o [4]
+_exit                         0xa51         Code  Gb  cexit.o [4]
+_main                         0xa47         Code  Gb  cmain.o [4]
+bsp_board_buttons_init        0x90d   0x18  Code  Lc  boards.o [1]
+bsp_board_init                0x92d   0x16  Code  Gb  boards.o [1]
+bsp_board_led_invert          0x8e5    0xe  Code  Gb  boards.o [1]
+bsp_board_led_off             0x8c1   0x10  Code  Gb  boards.o [1]
+bsp_board_leds_init           0x8f3   0x1a  Code  Lc  boards.o [1]
+bsp_board_leds_off            0x8d1   0x14  Code  Gb  boards.o [1]
+errata_108                    0x607   0x46  Code  Lc  system_nrf52.o [1]
+errata_12                     0x459   0x4c  Code  Lc  system_nrf52.o [1]
+errata_136                    0x64d   0x46  Code  Lc  system_nrf52.o [1]
+errata_16                     0x4a5   0x2e  Code  Lc  system_nrf52.o [1]
+errata_182                    0x693   0x18  Code  Lc  system_nrf52.o [1]
+errata_31                     0x4d3   0x46  Code  Lc  system_nrf52.o [1]
+errata_32                     0x519   0x2a  Code  Lc  system_nrf52.o [1]
+errata_36                     0x543   0x46  Code  Lc  system_nrf52.o [1]
+errata_37                     0x589   0x2a  Code  Lc  system_nrf52.o [1]
+errata_57                     0x5b3   0x2a  Code  Lc  system_nrf52.o [1]
+errata_66                     0x5dd   0x2a  Code  Lc  system_nrf52.o [1]
+exit                          0xa4b    0x4  Code  Gb  exit.o [2]
+m_board_btn_list              0xa98    0x4  Data  Lc  boards.o [1]
+m_board_led_list              0xaf4    0x1  Data  Lc  boards.o [1]
+main                          0x97d   0x20  Code  Gb  main.o [1]
+nrf_delay_ms                  0x965   0x18  Code  Lc  main.o [1]
+nrf_gpio_cfg                  0x7c1   0x48  Code  Lc  boards.o [1]
+nrf_gpio_cfg_input            0x823   0x1e  Code  Lc  boards.o [1]
+nrf_gpio_cfg_output           0x809   0x1a  Code  Lc  boards.o [1]
+nrf_gpio_pin_clear            0x85b   0x1a  Code  Lc  boards.o [1]
+nrf_gpio_pin_port_decode
+                              0x7b9    0x8  Code  Lc  boards.o [1]
+nrf_gpio_pin_set              0x841   0x1a  Code  Lc  boards.o [1]
+nrf_gpio_pin_toggle           0x875   0x26  Code  Lc  boards.o [1]
+nrf_gpio_pin_write            0x89b   0x1a  Code  Lc  boards.o [1]
+nrf_gpio_port_out_clear
+                              0x8bb    0x6  Code  Lc  boards.o [1]
+nrf_gpio_port_out_set         0x8b5    0x6  Code  Lc  boards.o [1]
+nrfx_coredep_delay_us         0x945   0x1a  Code  Lc  main.o [1]
+nrfx_coredep_delay_us::delay_machine_code
+                              0xa90    0x8  Data  Lc  main.o [1]
+
+
+[1] = C:\Nordic_BLE_SDK\nRF5_SDK_16.0.0_98a08e2\examples\peripheral\blinky\pca10040\blank\iar\_build
+[2] = dl7M_tlf.a
+[3] = m7M_tls.a
+[4] = rt7M_tl.a
+
+  2 754 bytes of readonly  code memory
+     51 bytes of readonly  data memory
+  8 196 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
