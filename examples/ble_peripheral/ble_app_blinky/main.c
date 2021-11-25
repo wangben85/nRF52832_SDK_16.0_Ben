@@ -590,7 +590,7 @@ int main(void)
     conn_params_init();
 
     // Start execution.
-    NRF_LOG_INFO("App: Blinky example started v3 .");  
+    NRF_LOG_INFO("App: Blinky example started!");  
     advertising_start();
     
     for (int j = 0; j < 5; j++)// execute five times

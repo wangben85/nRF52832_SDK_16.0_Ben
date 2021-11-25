@@ -1,0 +1,8 @@
+{
+    "manifest": {
+        "application": {
+            "bin_file": "slxd3_ble_app.bin",
+            "dat_file": "slxd3_ble_app.dat"
+        }
+    }
+}
